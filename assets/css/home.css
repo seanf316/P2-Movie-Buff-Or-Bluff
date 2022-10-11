@@ -13,7 +13,7 @@
     --dark-color: black;
 }
 
-li {
+ul li {
     list-style: none;
 }
 
@@ -58,6 +58,67 @@ header {
     transform: scale(1.05);
     cursor: pointer;
 }
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.733); /* Black w/ opacity */
+}
+
+.modal-content {
+    text-align: center;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 1.5rem;
+    border: 3px solid var(--main-color);
+    border-radius: 1rem;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content-title {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-content-list {
+   text-align: center;
+   list-style-position: inside;
+   margin-bottom: 1rem;
+   font-weight: 600;
+}
+
+.modal-content-list li {
+    padding: .5rem 0;
+}
+
+.modal-content-text {
+    color: var(--main-color);
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* The Close Button */
+.close {
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .close:hover,
+  .close:focus {
+    scale: 1.25;
+    cursor: pointer;
+  }
+
 
 /* About */
 
