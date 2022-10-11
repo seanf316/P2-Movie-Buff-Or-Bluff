@@ -276,4 +276,22 @@ footer {
         background: linear-gradient(rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3)), url("../images/hero2.jpg") no-repeat center center;
         background-size: cover;
     }
+
+    .modal-content {
+        text-align: center;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 1.5rem;
+        border: 3px solid var(--main-color);
+        border-radius: 1rem;
+        width: 50%; /* Could be more or less, depending on screen size */
+    }
+
+    .modal-content-title {
+        color: var(--main-color);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
 }
