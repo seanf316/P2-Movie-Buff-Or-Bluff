@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    caret-color: transparent
 }
 
 :root {
@@ -170,7 +171,7 @@ header {
     position: relative;
 }
 
-.easy {
+#easy {
     position: absolute;
     display: flex;
     background: linear-gradient(rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3)), url("../images/hero.jpg") no-repeat center center;
@@ -184,9 +185,10 @@ header {
     align-items: center;
     border-radius: 1rem;
     border: 2px solid var(--main-color);
+    cursor: pointer;
 }
 
-.medium {
+#medium {
     position: absolute;
     display: flex;
     background: linear-gradient(rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3)), url("../images/hero1.jpg") no-repeat center center;
@@ -200,9 +202,10 @@ header {
     align-items: center;
     border-radius: 1rem;
     border: 2px solid var(--main-color);
+    cursor: pointer;
 }
 
-.hard {
+#hard {
     position: absolute;
     display: flex;
     background: linear-gradient(rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3)), url("../images/hero2.jpg") no-repeat top center;
@@ -216,6 +219,7 @@ header {
     align-items: center;
     border-radius: 1rem;
     border: 2px solid var(--main-color);
+    cursor: pointer;
 }
 
 /* Footer */

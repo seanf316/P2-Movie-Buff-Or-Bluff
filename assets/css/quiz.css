@@ -65,6 +65,7 @@ body {
     color: var(--main-color);
     margin: .5rem auto;
     width: 10rem;
+    display: none;
 }
 
 .quiz-question {
