@@ -32,7 +32,7 @@ const _checkAnswer = document.getElementById('check-answer');
 const _playAgain = document.getElementById('play-again');
 
 // Event Listeners
-
+// function eventListeners ()
 
 document.addEventListener('DOMContentLoaded', () => {
   startQuiz();
@@ -81,7 +81,6 @@ function setCount(){
 // function checkCount()
 
 // function restartQuiz()
-
 
 // Homepage Functions
 instructionsBtn.onclick = function() {
