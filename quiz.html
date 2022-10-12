@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e4bf4f6321.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <title>Movie Buff or Bluff</title>
+</head>
+<body>
+    <div class="quiz-wrapper">
+        <h1 class="quiz-title">Movie<br>Buff or Bluff</h1>
+        <div id="difficulty">MEDIUM</div>
+        <div id="progress">
+            <p id="progressText">Question</p>
+        </div>
+        <div id="progressBar">
+            <div id="progressBarFull"></div>
+        </div>
+        <div class="quiz-score">
+            <p>Correct: </span><span id="correct-score">0</span>/ <span id="total-questions">10</span></p> 
+        </div>
+        <div class="quiz-body">
+            <h2 class="quiz-question" id="question">Question</h2>
+            <ul class="quiz-answers">
+            </ul>
+            <div id="result"></div>
+            <div id="overall-score"></div>
+        </div>
+        <div class="quiz-controls">
+            <button class="btn" type="button" id="check-answer">Check Answer</button>
+            <button class="btn" type="button" id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <script src="assets/javascript/quiz.js"></script>
+</body>
+</html>

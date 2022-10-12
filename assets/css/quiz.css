@@ -1,0 +1,116 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+}
+
+:root {
+    --main-color: #314BF8;
+    --light-color: white;
+    --dark-color: black;
+    --transition: all 300ms ease-in-out;
+}
+
+.quiz-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    background-color: var(--light-color);
+    padding: 1.5rem 1rem 3rem 1rem;
+    width: 90%;
+    height: auto;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 10%);;
+}
+
+.quiz-title {
+    line-height: 1.8rem;
+    margin-bottom: .5rem;
+}
+
+#difficulty {
+    color: var(--light-color);
+    background-color: var(--main-color);
+    padding: .2rem .5rem;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 1.5rem;
+    border: 3px solid var(--dark-color);
+    margin-bottom: 1rem;
+    border-radius: 50px;
+}
+
+#progressBarFull {
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    width: 0%;
+}
+
+.quiz-score {
+    font-weight: 800;
+    font-size: 1.2rem;
+    border: 5px solid var(--main-color);
+    color: var(--main-color);
+    margin: .5rem auto;
+    width: 10rem;
+}
+
+.quiz-question {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.quiz-answers li {
+    border-radius: .5rem;
+    font-weight: 600;
+    margin: .7rem auto;
+    padding: .4rem 1.2rem;
+    cursor: pointer;
+    border: 3px solid var(--dark-color);
+    background-color: var(--main-color);
+    color: var(--light-color);
+    box-shadow: 0 4px 0 0 var(--main-color);
+    transition: var(--transition);
+}
+
+.quiz-options li:hover {
+    background-color: var(--light-color);
+    color: var(--main-color-color);
+    border-color: var(--dark-color);
+    box-shadow: 0 4px 0 0 var(--dark-color);
+    transform: scale(0.97);
+}
+
+.quiz-options li:active {
+    transform: scale(0.97);
+}
+
+.selected {
+    background-color: var(--light-color)!important;
+    color: var(--main-color)!important;
+    border-color: var(--dark-color)!important;
+    box-shadow: 0 4px 0 0 var(--dark-color)!important;
+}
+
+.quiz-controls button {
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+#play-again{
+    display: none;
+    margin: 1rem auto;
+}
