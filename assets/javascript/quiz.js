@@ -34,7 +34,10 @@ const _checkAnswer = document.getElementById('check-answer');
 const _playAgain = document.getElementById('play-again');
 
 // Event Listeners
-// function eventListeners ()
+function eventListeners(){
+  _checkAnswer.addEventListener('click', checkAnswer);
+  _playAgain.addEventListener('click', restartQuiz);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   startQuiz();
@@ -42,14 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function startQuiz() {
   getQuestion();
+  eventListeners();
   setCount();
-  _result.innerHTML = "";
 }
 
 async function getQuestion() {
   const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&difficulty=easy&type=multiple';
   const result = await fetch(`${APIUrl}`);
   const data = await result.json();
+  _result.innerHTML = "";
   showQuestion(data.results[0]);
 }
 
@@ -88,24 +92,63 @@ function selectAnswer() {
   })
 }
 
-// function _checkAnswer()
-
-// function checkCount()
-
-// function restartQuiz()
-
-// Homepage Functions
-instructionsBtn.onclick = function () {
-  modal.style.display = "block";
-}
-
-closeIcon.onclick = function () {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+function checkAnswer(){
+  _checkAnswer.disabled = true;
+  if(_answers.querySelector('.selected')) {
+      let selectAnswer = _answers.querySelector('.selected span').textContent;
+      if(selectAnswer == correctAnswer) {
+          correctScore++;
+          _result.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer!</p>`;
+      } else {
+          _result.innerHTML = `<p> <i class = "fas fa-times"></i> Incorrect Answer!</p> <p><small><b>Correct Answer: </b> ${correctAnswer}</b></small></p>`;
+      }
+      checkCount();
+  } else {
+      _result.innerHTML = `<p><i class = "fas fa-question"></i>Please select and answer!</p>`;
+      _checkAnswer.disabled = false;
   }
 }
+
+function checkCount(){
+  askedCount++;
+  questionCounter++;
+  setCount();
+  if(askedCount == totalQuestion){
+      _playAgain.style.display = 'block';
+      _overallScore.innerHTML = `<p> Your scored ${correctScore} quetions correctly</p>`
+      setTimeout(() => {
+          localStorage.setItem('mostRecentScore',correctScore)
+      return window.location.assign('/end.html')
+      }, 1000);        
+  } else {
+      setTimeout(() => {
+          getQuestion();
+      }, 1000);
+  } 
+}
+
+function restartQuiz() {
+  correctScore = askedCount = 0;
+  questionCounter = 1;
+  _playAgain.style.display = 'none';
+  _checkAnswer.style.display = 'block';
+  _checkAnswer.disabled = false;
+  setCount();
+  getQuestion();
+}
+
+// Homepage Functions
+// instructionsBtn.onclick = function () {
+//   modal.style.display = "block";
+// }
+
+// closeIcon.onclick = function () {
+//   modal.style.display = "none";
+// }
+
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
