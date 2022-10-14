@@ -12,78 +12,60 @@
 </head>
 
 <body>
-    <header>
-        <a href="home.html"><img src="assets/images/logo.png" alt="Site Logo"></a>
+
+    <section id="homepage">
+        <a href="home.html"><img src="assets/images/logo.png" alt=""></a>
+        <div class="homepage_content">
+            <h1 class="homepage_content__title">Are you a <span>Movie </span>Buff or a <span>Movie </span>Bluff?</h1>
+            <p class="homepage_content__text">Take our quiz and prove yourself against family and friends.<br>There are 10 questions to answer to acheive a Highscore<br>Lets see if you are have <span>A Beautiful
+                    Mind</span> or if you are more likely
+                to be in <span>Dumb & Dumber.</span></p>
+        </div>
         <div class="buttons">
             <button class="btn" id="highScoresbtn">HIGH SCORES</button>
             <button class="btn" id="instructionsBtn">INSTRUCTIONS</button>
+        </div>
+        <div class="get-started">
+            <a href="quiz.html"><button type="button" class="getStartedBtn">Lets get started <i class="fa-solid fa-arrow-right"></i></button></a>
         </div>
         <div id="instructionsModal" class="modal">
             <div class="modal-content">
                 <p class="close"><i class="fa-regular fa-circle-xmark"></i></p>
                 <h3 class="modal-content-title">Movie Buff or Bluff<br>Instructions</h3>
                 <ol class="modal-content-list">
-                    <li>Choose 1 of the 3 difficulties provided - EASY, MEDIUM or HARD</li>
-                    <li>At the end of the quiz enter a valid username</li>
+                    <li>Enter a Username</li>
+                    <li>Answer 10 questions on the world of Cinema</li>
                     <li>Have fun!</li>
                 </ol>
-                <p class="modal-content-text" >*Please note this quiz will use your local storage to store the Highscores</p>
-              </div>
-        </div>
-    </header>
-
-    <section id="about">
-        <div class="about_content">
-            <h1 class="about-content-title">Are you a Movie Buff or a Movie Bluff?</h1>
-            <p class="about-content-text">Take our quiz and prove yourself against family and friends. We have 3
-                difficulty levels to choose from Easy, Medium & Hard.<br>Lets see if you are have <span>A Beautiful
-                    Mind</span> or if you are more likely
-                to be in <span>Dumb & Dumber.</span></p>
-        </div>
-    </section>
-
-    <section class="difficulty">
-        <h2 class="difficulty_title">Choose Your Difficulty</h2>
-        <div class="difficulty_grid">
-            <div class="difficulty_card">
-                <a href="quiz.html"><button type="button" id="easy">
-                    <h3>EASY</h3>
-                </button></a>
-            </div>
-            <div class="difficulty_card">
-                <a href="quiz.html"><button id="medium">
-                    <h3>MEDIUM</h3>
-                </button></a>
-            </div>
-            <div class="difficulty_card">
-                <a href="quiz.html"><div id="hard">
-                    <h3>HARD</h3>
-                </div></a>
+                <p class="modal-content-text">*Please note this quiz will use your local storage to store the Highscores
+                </p>
             </div>
         </div>
     </section>
+
 
     <footer>
         <ul class="social-networks">
             <li class="social-networks-item">
-              <a class="social-networks-link" href="https://facebook.com" target="_blank"
-                rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)"><i
-                  class="fa-brands fa-facebook-f"></i></a>
+                <a class="social-networks-link" href="https://facebook.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Facebook page (opens in a new tab)"><i
+                        class="fa-brands fa-facebook-f"></i></a>
             </li>
             <li class="social-networks-item">
-              <a class="social-networks-link" href="https://twitter.com" target="_blank"
-                rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)"><i
-                  class="fa-brands fa-twitter"></i></a>
+                <a class="social-networks-link" href="https://twitter.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
             </li>
             <li class="social-networks-item">
-              <a class="social-networks-link" href="https://instagram.com" target="_blank"
-                rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)"><i
-                  class="fa-brands fa-instagram"></i></a>
+                <a class="social-networks-link" href="https://instagram.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Instagram page (opens in a new tab)"><i
+                        class="fa-brands fa-instagram"></i></a>
             </li>
-          </ul>
-          <p class="devloped-text">Developed by Sean Finn <a href="https://github.com/seanf316/P2-Movie-Buff-Or-Bluff" target="_blank"
-            rel="noopener" aria-label="Visit my Github Repo (opens in a new tab)"><i class="fa-brands fa-github"></i></a></p>
+        </ul>
+        <p class="devloped-text">Developed by Sean Finn <a href="https://github.com/seanf316/P2-Movie-Buff-Or-Bluff"
+                target="_blank" rel="noopener" aria-label="Visit my Github Repo (opens in a new tab)"><i
+                    class="fa-brands fa-github"></i></a></p>
     </footer>
 </body>
-    <script src="assets/javascript/quiz.js"></script>
+<script src="assets/javascript/quiz.js"></script>
+
 </html>

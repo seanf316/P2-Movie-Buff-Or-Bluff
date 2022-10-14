@@ -6,11 +6,12 @@
 const modal = document.getElementById("instructionsModal");
 const instructionsBtn = document.getElementById("instructionsBtn");
 const closeIcon = document.getElementsByClassName("close")[0];
-let _easy = document.getElementById("easy");
-const _medium = document.getElementById("medium");
-const _hard = document.getElementById("hard");
 
 // Quiz Variables/Constants
+const _userContainer = document.getElementById('userContainer')
+const _username = document.getElementById('username')
+const _usernameText = document.getElementById('usernameText');
+const _startQuizBtn = document.getElementById('startQuizBtn');
 
 // Score
 const _progressText = document.getElementById('progressText');
@@ -20,21 +21,23 @@ const _totalQuestions = document.getElementById('total-questions');
 const _overallScore = document.getElementById('overall-score');
 
 // Quiz
-const _difficulty = document.getElementById('difficulty');
+const _quiz = document.getElementById('quiz');
 const _question = document.getElementById('question');
 const _answers = document.querySelector('.quiz-answers');
 const _result = document.getElementById('result');
 let correctAnswer = "",
   correctScore = askedCount = 0,
-  totalQuestion = 10;
+  totalQuestion = 1;
 let questionCounter = 1;
 
 // Buttons
 const _checkAnswer = document.getElementById('check-answer');
 const _playAgain = document.getElementById('play-again');
 
-// Event Listeners
-function eventListeners(){
+// Event Listeners 
+
+
+function eventListeners() {
   _checkAnswer.addEventListener('click', checkAnswer);
   _playAgain.addEventListener('click', restartQuiz);
 }
@@ -63,7 +66,6 @@ function showQuestion(data) {
   let incorrectAnswer = data.incorrect_answers;
   let answersList = incorrectAnswer;
   answersList.splice(Math.floor(Math.random() * (incorrectAnswer.length + 1)), 0, correctAnswer);
-  _difficulty.innerHTML = `${data.difficulty}`;
   _question.innerHTML = `${data.question}`;
   _answers.innerHTML = `
       ${answersList.map((answer, index) => `
@@ -92,39 +94,38 @@ function selectAnswer() {
   })
 }
 
-function checkAnswer(){
+function checkAnswer() {
   _checkAnswer.disabled = true;
-  if(_answers.querySelector('.selected')) {
-      let selectAnswer = _answers.querySelector('.selected span').textContent;
-      if(selectAnswer == correctAnswer) {
-          correctScore++;
-          _result.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer!</p>`;
-      } else {
-          _result.innerHTML = `<p> <i class = "fas fa-times"></i> Incorrect Answer!</p> <p><small><b>Correct Answer: </b> ${correctAnswer}</b></small></p>`;
-      }
-      checkCount();
+  if (_answers.querySelector('.selected')) {
+    let selectAnswer = _answers.querySelector('.selected span').textContent;
+    if (selectAnswer == correctAnswer) {
+      correctScore++;
+      _result.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer!</p>`;
+    } else {
+      _result.innerHTML = `<p> <i class = "fas fa-times"></i> Incorrect Answer!</p> <p><small><b>Correct Answer: </b> ${correctAnswer}</b></small></p>`;
+    }
+    checkCount();
   } else {
-      _result.innerHTML = `<p><i class = "fas fa-question"></i>Please select and answer!</p>`;
-      _checkAnswer.disabled = false;
+    _result.innerHTML = `<p><i class = "fas fa-question"></i> Please select and answer!</p>`;
+    _checkAnswer.disabled = false;
   }
 }
 
-function checkCount(){
+function checkCount() {
   askedCount++;
   questionCounter++;
   setCount();
-  if(askedCount == totalQuestion){
-      _playAgain.style.display = 'block';
-      _overallScore.innerHTML = `<p> Your scored ${correctScore} quetions correctly</p>`
-      setTimeout(() => {
-          localStorage.setItem('mostRecentScore',correctScore)
+  if (askedCount == totalQuestion) {
+    setTimeout(() => {
+      _checkAnswer.style.display = 'none';
+      localStorage.setItem('mostRecentScore', correctScore)
       return window.location.assign('/end.html')
-      }, 1000);        
+    }, 1000);
   } else {
-      setTimeout(() => {
-          getQuestion();
-      }, 1000);
-  } 
+    setTimeout(() => {
+      getQuestion();
+    }, 1000);
+  }
 }
 
 function restartQuiz() {
@@ -133,22 +134,23 @@ function restartQuiz() {
   _playAgain.style.display = 'none';
   _checkAnswer.style.display = 'block';
   _checkAnswer.disabled = false;
+  _overallScore.innerHTML = "";
   setCount();
   getQuestion();
 }
 
 // Homepage Functions
-// instructionsBtn.onclick = function () {
-//   modal.style.display = "block";
-// }
+instructionsBtn.onclick = function () {
+  modal.style.display = "block";
+}
 
-// closeIcon.onclick = function () {
-//   modal.style.display = "none";
-// }
+closeIcon.onclick = function () {
+  modal.style.display = "none";
+}
 
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function (event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
