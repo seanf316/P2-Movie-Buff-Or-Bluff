@@ -25,6 +25,7 @@ const _quiz = document.getElementById('quiz');
 const _question = document.getElementById('question');
 const _answers = document.querySelector('.quiz-answers');
 const _result = document.getElementById('result');
+const _encourage = document.getElementById('encourage');
 let correctAnswer = "",
   correctScore = askedCount = 0,
   totalQuestion = 10;
@@ -56,8 +57,8 @@ async function getQuestion() {
   const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&difficulty=easy&type=multiple';
   const result = await fetch(`${APIUrl}`);
   const data = await result.json();
-  _result.innerHTML = "";
   showQuestion(data.results[0]);
+  _encourage.style.display = 'none';
 }
 
 function showQuestion(data) {
@@ -72,6 +73,7 @@ function showQuestion(data) {
           <li> ${index + 1}. <span>${answer}</span> </li>
       `).join('')}
   `;
+  _result.style.display = 'none';
   _progressText.innerText = `Question ${questionCounter} of ${totalQuestion}`
   _progressBarFull.style.width = `${(questionCounter/totalQuestion) * 100}%`
   selectAnswer();
@@ -100,12 +102,15 @@ function checkAnswer() {
     let selectAnswer = _answers.querySelector('.selected span').textContent;
     if (selectAnswer == correctAnswer) {
       correctScore++;
+      _result.style.display = 'block';
       _result.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer!</p>`;
     } else {
+      _result.style.display = 'block';
       _result.innerHTML = `<p> <i class = "fas fa-times"></i> Incorrect Answer!</p> <p><small><b>Correct Answer: </b> ${correctAnswer}</b></small></p>`;
     }
     checkCount();
   } else {
+    _result.style.display = 'block';
     _result.innerHTML = `<p><i class = "fas fa-question"></i> Please select and answer!</p>`;
     _checkAnswer.disabled = false;
   }
@@ -122,6 +127,22 @@ function checkCount() {
       return window.location.assign('/end.html')
     }, 1000);
   } else {
+    if (askedCount == 1) {
+      _encourage.style.display = 'block';
+      _encourage.innerHTML = `"May the Force be with you!"`;
+    } else if (askedCount === 3) {
+      _encourage.style.display = 'block';
+      _encourage.innerHTML = `"With great power comes great responsibilty..."`;
+    } else if (askedCount === 5) {
+      _encourage.style.display = 'block';
+      _encourage.innerHTML = `"You cant handle the truth!"`;
+    } else if (askedCount === 7) {
+      _encourage.style.display = 'block';
+      _encourage.innerHTML = `"My mama always said life was like a box of chocolates..."`;
+    } else if (askedCount === 9) {
+      _encourage.style.display = 'block';
+      _encourage.innerHTML = `"I'll be back..."`;
+    } 
     setTimeout(() => {
       getQuestion();
     }, 1000);
