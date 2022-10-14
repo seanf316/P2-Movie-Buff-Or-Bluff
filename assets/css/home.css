@@ -280,15 +280,21 @@ footer {
 
 #highScores {
     width: 90%;
-    margin: 5rem auto;
+    margin: 3rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #highScoresList {
-    background-color: var(--main-color);
+    background-color: var(--accent-color);
+    color: var(--main-color);
     padding: 1.5rem;
+    margin: 1rem auto;
+    width: 100%;
+    min-height: 30vh;
+    border: 3px solid var(--main-color);
+    border-radius: 1rem;
 }
 
 .high-score {
@@ -297,7 +303,15 @@ footer {
 
 }
 
+#highScores a.btn {
+    width: 100%;
+    text-align: center;
+}
 
+#clearBtn {
+    width: 100%;
+    margin-top: 1rem;
+}
 
 
 

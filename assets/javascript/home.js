@@ -4,16 +4,19 @@ const instructionsBtn = document.getElementById("instructionsBtn");
 const closeIcon = document.getElementsByClassName("close")[0];
 
 // Event Listeners
-instructionsBtn.onclick = function() {
-  modal.style.display = "block";
-}
+instructionsBtn.addEventListener('click', modalShow);
+closeIcon.addEventListener('click', modalHide);
 
-closeIcon.onclick = function() {
+// Homepage Functions
+function modalShow() {  
+    modal.style.display = "block";
+  }
+
+function modalHide() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
