@@ -132,4 +132,5 @@ body {
     font-style: italic;
     font-weight: 600;
     padding-top: 1rem;
+    color: var(--main-color);
 }
