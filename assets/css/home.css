@@ -258,6 +258,11 @@ footer {
     outline: none;
 }
 
+#username-text {
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
 .control-buttons {
     width: 90%;
     margin: 0 auto;
