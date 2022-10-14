@@ -17,6 +17,8 @@
 
 body {
     background-color: var(--accent-color);
+    width: 100%;
+    height: 100vh;
 }
 
 a {
@@ -213,6 +215,71 @@ footer {
 .devloped-text i:hover, .devloped-text i:focus {
     color: var(--accent-color);
 }
+
+
+/* End */
+
+#end {
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.end-text2 {
+    color: var(--light-color);
+    font-style: italic;
+    font-weight: 500;
+    font-size: .8rem;
+    margin-top: .5rem;
+}
+
+#username {
+    width: 100%;
+}
+
+#saveScoreBtn {
+    width: 100%;
+}
+
+.end-form input {
+    border: 5px solid var(--main-color);
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    background-color: var(--accent-color);
+    margin: 1rem auto;
+    padding: .3rem .8rem;
+    color: var(--light-color);
+}
+    
+.end-form input:focus {
+    outline: none;
+}
+
+.control-buttons {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control-buttons a {
+    width: 46%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 1200px) {
     .modal-content {

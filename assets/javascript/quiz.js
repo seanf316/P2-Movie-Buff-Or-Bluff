@@ -25,7 +25,7 @@ const _quiz = document.getElementById('quiz');
 const _question = document.getElementById('question');
 const _answers = document.querySelector('.quiz-answers');
 const _result = document.getElementById('result');
-const _quotes = document.getElementById('quotes');
+const _quotes = document.getElementById('quotesyo');
 let correctAnswer = "",
   correctScore = askedCount = 0,
   totalQuestion = 10;

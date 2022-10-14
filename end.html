@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e4bf4f6321.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/home.css">
-    <link rel="stylesheet" href="quiz.html">
     <title>Movie Buff or Bluff</title>
 </head>
 <body>
-    
+    <div id="end">
+        <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+        <h1 id="finalScore">0</h1>
+        <form class="end-form">
+            <h2 id="end-text">Enter your name below to save your score!</h2>
+            <p class="end-text2">Just your first one is fine. Or a nickname.</p>
+            <input type="text" name="name" id="username" placeholder="Enter your name here....">
+            <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+        </form>
+    </div>
+    <div class="control-buttons">
+        <a href="quiz.html" class="btn">Play Again</a>
+        <a href="index.html" class="btn">Go Home</a>
+    </div>
 </body>
 </html>
