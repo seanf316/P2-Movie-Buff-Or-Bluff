@@ -27,7 +27,7 @@ const _answers = document.querySelector('.quiz-answers');
 const _result = document.getElementById('result');
 let correctAnswer = "",
   correctScore = askedCount = 0,
-  totalQuestion = 1;
+  totalQuestion = 10;
 let questionCounter = 1;
 
 // Buttons
