@@ -25,7 +25,7 @@ const _quiz = document.getElementById('quiz');
 const _question = document.getElementById('question');
 const _answers = document.querySelector('.quiz-answers');
 const _result = document.getElementById('result');
-const _encourage = document.getElementById('encourage');
+const _quotes = document.getElementById('quotes');
 let correctAnswer = "",
   correctScore = askedCount = 0,
   totalQuestion = 10;
@@ -58,7 +58,7 @@ async function getQuestion() {
   const result = await fetch(`${APIUrl}`);
   const data = await result.json();
   showQuestion(data.results[0]);
-  _encourage.style.display = 'none';
+  _quotes.style.display = 'none';
 }
 
 function showQuestion(data) {
@@ -128,20 +128,20 @@ function checkCount() {
     }, 1000);
   } else {
     if (askedCount == 1) {
-      _encourage.style.display = 'block';
-      _encourage.innerHTML = `"May the Force be with you!"`;
+      _quotes.style.display = 'block';
+      _quotes.innerHTML = `"May the Force be with you!"`;
     } else if (askedCount === 3) {
-      _encourage.style.display = 'block';
-      _encourage.innerHTML = `"With great power comes great responsibilty..."`;
+      _quotes.style.display = 'block';
+      _quotes.innerHTML = `"With great power comes great responsibilty..."`;
     } else if (askedCount === 5) {
-      _encourage.style.display = 'block';
-      _encourage.innerHTML = `"You cant handle the truth!"`;
+      _quotes.style.display = 'block';
+      _quotes.innerHTML = `"You cant handle the truth!"`;
     } else if (askedCount === 7) {
-      _encourage.style.display = 'block';
-      _encourage.innerHTML = `"My mama always said life was like a box of chocolates..."`;
+      _quotes.style.display = 'block';
+      _quotes.innerHTML = `"My mama always said life was like a box of chocolates..."`;
     } else if (askedCount === 9) {
-      _encourage.style.display = 'block';
-      _encourage.innerHTML = `"I'll be back..."`;
+      _quotes.style.display = 'block';
+      _quotes.innerHTML = `"I'll be back..."`;
     } 
     setTimeout(() => {
       getQuestion();
