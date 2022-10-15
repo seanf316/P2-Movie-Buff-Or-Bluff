@@ -221,7 +221,7 @@ footer {
 
 /* End */
 
-.finalScoreTest {
+#finalTextContainer {
     margin-top: 1rem;
     background-color: var(--main-color);
     border: 3px solid var(--light-color);
