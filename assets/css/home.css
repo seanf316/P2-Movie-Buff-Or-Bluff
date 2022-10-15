@@ -88,7 +88,6 @@ h1, h2 {
     background-color: var(--light-color);
     border: 3px solid var(--main-color);
     color: var(--main-color);
-    transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -107,7 +106,6 @@ h1, h2 {
 .getStartedBtn:hover,.getStartedBtn:focus {
     border: 3px solid var(--main-color);
     color: var(--main-color);
-    transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -222,6 +220,29 @@ footer {
 
 
 /* End */
+
+.finalScoreTest {
+    margin-top: 1rem;
+    background-color: var(--main-color);
+    border: 3px solid var(--light-color);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+#final-text {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+#final-text strong {
+    color: var(--light-color);
+}
+
+#final-quote {
+    margin-top: 1rem;
+    color: var(--light-color);
+    font-style: italic;
+}
 
 #end {
     width: 90%;
