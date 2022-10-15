@@ -27,19 +27,19 @@ function replayQuiz() {
         _finalQuote.innerHTML = `“Everybody looses a couple, and you either pack up and go home or keep fighting.” - Seabiscuit 2003`
     } else {
         finalScore.innerHTML = `You correctly answered ${mostRecentScore} out of 10`;
-        if (mostRecentScore < 3) {
+        if (mostRecentScore <= 3) {
             _finalText.innerHTML = `Not the best my friend but certainly not the worst, you have made it onto the Leaderboard.`
             _finalQuote.innerHTML = `“Worrying about losing keeps you winning.” - Sweet November 2001`
         } else if (mostRecentScore > 3 && mostRecentScore <= 5) {
             _finalText.innerHTML = `Now your getting there keep going young Padawan.`
             _finalQuote.innerHTML = `“You know what makes you feel okay about losing? Winning.” - Molly's Game 2017`
         } else if (mostRecentScore > 5 && mostRecentScore <= 7) {
-            _finalText.innerHTML = `Good job my friend now that's what we want see you at the Leaderboard summit`
+            _finalText.innerHTML = `Good job my friend now that's what we want see, your heading towards the Leaderboard summit`
             _finalQuote.innerHTML = `“Oh, I don't lose. People who bet on me to lose lose. And they lose big.” - Ocean's 13 2007`
         } else if (mostRecentScore > 7 && mostRecentScore <= 9) {
             _finalText.innerHTML = `We are in the presence of greatness you are going straight to the top.`
             _finalQuote.innerHTML = `“Winners forget they're in a race, they just love to run.” - With Honors 1994`
-        } else if (mostRecentScore = 10) {
+        } else if (mostRecentScore == 10) {
             _finalText.innerHTML = `Well my friend you have acheived Perfection - Be Proud - Be Humble`
             _finalQuote.innerHTML = `“All I'm asking for is total perfection.” - The Lego Movie 2014`
         }
