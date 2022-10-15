@@ -33,6 +33,10 @@ h1, h2 {
     color: var(--main-color);
 }
 
+.hide {
+    display: none;
+}
+
 /* Homepage */
 
 #homepage {
@@ -244,7 +248,7 @@ footer {
     width: 100%;
 }
 
-.end-form input {
+#end-form input {
     border: 5px solid var(--main-color);
     border-radius: .5rem;
     font-size: 1.5rem;
@@ -254,7 +258,7 @@ footer {
     color: var(--light-color);
 }
     
-.end-form input:focus {
+#end-form input:focus {
     outline: none;
 }
 
@@ -287,30 +291,29 @@ footer {
 }
 
 #highScoresList {
-    background-color: var(--accent-color);
-    color: var(--main-color);
+    background-color: var(--main-color);
     padding: 1.5rem;
-    margin: 1rem auto;
     width: 100%;
     min-height: 30vh;
-    border: 3px solid var(--main-color);
+    margin: 1rem auto;
+    border: 3px solid var(--light-color);
     border-radius: 1rem;
 }
 
 .high-score {
     font-size: 1.5rem;
     color: var(--accent-color);
-
+    text-align: center;
 }
 
 #highScores a.btn {
     width: 100%;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 #clearBtn {
     width: 100%;
-    margin-top: 1rem;
 }
 
 
