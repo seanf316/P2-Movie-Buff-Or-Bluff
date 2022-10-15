@@ -28,7 +28,7 @@ const _result = document.getElementById('result');
 const _quotes = document.getElementById('quotes');
 let correctAnswer = "",
   correctScore = askedCount = 0,
-  totalQuestion = 10;
+  totalQuestion = 1;
 let questionCounter = 1;
 
 // Buttons
@@ -124,7 +124,7 @@ function checkCount() {
     setTimeout(() => {
       _checkAnswer.style.display = 'none';
       localStorage.setItem('mostRecentScore', correctScore)
-      return window.location.assign('end.html')
+      return window.location.assign('./end.html')
     }, 1000);
   } else {
     if (askedCount == 1) {
