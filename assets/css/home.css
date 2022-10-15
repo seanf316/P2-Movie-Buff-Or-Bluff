@@ -253,14 +253,6 @@ footer {
     text-align: center;
 }
 
-.end-text2 {
-    color: var(--light-color);
-    font-style: italic;
-    font-weight: 500;
-    font-size: .8rem;
-    margin-top: .5rem;
-}
-
 #username {
     width: 100%;
 }
@@ -284,11 +276,15 @@ footer {
 }
 
 #username-text {
+    width: 90%;
+    font-size: small;
     font-weight: 600;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    color: var(--light-color);
 }
 
-.control-buttons {
+#control-buttons {
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -296,7 +292,7 @@ footer {
     justify-content: space-between;
 }
 
-.control-buttons a {
+#control-buttons a {
     width: 46%;
     text-align: center;
 }

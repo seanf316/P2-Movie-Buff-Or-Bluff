@@ -28,7 +28,7 @@ const _result = document.getElementById('result');
 const _quotes = document.getElementById('quotes');
 let correctAnswer = "",
   correctScore = askedCount = 0,
-  totalQuestion = 1;
+  totalQuestion = 10;
 let questionCounter = 1;
 
 // Buttons
