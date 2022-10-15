@@ -11,5 +11,5 @@ _clearBtn.addEventListener('click', removeHighscores);
 
 function removeHighscores() {
     localStorage.clear();
-    return window.location.assign('/index.html')
+    return window.location.assign('./index.html')
 }

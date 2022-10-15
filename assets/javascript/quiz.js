@@ -54,9 +54,10 @@ function startQuiz() {
 }
 
 async function getQuestion() {
-  const APIUrl = 'https://opentdb.com/api.php?amount=10&category=11&type=multiple';
+  const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&type=multiple&token=5c156d09a2f995096fb633d42dce33c740cf9aecdfea6de5f2a1ab433855afc7';
   const result = await fetch(`${APIUrl}`);
   const data = await result.json();
+  console.log(data)
   showQuestion(data.results[0]);
   _quotes.style.display = 'none';
 }
