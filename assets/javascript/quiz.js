@@ -124,7 +124,7 @@ function checkCount() {
     setTimeout(() => {
       _checkAnswer.style.display = 'none';
       localStorage.setItem('mostRecentScore', correctScore)
-      return window.location.assign('/end.html')
+      return window.location.assign('end.html')
     }, 1000);
   } else {
     if (askedCount == 1) {
