@@ -28,7 +28,7 @@ const _result = document.getElementById('result');
 const _quotes = document.getElementById('quotes');
 let correctAnswer = "",
   correctScore = askedCount = 0,
-  totalQuestion = 1;
+  totalQuestion = 10;
 let questionCounter = 1;
 
 // Buttons
@@ -54,7 +54,7 @@ function startQuiz() {
 }
 
 async function getQuestion() {
-  const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&difficulty=easy&type=multiple';
+  const APIUrl = 'https://opentdb.com/api.php?amount=10&category=11&type=multiple';
   const result = await fetch(`${APIUrl}`);
   const data = await result.json();
   showQuestion(data.results[0]);
