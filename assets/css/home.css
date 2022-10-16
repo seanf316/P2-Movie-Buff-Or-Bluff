@@ -167,7 +167,7 @@ h2 {
     text-align: center;
     color: var(--light-color);
     background-color: var(--main-color);
-    margin: 15% auto;
+    margin: 50% auto;
     /* 15% from the top and centered */
     padding: 1.5rem;
     border: 3px solid var(--accent-color);

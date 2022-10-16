@@ -26,9 +26,9 @@ const _question = document.getElementById('question');
 const _answers = document.querySelector('.quiz-answers');
 const _result = document.getElementById('result');
 const _quotes = document.getElementById('quotes');
-let correctAnswer = "",
-  correctScore = askedCount = 0,
-  totalQuestion = 10;
+let correctAnswer = ""
+let correctScore = askedCount = 0;
+let totalQuestion = 1;
 let questionCounter = 1;
 
 // Buttons
@@ -54,7 +54,7 @@ function startQuiz() {
 }
 
 async function getQuestion() {
-  const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&type=multiple&token=5c156d09a2f995096fb633d42dce33c740cf9aecdfea6de5f2a1ab433855afc7';
+  const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&type=multiple';
   const result = await fetch(`${APIUrl}`);
   const data = await result.json();
   console.log(data)
