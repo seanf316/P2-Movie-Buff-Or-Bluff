@@ -106,7 +106,6 @@ h2 {
     border: 3px solid var(--light-color);
     border-radius: .5rem;
     color: var(--accent-color);
-    opacity: 1;
     font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
@@ -307,6 +306,10 @@ footer {
     width: 100%;
 }
 
+#end-form {
+    width: 100%;
+}
+
 #end-form input {
     border: 5px solid var(--main-color);
     border-radius: .5rem;
@@ -325,7 +328,7 @@ footer {
     width: 90%;
     font-size: small;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;
     font-style: italic;
     color: var(--light-color);
 }

@@ -146,7 +146,7 @@ function checkCount() {
     } 
     setTimeout(() => {
       getQuestion();
-    }, 10000);
+    }, 1000);
   }
 }
 

@@ -50,10 +50,13 @@ function replayQuiz() {
 
 function usernameEnter() {
     if (username.value.length < 4) {
-        usernameText.innerText = "Please enter a username between 4 & 10 characters"
+        usernameText.innerText = "Please enter a username between 4 & 10 characters without spaces"
         saveScoreBtn.disabled = true
     } else if (username.value.length >= 11) {
-        usernameText.innerText = "Please enter a username between 4 & 10 characters"
+        usernameText.innerText = "Please enter a username between 4 & 10 characters without spaces"
+        saveScoreBtn.disabled = true
+    } else if (username.value.includes("")) {
+        usernameText.innerText = "without spaces"
         saveScoreBtn.disabled = true
     } else {
         usernameText.innerText = ""
