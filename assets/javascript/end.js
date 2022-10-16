@@ -14,6 +14,7 @@ const MAX_HIGH_SCORES = 5;
 
 // Event Listeners
 username.addEventListener('keyup', usernameEnter);
+saveScoreBtn.addEventListener('click', saveHighScore);
 document.addEventListener('DOMContentLoaded', () => {
     replayQuiz();
 })
@@ -40,7 +41,7 @@ function replayQuiz() {
             _finalText.innerHTML = `We are in the presence of greatness you are going straight to the top.`
             _finalQuote.innerHTML = `“Winners forget they're in a race, they just love to run.” - With Honors 1994`
         } else if (mostRecentScore == 10) {
-            _finalText.innerHTML = `Well my friend you have acheived Perfection - Be Proud - Be Humble`
+            _finalText.innerHTML = `I guess you really are a Movie Buff - Absolute Perfection!`
             _finalQuote.innerHTML = `“All I'm asking for is total perfection.” - The Lego Movie 2014`
         }
         _controlBtns.style.display = 'none';
@@ -52,10 +53,7 @@ function usernameEnter() {
     let userBox = username.value;
     userBox = userBox.replace(/\s/g, '');
     username.value = userBox;
-    if (username.value.length < 4) {
-        usernameText.innerText = "Please enter a username between 4 & 10 characters without spaces"
-        saveScoreBtn.disabled = true
-    } else if (username.value.length >= 11) {
+    if (username.value.length <= 3 && username.value.length < 11) {
         usernameText.innerText = "Please enter a username between 4 & 10 characters without spaces"
         saveScoreBtn.disabled = true
     } else {
