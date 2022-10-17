@@ -127,23 +127,6 @@ function checkCount() {
       localStorage.setItem('mostRecentScore', correctScore)
       return window.location.assign('./end.html')
     }, 1000);
-  } else {
-    if (askedCount == 1) {
-      _quotes.style.display = 'block';
-      _quotes.innerHTML = `"May the Force be with you!"`;
-    } else if (askedCount === 3) {
-      _quotes.style.display = 'block';
-      _quotes.innerHTML = `"With great power comes great responsibilty..."`;
-    } else if (askedCount === 5) {
-      _quotes.style.display = 'block';
-      _quotes.innerHTML = `"You cant handle the truth!"`;
-    } else if (askedCount === 7) {
-      _quotes.style.display = 'block';
-      _quotes.innerHTML = `"My mama always said life was like a box of chocolates..."`;
-    } else if (askedCount === 9) {
-      _quotes.style.display = 'block';
-      _quotes.innerHTML = `"I'll be back..."`;
-    } 
     setTimeout(() => {
       getQuestion();
     }, 1000);

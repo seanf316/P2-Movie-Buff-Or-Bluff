@@ -36,19 +36,6 @@ h2 {
 }
 
 /* Animations */
-@keyframes fadetop {
-    0% {
-        transform: translateY(-2000px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
 @keyframes moveright {
     0% {
         transform: translateX(0);
@@ -446,7 +433,7 @@ footer {
     }
 
     .btn:hover {
-        background-color: var(--light-color);
+        background-color: var(--accent-color);
         border: 3px solid var(--main-color);
         color: var(--main-color);
         cursor: pointer;
