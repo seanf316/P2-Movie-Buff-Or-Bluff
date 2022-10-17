@@ -131,40 +131,32 @@ h2 {
 
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.733);
-    /* Black w/ opacity */
 }
 
 .modal-content {
     text-align: center;
     color: var(--light-color);
-    background-color: var(--main-color);
+    background-color: var(--accent-color);
     margin: 15% auto;
     /* 15% from the top and centered */
     padding: 1.5rem;
-    border: 3px solid var(--accent-color);
+    border: 3px solid var(--main-color);
     border-radius: 1rem;
     width: 80%;
     /* Could be more or less, depending on screen size */
 }
 
 .modal-content-title {
-    color: var(--accent-color);
+    color: var(--main-color);
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -181,14 +173,14 @@ h2 {
 }
 
 .modal-content-text {
-    color: var(--accent-color);
+    color: var(--main-color);
     font-weight: 600;
     font-style: italic;
 }
 
 /* The Close Button */
 .close {
-    color: var(--accent-color);
+    color: var(--main-color);
     font-size: 2rem;
     font-weight: 600;
 }
@@ -452,20 +444,12 @@ footer {
     }
 
     .modal-content {
-        text-align: center;
-        color: var(--light-color);
-        background-color: var(--main-color);
         margin: 15% auto;
-        /* 15% from the top and centered */
-        padding: 1.5rem;
-        border: 3px solid var(--accent-color);
-        border-radius: 1rem;
         width: 50%;
-        /* Could be more or less, depending on screen size */
     }
 
     .modal-content-title {
-        color: var(--accent-color);
+        color: var(--main-color);
         font-size: 2rem;
         margin-bottom: 1rem;
     }

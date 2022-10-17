@@ -74,6 +74,7 @@ function showQuestion(data) {
           <li> ${index + 1}. <span>${answer}</span> </li>
       `).join('')}
   `;
+  _checkAnswer.style.display = 'block'
   _result.style.display = 'none';
   _progressText.innerText = `Question ${questionCounter} of ${totalQuestion}`
   _progressBarFull.style.width = `${(questionCounter/totalQuestion) * 100}%`
@@ -102,11 +103,15 @@ function checkAnswer() {
   if (_answers.querySelector('.selected')) {
     let selectAnswer = _answers.querySelector('.selected span').textContent;
     if (selectAnswer == correctAnswer) {
+      _checkAnswer.style.display = 'none'
       correctScore++;
       _result.style.display = 'block';
+      _result.style.backgroundColor = 'green'
       _result.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer!</p>`;
     } else {
+      _checkAnswer.style.display = 'none'
       _result.style.display = 'block';
+      _result.style.backgroundColor = 'rgb(182, 26, 26)'
       _result.innerHTML = `<p> <i class = "fas fa-times"></i> Incorrect Answer!</p> <p><small><b>Correct Answer: </b> ${correctAnswer}</b></small></p>`;
     }
     checkCount();
@@ -127,10 +132,10 @@ function checkCount() {
       localStorage.setItem('mostRecentScore', correctScore)
       return window.location.assign('./end.html')
     }, 1000);
-    setTimeout(() => {
-      getQuestion();
-    }, 1000);
   }
+  setTimeout(() => {
+    getQuestion();
+  }, 10000);
 }
 
 function restartQuiz() {
@@ -143,4 +148,3 @@ function restartQuiz() {
   setCount();
   getQuestion();
 }
-
