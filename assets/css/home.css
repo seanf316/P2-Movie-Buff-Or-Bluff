@@ -210,14 +210,14 @@ footer {
 }
 
 .social-networks i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--light-color);
     border: 2px solid var(--main-color);
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     text-align: center;
-    line-height: 45px;
+    line-height: 30px;
 }
 
 .social-networks i:hover,
@@ -228,13 +228,12 @@ footer {
 }
 
 .devloped-text {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1rem;
     color: var(--light-color);
 }
 
 .devloped-text i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--main-color);
 }
 
@@ -452,6 +451,28 @@ footer {
         color: var(--main-color);
         font-size: 2rem;
         margin-bottom: 1rem;
+    }
+
+    .social-networks i {
+        font-size: 1.5rem;
+        color: var(--light-color);
+        border: 2px solid var(--main-color);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 45px;
+    }
+    
+    .devloped-text {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--light-color);
+    }
+    
+    .devloped-text i {
+        font-size: 1.5rem;
+        color: var(--main-color);
     }
 
     /* End */
