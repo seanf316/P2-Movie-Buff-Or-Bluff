@@ -53,10 +53,13 @@ function usernameEnter() {
     let userBox = username.value;
     userBox = userBox.replace(/\s/g, '');
     username.value = userBox;
-    if (username.value.length <= 3 && username.value.length < 11) {
+    if (username.value.length <= 3) {
         usernameText.innerText = "Please enter a username between 4 & 10 characters without spaces"
         saveScoreBtn.disabled = true
-    } else {
+    } else if (username.value.length >= 11) {
+        usernameText.innerText = "Please enter a username between 4 & 10 characters without spaces"
+        saveScoreBtn.disabled = true
+    }else {
         usernameText.innerText = ""
         saveScoreBtn.disabled = false
     }

@@ -339,14 +339,25 @@ footer {
     align-items: center;
 }
 
-#highScoresList {
+#leaderboard {
     background-color: var(--main-color);
+    font-weight: 600;
     padding: 1.5rem;
     width: 100%;
     min-height: 30vh;
     margin: 1rem auto;
     border: 3px solid var(--light-color);
     border-radius: 1rem;
+    line-height: 10px;
+}
+#leaderboard thead th {
+    border: 2px solid var(--accent-color);
+}
+#leaderboard tbody td {
+    border: 2px solid var(--accent-color);
+    line-height: 1rem;
+    text-align: center;
+    
 }
 
 .high-score {
