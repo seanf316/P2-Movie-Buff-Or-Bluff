@@ -18,7 +18,7 @@ const _answers = document.querySelector('.quiz-answers');
 const _result = document.getElementById('result');
 let correctAnswer = ""
 let correctScore = askedCount = 0;
-let totalQuestion = 2;
+let totalQuestion = 10;
 let questionCounter = 1;
 
 // Buttons
@@ -128,7 +128,7 @@ function checkCount() {
   }
   setTimeout(() => {
     getQuestion();
-  }, 800);
+  }, 500);
 }
 
 function restartQuiz() {
