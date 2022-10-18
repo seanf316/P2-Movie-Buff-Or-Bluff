@@ -1,12 +1,3 @@
-// Easy - https://opentdb.com/api.php?amount=1&category=11&difficulty=easy&type=multiple
-// Medium - https://opentdb.com/api.php?amount=1&category=11&difficulty=medium&type=multiple
-// Hard - https://opentdb.com/api.php?amount=1&category=11&difficulty=hard&type=multiple
-
-// Homepage Variables
-const modal = document.getElementById("instructionsModal");
-const instructionsBtn = document.getElementById("instructionsBtn");
-const closeIcon = document.getElementsByClassName("close")[0];
-
 // Quiz Variables/Constants
 const _userContainer = document.getElementById('userContainer')
 const _username = document.getElementById('username')
@@ -25,10 +16,9 @@ const _quiz = document.getElementById('quiz');
 const _question = document.getElementById('question');
 const _answers = document.querySelector('.quiz-answers');
 const _result = document.getElementById('result');
-const _quotes = document.getElementById('quotes');
 let correctAnswer = ""
 let correctScore = askedCount = 0;
-let totalQuestion = 1;
+let totalQuestion = 2;
 let questionCounter = 1;
 
 // Buttons
@@ -36,16 +26,11 @@ const _checkAnswer = document.getElementById('check-answer');
 const _playAgain = document.getElementById('play-again');
 
 // Event Listeners 
-
-
-function eventListeners() {
-  _checkAnswer.addEventListener('click', checkAnswer);
-  _playAgain.addEventListener('click', restartQuiz);
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   startQuiz();
 })
+
+
 
 function startQuiz() {
   getQuestion();
@@ -59,7 +44,6 @@ async function getQuestion() {
   const data = await result.json();
   console.log(data)
   showQuestion(data.results[0]);
-  _quotes.style.display = 'none';
 }
 
 function showQuestion(data) {
@@ -79,6 +63,11 @@ function showQuestion(data) {
   _progressText.innerText = `Question ${questionCounter} of ${totalQuestion}`
   _progressBarFull.style.width = `${(questionCounter/totalQuestion) * 100}%`
   selectAnswer();
+}
+
+function eventListeners() {
+  _checkAnswer.addEventListener('click', checkAnswer);
+  _playAgain.addEventListener('click', restartQuiz);
 }
 
 function setCount() {
@@ -102,22 +91,26 @@ function checkAnswer() {
   _checkAnswer.disabled = true;
   if (_answers.querySelector('.selected')) {
     let selectAnswer = _answers.querySelector('.selected span').textContent;
+    checkCount();
     if (selectAnswer == correctAnswer) {
       _checkAnswer.style.display = 'none'
       correctScore++;
       _result.style.display = 'block';
       _result.style.backgroundColor = 'green'
+      _result.style.color = 'var(--light-color)'
       _result.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer!</p>`;
     } else {
       _checkAnswer.style.display = 'none'
       _result.style.display = 'block';
       _result.style.backgroundColor = 'rgb(182, 26, 26)'
+      _result.style.color = 'var(--light-color)'
       _result.innerHTML = `<p> <i class = "fas fa-times"></i> Incorrect Answer!</p> <p><small><b>Correct Answer: </b> ${correctAnswer}</b></small></p>`;
     }
-    checkCount();
   } else {
     _result.style.display = 'block';
-    _result.innerHTML = `<p><i class = "fas fa-question"></i> Please select and answer!</p>`;
+    _result.style.backgroundColor = 'var(--main-color)'
+    _result.style.color = 'var(--accent-color)'
+    _result.innerHTML = `<p><i class = "fas fa-question"></i> <strong>Please select and answer!</strong></p>`;
     _checkAnswer.disabled = false;
   }
 }
@@ -131,11 +124,11 @@ function checkCount() {
       _checkAnswer.style.display = 'none';
       localStorage.setItem('mostRecentScore', correctScore)
       return window.location.assign('./end.html')
-    }, 1000);
+    }, 300);
   }
   setTimeout(() => {
     getQuestion();
-  }, 1000);
+  }, 800);
 }
 
 function restartQuiz() {

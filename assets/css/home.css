@@ -256,6 +256,7 @@ footer {
 #final-text {
     color: var(--accent-color);
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 #final-text strong {
@@ -344,20 +345,24 @@ footer {
     font-weight: 600;
     padding: 1.5rem;
     width: 100%;
-    min-height: 30vh;
+    height: auto;
     margin: 1rem auto;
     border: 3px solid var(--light-color);
     border-radius: 1rem;
-    line-height: 10px;
 }
-#leaderboard thead th {
-    border: 2px solid var(--accent-color);
+#leaderboard th {
+    font-size: 1.2rem;
+    color: var(--main-color);
+    background-color: var(--accent-color);
 }
-#leaderboard tbody td {
-    border: 2px solid var(--accent-color);
-    line-height: 1rem;
+
+#leaderboard td {
+    padding-top: .3rem;
     text-align: center;
-    
+    border: 2px solid var(--accent-color);
+    line-height: 1.8rem;
+    color: var(--accent-color);
+    background-color: var(--light-color);
 }
 
 .high-score {
@@ -495,6 +500,7 @@ footer {
 
     #final-text {
         font-size: 1.8rem;
+
     }
 
     #final-quote {
@@ -518,7 +524,7 @@ footer {
 
     #highScores {
         width: 40%;
-        margin: 8rem auto;
+        margin: 2rem auto;
     }
 
     #highScoresList {
