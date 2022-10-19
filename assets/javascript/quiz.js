@@ -49,7 +49,7 @@ async function getQuestion() {
   const tokenResult = await fetch(`${tokenURL}`);
   const tokenData = await tokenResult.json();
   console.log(tokenData.token);
-  const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&type=multiple&token=8e6c699607059c91927d8fe478b5490148aad65482b3ce74cbaeaf232175d164';
+  const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&type=multiple';
   const result = await fetch(`${APIUrl}`);
   const data = await result.json();
   console.log(data)
