@@ -6,7 +6,7 @@ const _progressBarFull = document.getElementById('progressBarFull');
 const _totalQuestions = document.getElementById('total-questions');
 
 // Sounds
-let isPlaying = true;
+let isPlaying = false;
 const audioOffIcon = document.getElementsByClassName("sound-off");
 const audioOnIcon = document.getElementsByClassName("sound-on");
 const buttonAudio = new Audio("assets/sounds/button-click.mp3");
@@ -41,10 +41,6 @@ function startQuiz() {
  * Function to get questions from opentdb.com API
  */
 async function getQuestion() {
-  const tokenURL = 'https://opentdb.com/api_token.php?command=request';
-  const tokenResult = await fetch(`${tokenURL}`);
-  const tokenData = await tokenResult.json();
-  console.log(tokenData.token);
   const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&type=multiple';
   const result = await fetch(`${APIUrl}`);
   const data = await result.json();

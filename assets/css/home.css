@@ -58,7 +58,7 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 90%;
-    margin: 1rem auto;
+    margin: 1rem auto 10rem auto;
     color: var(--light-color);
 }
 
@@ -242,6 +242,50 @@ footer {
     color: var(--light-color);
 }
 
+/* Signup */
+
+#signup {
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 3rem 1rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+#signup h2 {
+    color: var(--accent-color);
+}
+
+.signup__form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.signup__form__text-input {
+    margin-bottom: .5rem;
+    line-height: 2rem;
+    padding-left: .2rem;
+}
+
+.signup__form__textarea {
+    height: 8rem;
+    margin-bottom: 1rem;
+    padding-left: .2rem;
+    padding-top: .2rem;
+}
+
+.btn-form {
+    padding: .2rem 1rem;
+    text-transform: uppercase;
+    background-color: var(--accent-color);
+    border: 3px solid var(--light-color);
+    border-radius: .5rem;
+    color: var(--main-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
 
 /* End */
 
@@ -350,6 +394,7 @@ footer {
     border: 3px solid var(--light-color);
     border-radius: 1rem;
 }
+
 #leaderboard th {
     font-size: 1.2rem;
     color: var(--main-color);
@@ -384,7 +429,7 @@ footer {
 @media (min-height: 1000px) and (orientation: landscape) {
 
     footer {
-        position:relative;
+        position: relative;
     }
 }
 
@@ -479,16 +524,23 @@ footer {
         text-align: center;
         line-height: 45px;
     }
-    
+
     .devloped-text {
         font-size: 1.2rem;
         font-weight: 600;
         color: var(--light-color);
     }
-    
+
     .devloped-text i {
         font-size: 1.5rem;
         color: var(--main-color);
+    }
+
+    .btn-form:hover {
+        background-color: var(--main-color);
+        border: 3px solid var(--accent-color);
+        color: var(--accent-color);
+        cursor: pointer;
     }
 
     /* End */
@@ -538,7 +590,7 @@ footer {
         align-items: center;
         justify-content: space-between;
     }
-    
+
     #control-buttons a {
         width: 46%;
         text-align: center;
