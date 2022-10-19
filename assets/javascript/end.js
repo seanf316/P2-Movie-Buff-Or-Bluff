@@ -1,15 +1,14 @@
+// End Page Variables
 const username = document.querySelector('#username');
 const usernameText = document.querySelector('#username-text');
 const _endForm = document.getElementById('end-form');
 const finalScore = document.querySelector('#finalScore');
-const _finalTextContainer = document.getElementById('finalTextContainer');
 const _finalText = document.getElementById('final-text');
 const _finalQuote = document.getElementById('final-quote');
 const saveScoreBtn = document.querySelector('#saveScoreBtn');
 const _controlBtns = document.getElementById('control-buttons');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-const MAX_HIGH_SCORES = 5;
 
 
 // Event Listeners
@@ -19,15 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
     replayQuiz();
 })
 
-
-
+/**
+ * Function to stop user entering a username for Leaderboard if score is 0.
+ */
 function replayQuiz() {
     if (mostRecentScore == 0) {
         _endForm.style.display = 'none';
         _finalText.innerHTML = `Sorry my friend you answered <strong>0</strong> questions correctly, not everyone is cursed with knowledge.<br>Play again to get your name on the Highscores Leaderboard.`
         _finalQuote.innerHTML = `“Everybody looses a couple, and you either pack up and go home or keep fighting.” - Seabiscuit 2003`
     } else {
-        finalScore.innerHTML = `You correctly answered ${mostRecentScore} out of 10`;
+        finalScore.innerHTML = `You got ${mostRecentScore} out of 10 correct!`;
         if (mostRecentScore <= 3) {
             _finalText.innerHTML = `Not the best my friend but certainly not the worst, you have made it onto the Leaderboard.`
             _finalQuote.innerHTML = `“Worrying about losing keeps you winning.” - Sweet November 2001`
@@ -49,6 +49,10 @@ function replayQuiz() {
     }
 }
 
+/**
+ * Function to stop user entering empty spaces as username, also it alerts user that username has to be between 4 & 10 characters.
+ * Alert will dissappear if user enters 4 or more charaters but we re-appear if more then 10 characters are entered.
+ */
 function usernameEnter() {
     let userBox = username.value;
     userBox = userBox.replace(/\s/g, '');
@@ -65,21 +69,22 @@ function usernameEnter() {
     }
 }
 
+/** 
+ * Function to save the Highscores to local stroage.
+ * It will push the username and most recent score to the Highscores table.
+*/
 function saveHighScore(event) {
     event.preventDefault()
-
     const score = {
         score: mostRecentScore,
         name: username.value
     }
-
+    //Allows up to 10 Highscores and after that it will replace the lowest score
     highScores.push(score)
     highScores.sort((a, b) => {
         return b.score - a.score
     })
-
     highScores.splice(10)
-
     localStorage.setItem('highScores', JSON.stringify(highScores))
     window.location.assign('./highscores.html')
 }

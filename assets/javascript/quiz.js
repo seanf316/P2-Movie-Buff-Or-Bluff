@@ -1,25 +1,9 @@
 // Quiz Variables/Constants
-const _userContainer = document.getElementById('userContainer')
-const _username = document.getElementById('username')
-const _usernameText = document.getElementById('usernameText');
-const _startQuizBtn = document.getElementById('startQuizBtn');
 
 // Score
 const _progressText = document.getElementById('progressText');
 const _progressBarFull = document.getElementById('progressBarFull');
-const _correctScore = document.getElementById('correct-score');
 const _totalQuestions = document.getElementById('total-questions');
-const _overallScore = document.getElementById('overall-score');
-
-// Quiz
-const _quiz = document.getElementById('quiz');
-const _question = document.getElementById('question');
-const _answers = document.querySelector('.quiz-answers');
-const _result = document.getElementById('result');
-let correctAnswer = ""
-let correctScore = askedCount = 0;
-let totalQuestion = 10;
-let questionCounter = 1;
 
 // Sounds
 let isPlaying = true;
@@ -29,21 +13,33 @@ const buttonAudio = new Audio("assets/sounds/button-click.mp3");
 const correctAudio = new Audio("assets/sounds/correct-sound.mp3");
 const incorrectAudio = new Audio("assets/sounds/incorrect-sound.mp3");
 
-// Buttons
+// Quiz
+const _question = document.getElementById('question');
+const _answers = document.querySelector('.quiz-answers');
 const _checkAnswer = document.getElementById('check-answer');
-const _playAgain = document.getElementById('play-again');
+const _result = document.getElementById('result');
+let correctAnswer = ""
+let correctScore = askedCount = 0;
+let totalQuestion = 10;
+let questionCounter = 1;
 
 // Event Listeners 
 document.addEventListener('DOMContentLoaded', () => {
   startQuiz();
 })
 
+/** 
+ * Main Function to start the Quiz 
+*/
 function startQuiz() {
   getQuestion();
-  eventListeners();
-  setCount();
+  _checkAnswer.addEventListener('click', checkAnswer)
 }
 
+
+/**
+ * Function to get questions from opentdb.com API
+ */
 async function getQuestion() {
   const tokenURL = 'https://opentdb.com/api_token.php?command=request';
   const tokenResult = await fetch(`${tokenURL}`);
@@ -56,11 +52,17 @@ async function getQuestion() {
   showQuestion(data.results[0]);
 }
 
+
+/** 
+ * Function that takes the data from the result fetched by getQuestions and maps the questions and answers to the html
+*/
 function showQuestion(data) {
   _checkAnswer.disabled = false;
   correctAnswer = data.correct_answer;
   let incorrectAnswer = data.incorrect_answers;
   let answersList = incorrectAnswer;
+
+  // Takes all the incorrect answers and joins it with the correct answer and randomises the correct answer position
   answersList.splice(Math.floor(Math.random() * (incorrectAnswer.length + 1)), 0, correctAnswer);
   _question.innerHTML = `${data.question}`;
   _answers.innerHTML = `
@@ -68,6 +70,7 @@ function showQuestion(data) {
           <li> ${index + 1}. <span>${answer}</span> </li>
       `).join('')}
   `;
+  _totalQuestions.textContent = totalQuestion;
   _checkAnswer.style.display = 'block'
   _result.style.display = 'none';
   _progressText.innerText = `Question ${questionCounter} of ${totalQuestion}`
@@ -75,16 +78,11 @@ function showQuestion(data) {
   selectAnswer();
 }
 
-function eventListeners() {
-  _checkAnswer.addEventListener('click', checkAnswer);
-  _playAgain.addEventListener('click', restartQuiz);
-}
 
-function setCount() {
-  _totalQuestions.textContent = totalQuestion;
-  _correctScore.textContent = correctScore;
-}
-
+/**
+ * Function for selecting answer, to avoid accidentally selecting an answer by mistake I have the answers setup to not reval answer until "check answer" is clicked
+ * User can change their selected answer before clicking "check answer"
+ */
 function selectAnswer() {
   _answers.querySelectorAll('li').forEach((answer) => {
     answer.addEventListener('click', () => {
@@ -99,6 +97,12 @@ function selectAnswer() {
   })
 }
 
+/**
+ * Function to check answer
+ * If answer selected is correct user will be met with a Correct Answer display and a sound effect indicating correct
+ * If answer selected is incorrect user will be met with a Incorrect Answer display and a sound effect indicating incorrect, It will detail what the correct answer was too
+ * If user clicks "Check Answer" without selecting an answer they will be met with a "Please select and answer!" display and button will be disabled
+ */
 function checkAnswer() {
   _checkAnswer.disabled = true;
   if (_answers.querySelector('.selected')) {
@@ -129,10 +133,12 @@ function checkAnswer() {
   }
 }
 
+/**
+ * Function to increase question count, score and log score for Highscore Leaderboard
+ */
 function checkCount() {
   askedCount++;
   questionCounter++;
-  setCount();
   if (askedCount == totalQuestion) {
     setTimeout(() => {
       _checkAnswer.style.display = 'none';
@@ -145,16 +151,13 @@ function checkCount() {
   }, 500);
 }
 
-function restartQuiz() {
-  correctScore = askedCount = 0;
-  questionCounter = 1;
-  _playAgain.style.display = 'none';
-  _checkAnswer.style.display = 'block';
-  _checkAnswer.disabled = false;
-  _overallScore.innerHTML = "";
-  setCount();
-  getQuestion();
-}
+// function restartQuiz() {
+//   correctScore = askedCount = 0;
+//   questionCounter = 1;
+//   _checkAnswer.style.display = 'block';
+//   _checkAnswer.disabled = false;
+//   getQuestion();
+// }
 
 // Sound Functions
 
