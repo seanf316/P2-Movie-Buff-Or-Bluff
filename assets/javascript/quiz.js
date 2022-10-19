@@ -21,6 +21,14 @@ let correctScore = askedCount = 0;
 let totalQuestion = 10;
 let questionCounter = 1;
 
+// Sounds
+let isPlaying = true;
+const audioOffIcon = document.getElementsByClassName("sound-off");
+const audioOnIcon = document.getElementsByClassName("sound-on");
+const buttonAudio = new Audio("assets/sounds/button-click.mp3");
+const correctAudio = new Audio("assets/sounds/correct-sound.mp3");
+const incorrectAudio = new Audio("assets/sounds/incorrect-sound.mp3");
+
 // Buttons
 const _checkAnswer = document.getElementById('check-answer');
 const _playAgain = document.getElementById('play-again');
@@ -29,8 +37,6 @@ const _playAgain = document.getElementById('play-again');
 document.addEventListener('DOMContentLoaded', () => {
   startQuiz();
 })
-
-
 
 function startQuiz() {
   getQuestion();
@@ -83,9 +89,11 @@ function selectAnswer() {
   _answers.querySelectorAll('li').forEach((answer) => {
     answer.addEventListener('click', () => {
       if (_answers.querySelector('.selected')) {
+        buttonSound();
         const activeAnswer = _answers.querySelector('.selected');
         activeAnswer.classList.remove('selected')
       }
+      buttonSound();
       answer.classList.add('selected');
     })
   })
@@ -97,6 +105,7 @@ function checkAnswer() {
     let selectAnswer = _answers.querySelector('.selected span').textContent;
     checkCount();
     if (selectAnswer == correctAnswer) {
+      correctSound()
       _checkAnswer.style.display = 'none'
       correctScore++;
       _result.style.display = 'block';
@@ -104,6 +113,7 @@ function checkAnswer() {
       _result.style.color = 'var(--light-color)'
       _result.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer!</p>`;
     } else {
+      incorrectSound()
       _checkAnswer.style.display = 'none'
       _result.style.display = 'block';
       _result.style.backgroundColor = 'rgb(182, 26, 26)'
@@ -144,4 +154,78 @@ function restartQuiz() {
   _overallScore.innerHTML = "";
   setCount();
   getQuestion();
+}
+
+// Sound Functions
+
+/**
+ * Loop through the audio-icon-logo and call toggleAudio() when the player clicks
+ */
+let audioIconLogo = document.getElementsByClassName("audio-icon-logo");
+for (let i = 0; i < audioIconLogo.length; i++) {
+  audioIconLogo[i].addEventListener("click", () => {
+    toggleAudio();
+  });
+}
+
+/**
+ * Lets the player have the option whether to have sounds on or not
+ */
+ function toggleAudio() {
+  isPlaying ? toggleAudioOff() : toggleAudioOn();
+}
+
+/**
+ * Toggle audio on
+ */
+function toggleAudioOn() {
+  isPlaying = true;
+  for (let i = 0; i < audioOffIcon.length && audioOnIcon.length; i++) {
+    audioOffIcon[i].classList.add("hide");
+    audioOnIcon[i].classList.remove("hide");
+  }
+}
+
+/**
+ * Toggle audio off
+ */
+function toggleAudioOff() {
+  isPlaying = false;
+  for (let i = 0; i < audioOffIcon.length && audioOnIcon.length; i++) {
+    audioOffIcon[i].classList.remove("hide");
+    audioOnIcon[i].classList.add("hide");
+  }
+}
+
+/**
+ * Play a sound when the player answers correctly
+ */
+ function correctSound() {
+  if (isPlaying) {
+    correctAudio.play();
+  } else {
+    correctAudio.pause();
+  }
+}
+
+/**
+ * Play a sound when the player answers incorrectly
+ */
+function incorrectSound() {
+  if (isPlaying) {
+    incorrectAudio.play();
+  } else {
+    incorrectAudio.pause();
+  }
+}
+
+/**
+ * Play a sound when the player clicks a button
+ */
+function buttonSound() {
+  if (isPlaying) {
+    buttonAudio.play();
+  } else {
+    buttonAudio.pause();
+  }
 }

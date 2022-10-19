@@ -14,6 +14,10 @@ body {
     --transition: all 300ms ease-in-out;    
 }
 
+.hide {
+    display: none;
+}
+
 .quiz-wrapper {
     display: flex;
     flex-direction: column;
@@ -25,6 +29,9 @@ body {
     height: auto;
 }
 
+.sound-on, .sound-off {
+    color: var(--main-color);
+}
 
 #progressText {
     font-size: 1.2rem;
@@ -140,7 +147,7 @@ body {
         text-align: center;
         margin: 6rem auto;
         padding: 0;
-        width: 50%;
+        width: 40%;
         height: auto;
     }
 
