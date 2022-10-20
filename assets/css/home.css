@@ -156,7 +156,7 @@ h2 {
     text-align: center;
     color: var(--light-color);
     background-color: var(--accent-color);
-    margin: 15% auto;
+    margin: 50% auto;
     padding: 1.5rem;
     border: 3px solid var(--main-color);
     border-radius: 1rem;
@@ -551,8 +551,16 @@ footer {
 
     .modal-content-title {
         color: var(--main-color);
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
+    }
+
+    .modal-content-list {
+        text-align: center;
+        list-style-position: inside;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        font-size: 1.2rem;
     }
 
     /* Signup */
