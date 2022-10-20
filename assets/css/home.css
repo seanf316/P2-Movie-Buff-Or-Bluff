@@ -160,7 +160,7 @@ h2 {
     padding: 1.5rem;
     border: 3px solid var(--main-color);
     border-radius: 1rem;
-    width: 80%;
+    width: 90%;
 }
 
 .modal-content-title {
@@ -324,6 +324,10 @@ footer {
 }
 
 /* End */
+
+#finalScore {
+    margin-top: 1rem;
+}
 
 #finalTextContainer {
     margin-top: 1rem;
@@ -659,7 +663,7 @@ footer {
 
     .signup__container {
         width: 40%;
-        height: 82vh; 
+        height: 82vh;
     }
 
     .signup__title {
@@ -689,7 +693,7 @@ footer {
         border: 3px solid var(--accent-color);
         border-radius: .4rem;
     }
-    
+
     .signup__form__textarea {
         height: 8rem;
         margin-bottom: 1.5rem;
@@ -806,19 +810,19 @@ footer {
         width: 60%;
         padding: 2rem;
     }
-    
+
     .thank-you__title {
         font-size: 4rem;
         line-height: 4.2rem;
         margin-bottom: 3rem;
     }
-    
+
     .thank-you__text {
         font-size: 1.5rem;
         text-align: justify;
         margin-bottom: 3rem;
     }
-    
+
     .thank-you__quote {
         font-size: 1.3rem;
         width: 60%;
@@ -827,25 +831,25 @@ footer {
 
     /* 404 */
 
-.error-page__title {
-    font-size: 6rem;
-    line-height: 6rem;
-    margin-top: 1rem;
-}
+    .error-page__title {
+        font-size: 6rem;
+        line-height: 6rem;
+        margin-top: 1rem;
+    }
 
-.error-page__title2 {
-    font-size: 4.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-}
+    .error-page__title2 {
+        font-size: 4.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
 
-.error-page__quote {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-}
+    .error-page__quote {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
 
-.error-page__text {
-    font-size: 1.8rem;
-}
+    .error-page__text {
+        font-size: 1.8rem;
+    }
 
 }

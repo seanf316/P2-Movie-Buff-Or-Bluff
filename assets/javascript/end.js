@@ -1,4 +1,4 @@
-// End Page Variables
+// End Page Variables/Constants
 const username = document.querySelector('#username');
 const usernameText = document.querySelector('#username-text');
 const _endForm = document.getElementById('end-form');
@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /**
  * Function to stop user entering a username for Leaderboard if score is 0.
+ * Displays a message to user depending on score
+ * Displays a movie quote to user depending on score
  */
 function replayQuiz() {
     if (mostRecentScore == 0) {
