@@ -1,4 +1,4 @@
-// Homepage Variables
+// Homepage Variables/Constants
 const modal = document.getElementById("instructionsModal");
 const instructionsBtn = document.getElementById("instructionsBtn");
 const closeIcon = document.getElementsByClassName("close")[0];
