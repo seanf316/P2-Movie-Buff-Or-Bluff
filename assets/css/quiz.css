@@ -96,14 +96,34 @@ body {
     transform: scale(0.97);
 }
 
-#result {
+.result-correct {
     font-size: 1.2rem;
     padding: .5rem 0;
     border: 3px solid var(--light-color);
-    color: var(--light-color);
     border-style: double;
     border-radius: .5rem;
-    display: none;
+    background-color: green;
+    color: var(--light-color);
+}
+
+.result-incorrect {
+    font-size: 1.2rem;
+    padding: .5rem 0;
+    border: 3px solid var(--light-color);
+    border-style: double;
+    border-radius: .5rem;
+    background-color: rgb(182, 26, 26);
+    color: var(--light-color);
+}
+
+.result-omit {
+    font-size: 1.2rem;
+    padding: .5rem 0;
+    border: 3px solid var(--light-color);
+    border-style: double;
+    border-radius: .5rem;
+    background-color: var(--main-color);
+    color: var(--accent-color);
 }
 
 #result i {

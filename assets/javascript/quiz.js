@@ -51,12 +51,13 @@ async function getQuestion() {
   const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&type=multiple';
   const result = await fetch(`${APIUrl}`);
   const data = await result.json();
-  console.log(data)
   showQuestion(data.results[0]);
   removeHide(_siteLogoMobile, _siteLogoDesktop, _audioLogo, _progressBar, _checkAnswer)
 }
 
-
+/**
+ * Function to remove hide class where required
+ */
 function removeHide() {
     for (let i = 0; i < arguments.length; i++) {
       arguments[i].classList.remove('hide');
@@ -82,7 +83,7 @@ function showQuestion(data) {
   `;
   _totalQuestions.textContent = totalQuestion;
   _checkAnswer.style.display = 'block'
-  _result.style.display = 'none';
+  _result.className = "hide";
   _progressText.innerText = `Question ${questionCounter} of ${totalQuestion}`
   _progressBarFull.style.width = `${(questionCounter/totalQuestion) * 100}%`
   selectAnswer();
@@ -122,22 +123,16 @@ function checkAnswer() {
       correctSound()
       _checkAnswer.style.display = 'none'
       correctScore++;
-      _result.style.display = 'block';
-      _result.style.backgroundColor = 'green'
-      _result.style.color = 'var(--light-color)'
+      _result.className = "result-correct";
       _result.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer!</p>`;
     } else {
       incorrectSound()
       _checkAnswer.style.display = 'none'
-      _result.style.display = 'block';
-      _result.style.backgroundColor = 'rgb(182, 26, 26)'
-      _result.style.color = 'var(--light-color)'
+      _result.className = "result-incorrect";
       _result.innerHTML = `<p> <i class = "fas fa-times"></i> Incorrect Answer!</p> <p><small><b>Correct Answer: </b> ${correctAnswer}</b></small></p>`;
     }
   } else {
-    _result.style.display = 'block';
-    _result.style.backgroundColor = 'var(--main-color)'
-    _result.style.color = 'var(--accent-color)'
+    _result.className = "result-omit";
     _result.innerHTML = `<p><i class = "fas fa-question"></i> <strong>Please select and answer!</strong></p>`;
     _checkAnswer.disabled = false;
   }
