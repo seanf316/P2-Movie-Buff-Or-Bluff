@@ -1,12 +1,17 @@
 // Quiz Variables/Constants
+// Images
+const _siteLogoMobile = document.getElementById('siteLogoMobile');
+const _siteLogoDesktop = document.getElementById('siteLogoDesktop');
 
 // Score
 const _progressText = document.getElementById('progressText');
+const _progressBar = document.getElementById('progressBar');
 const _progressBarFull = document.getElementById('progressBarFull');
 const _totalQuestions = document.getElementById('total-questions');
 
 // Sounds
 let isPlaying = false;
+const _audioLogo = document.getElementById('audioLogo');
 const audioOffIcon = document.getElementsByClassName("sound-off");
 const audioOnIcon = document.getElementsByClassName("sound-on");
 const buttonAudio = new Audio("assets/sounds/button-click.mp3");
@@ -14,6 +19,7 @@ const correctAudio = new Audio("assets/sounds/correct-sound.mp3");
 const incorrectAudio = new Audio("assets/sounds/incorrect-sound.mp3");
 
 // Quiz
+const _quizWrapper = document.getElementById('quizWrapper');
 const _question = document.getElementById('question');
 const _answers = document.querySelector('.quiz-answers');
 const _checkAnswer = document.getElementById('check-answer');
@@ -26,11 +32,12 @@ let questionCounter = 1;
 // Event Listeners 
 document.addEventListener('DOMContentLoaded', () => {
   startQuiz();
+  
 })
 
 /** 
  * Main Function to start the Quiz 
-*/
+ */
 function startQuiz() {
   getQuestion();
   _checkAnswer.addEventListener('click', checkAnswer)
@@ -46,12 +53,19 @@ async function getQuestion() {
   const data = await result.json();
   console.log(data)
   showQuestion(data.results[0]);
+  removeHide(_siteLogoMobile, _siteLogoDesktop, _audioLogo, _progressBar, _checkAnswer)
 }
 
 
+function removeHide() {
+    for (let i = 0; i < arguments.length; i++) {
+      arguments[i].classList.remove('hide');
+    }
+}
+
 /** 
  * Function that takes the data from the result fetched by getQuestions and maps the questions and answers to the html
-*/
+ */
 function showQuestion(data) {
   _checkAnswer.disabled = false;
   correctAnswer = data.correct_answer;
@@ -170,7 +184,7 @@ for (let i = 0; i < audioIconLogo.length; i++) {
 /**
  * Lets the player have the option whether to have sounds on or not
  */
- function toggleAudio() {
+function toggleAudio() {
   isPlaying ? toggleAudioOff() : toggleAudioOn();
 }
 
@@ -199,7 +213,7 @@ function toggleAudioOff() {
 /**
  * Play a sound when the player answers correctly
  */
- function correctSound() {
+function correctSound() {
   if (isPlaying) {
     correctAudio.play();
   } else {
