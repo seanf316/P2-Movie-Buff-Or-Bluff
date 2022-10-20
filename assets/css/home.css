@@ -468,6 +468,7 @@ footer {
     #homepage {
         height: 100vh;
         width: 50%;
+        margin: 0 auto;
     }
 
     #logo-mobile {
@@ -612,7 +613,7 @@ footer {
 
     .signup__end_text {
         text-align: center;
-        margin-top: 4rem;
+        margin-top: 1em;
     }
 
     .signup__form__btn:hover {
