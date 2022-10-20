@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Movie Buff or Bluff is a Movie based Trivia Quiz site aimed at anyone who enjoys the world of cinema and testing their knowledge" />
-    <meta name="keywords"
-        content="quiz, movie, trivia, movie-buff" />
+    <meta name="keywords" content="quiz, movie, trivia, movie-buff" />
     <script src="https://kit.fontawesome.com/e4bf4f6321.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/home.css">
     <title>Movie Buff or Bluff</title>
@@ -44,33 +43,36 @@
             </div>
         </div>
         <div class="get-started">
-            <a href="quiz.html"><button type="button" class="getStartedBtn">Lets get started <i class="fa-solid fa-arrow-right"></i></button></a>
+            <a href="quiz.html"><button type="button" class="getStartedBtn">Lets get started <i
+                        class="fa-solid fa-arrow-right"></i></button></a>
         </div>
     </section>
     <!-- Homepage End -->
 
     <!-- Signup start -->
     <section id="signup">
-        <h2>SIGN UP</h2>
-
-
-        <form action="thank-you.html" class="signup__form">
-            <label class="signup__form__label" for="fname">First Name</label>
-            <input id="fname" name="first_name" type="text" class="signup__form__text-input" placeholder="Commander"
-              required />
-            <label class="signup__form__label" for="lname">Last Name</label>
-            <input id="lname" name="last_name" type="text" class="signup__form__text-input" placeholder="Zavela"
-              required />
-            <label class="signup__form__label" for="email">Email Address</label>
-            <input type="email" id="email" name="email_address" class="signup__form__text-input"
-              placeholder="commzavela@vanguard.com" required />
-            <label class="signup__form__label" for="feedback">Feedback</label>
-            <textarea id="feedback" name="feedback" class="signup__form__textarea"
-              placeholder="Tell us how we can improve Vanguard?"></textarea>
-            <div class="signup__form__button">
-              <input class="signup__form__button btn-form" type="submit" value="Join Us" />
-            </div>
-          </form>
+        <div class="signup__container">
+            <h2 class="signup__title">Thanks for playing <i class="fa-regular fa-face-smile"></i></h2>
+            <p class="signup__text">We hope you enjoyed the quiz. Sign up below to receive our
+                newsletter which will include news on future updates to the site and any new content released.</p>
+            <form action="thank-you.html" class="signup__form">
+                <label class="signup__form__label" for="fname">First Name</label>
+                <input id="fname" name="first_name" type="text" class="signup__form__text-input" placeholder="Forrest"
+                    required />
+                <label class="signup__form__label" for="lname">Last Name</label>
+                <input id="lname" name="last_name" type="text" class="signup__form__text-input" placeholder="Gump"
+                    required />
+                <label class="signup__form__label" for="email">Email Address</label>
+                <input type="email" id="email" name="email_address" class="signup__form__text-input"
+                    placeholder="bubbagumpshrimp@gmail.com" required />
+                <label class="signup__form__label" for="feedback">Feedback</label>
+                <textarea id="feedback" name="feedback" class="signup__form__textarea"
+                    placeholder="If you have any feedback on the quiz i.e. what you enjoyed, what can be improved or what content you feel is missing please fill out the feedback section."
+                    required></textarea>
+                <button class="signup__form__btn" type="submit">Sign Up</button>
+            </form>
+            <p class="signup__end_text">Alternatively you can get in contact with us via social media see below.</p>
+        </div>
     </section>
 
     <!-- Footer Start -->
