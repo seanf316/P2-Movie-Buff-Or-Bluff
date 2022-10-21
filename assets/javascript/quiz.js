@@ -28,10 +28,25 @@ let correctAnswer = ""
 let correctScore = askedCount = 0;
 let totalQuestion = 10;
 let questionCounter = 1;
+let currentQuestion = {};
+let questions = [];
+let availableQuestions = [];
 
 // Event Listeners 
 document.addEventListener('DOMContentLoaded', () => {
-  startQuiz();
+  fetch('https://opentdb.com/api.php?amount=50&category=11&type=multiple')
+    .then((res) => {
+        return res.json();
+    })
+    .then((loadedQuestions) => {
+        questions = loadedQuestions.results;
+        console.log(loadedQuestions.results)
+        startQuiz();
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+  
   
 })
 
@@ -39,20 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
  * Main Function to start the Quiz 
  */
 function startQuiz() {
-  getQuestion();
-  _checkAnswer.addEventListener('click', checkAnswer)
-}
-
-
-/**
- * Function to get questions from opentdb.com API
- */
-async function getQuestion() {
-  const APIUrl = 'https://opentdb.com/api.php?amount=1&category=11&type=multiple';
-  const result = await fetch(`${APIUrl}`);
-  const data = await result.json();
-  showQuestion(data.results[0]);
+  availableQuestions = [...questions];
+  showQuestion()
   removeHide(_siteLogoMobile, _siteLogoDesktop, _audioLogo, _progressBar, _checkAnswer)
+  _checkAnswer.addEventListener('click', checkAnswer)
 }
 
 /**
@@ -65,17 +70,17 @@ function removeHide() {
 }
 
 /** 
- * Function that takes the data from the result fetched by getQuestions and maps the questions and answers to the html
+ * Function that takes the data from the result fetched by getQuestion and maps the questions and answers to the html
  */
-function showQuestion(data) {
+function showQuestion() {
   _checkAnswer.disabled = false;
-  correctAnswer = data.correct_answer;
-  let incorrectAnswer = data.incorrect_answers;
+  const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+  currentQuestion = availableQuestions[questionIndex];
+  _question.innerHTML = currentQuestion.question;
+  correctAnswer = currentQuestion.correct_answer;
+  let incorrectAnswer = currentQuestion.incorrect_answers;
   let answersList = incorrectAnswer;
-
-  // Takes all the incorrect answers and joins it with the correct answer and randomises the correct answer position
   answersList.splice(Math.floor(Math.random() * (incorrectAnswer.length + 1)), 0, correctAnswer);
-  _question.innerHTML = `${data.question}`;
   _answers.innerHTML = `
       ${answersList.map((answer, index) => `
           <li> ${index + 1}. <span>${answer}</span> </li>
@@ -87,6 +92,7 @@ function showQuestion(data) {
   _progressText.innerText = `Question ${questionCounter} of ${totalQuestion}`
   _progressBarFull.style.width = `${(questionCounter/totalQuestion) * 100}%`
   selectAnswer();
+  availableQuestions.splice(questionIndex, 1)
 }
 
 
@@ -152,7 +158,7 @@ function checkCount() {
     }, 300);
   }
   setTimeout(() => {
-    getQuestion();
+    showQuestion();
   }, 500);
 }
 
