@@ -29,7 +29,7 @@ const _checkAnswer = document.getElementById('check-answer');
 const _result = document.getElementById('result');
 let correctAnswer = ""
 let correctScore = askedCount = 0;
-let totalQuestion = 10;
+let totalQuestion = 1;
 let questionCounter = 1;
 let currentQuestion = {};
 let questions = [];
