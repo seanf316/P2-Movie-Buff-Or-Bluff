@@ -34,10 +34,25 @@ let questionCounter = 1;
 let currentQuestion = {};
 let questions = [];
 let availableQuestions = [];
+let token = "";
+let API = "https://opentdb.com/api.php?amount=10&category=11&type=multiple";
+
+function loadToken() {
+  fetch('https://opentdb.com/api_token.php?command=request')
+  .then((res) => {
+    return res.json();
+  })
+ .then((loadedToken) => {
+    token = loadedToken.token;
+})
+}
+
 
 // Event Listeners 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('https://opentdb.com/api.php?amount=10&category=11&type=multiple')
+  let URL = (API + "&token=" + token);
+  console.log(URL)
+  fetch(`${URL}`)
     .then((res) => {
         return res.json();
     })
@@ -49,8 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch((err) => {
         console.error(err);
     });
-  
-  
 })
 
 /** 
@@ -184,7 +197,7 @@ function checkCount() {
   }
   setTimeout(() => {
     showQuestion();
-  }, 500);
+  }, 900);
 }
 
 // function restartQuiz() {
