@@ -2,7 +2,7 @@
 
 const highScoresList = document.querySelector('#highScoresTable');
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-const _clearBtn = document.getElementById('clearBtn')
+const _clearBtn = document.getElementById('clearBtn');
 const date = new Date();
 let day = date.getDate();
 let month = date.getMonth() + 1;
