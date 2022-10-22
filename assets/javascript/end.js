@@ -12,7 +12,7 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 
 // Event Listeners
-username.addEventListener('keyup', usernameEnter);
+username.addEventListener('input', usernameEnter);
 saveScoreBtn.addEventListener('click', saveHighScore);
 document.addEventListener('DOMContentLoaded', () => {
     replayQuiz();
