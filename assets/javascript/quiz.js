@@ -34,25 +34,11 @@ let questionCounter = 1;
 let currentQuestion = {};
 let questions = [];
 let availableQuestions = [];
-let token = "";
-let API = "https://opentdb.com/api.php?amount=10&category=11&type=multiple";
-
-function loadToken() {
-  fetch('https://opentdb.com/api_token.php?command=request')
-  .then((res) => {
-    return res.json();
-  })
- .then((loadedToken) => {
-    token = loadedToken.token;
-})
-}
-
 
 // Event Listeners 
 document.addEventListener('DOMContentLoaded', () => {
-  let URL = (API + "&token=" + token);
-  console.log(URL)
-  fetch(`${URL}`)
+  // Fetch to retrieve API learned from James Q Quick tutorial
+  fetch(`https://opentdb.com/api.php?amount=10&category=11&type=multiple`)
     .then((res) => {
         return res.json();
     })
@@ -78,7 +64,10 @@ function startQuiz() {
   _checkAnswer.addEventListener('click', checkAnswer)
 }
 
-
+/**
+ * Function for Timer
+ * Time set to 60 seconds - after time is finished user is moved to end.html
+ */
 function quizTime() {
   let timeLeft = 60;
   quizTime = setInterval(function () {
@@ -93,7 +82,6 @@ function quizTime() {
       }
   }, 1000);
 }
-
 
 /**
  * Function to remove hide class where required
@@ -130,10 +118,10 @@ function showQuestion() {
   availableQuestions.splice(questionIndex, 1)
 }
 
-
 /**
- * Function for selecting answer, to avoid accidentally selecting an answer by mistake I have the answers setup to not reval answer until "check answer" is clicked
+ * Function for selecting an answer, to avoid accidentally selecting an answer by mistake I have the answers setup to not reveal answer until "check answer" is clicked
  * User can change their selected answer before clicking "check answer"
+ * Applies a .selected class to each answer that is clicked by user
  */
 function selectAnswer() {
   _answers.querySelectorAll('li').forEach((answer) => {
@@ -174,7 +162,7 @@ function checkAnswer() {
     }
   } else {
     _result.className = "result-omit";
-    _result.innerHTML = `<p><i class = "fas fa-question"></i> <strong>Please select and answer!</strong></p>`;
+    _result.innerHTML = `<p><i class = "fas fa-question"></i> <strong>Please select an answer!</strong></p>`;
     setTimeout(() => {
       _result.className = "hide";
     }, 500);
@@ -199,14 +187,6 @@ function checkCount() {
     showQuestion();
   }, 900);
 }
-
-// function restartQuiz() {
-//   correctScore = askedCount = 0;
-//   questionCounter = 1;
-//   _checkAnswer.style.display = 'block';
-//   _checkAnswer.disabled = false;
-//   getQuestion();
-// }
 
 // Sound Functions
 

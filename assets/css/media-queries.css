@@ -202,9 +202,12 @@
         font-size: 2rem;
     }
 
+    #finalTextContainer {
+        width: 100%;
+    }
+
     #final-text {
         font-size: 1.8rem;
-
     }
 
     #final-quote {
@@ -383,7 +386,7 @@
     /* End */
 
     #end {
-        width: 60%;
+        width: 50%;
     }
 
     /* Thank You */

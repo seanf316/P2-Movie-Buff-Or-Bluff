@@ -1,4 +1,4 @@
-// End Page Variables/Constants
+// End Page Variables
 const username = document.querySelector('#username');
 const usernameText = document.querySelector('#username-text');
 const _endForm = document.getElementById('end-form');
@@ -15,7 +15,7 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 username.addEventListener('input', usernameEnter);
 saveScoreBtn.addEventListener('click', saveHighScore);
 document.addEventListener('DOMContentLoaded', () => {
-    replayQuiz();
+    endQuiz();
 })
 
 /**
@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
  * Displays a message to user depending on score
  * Displays a movie quote to user depending on score
  */
-function replayQuiz() {
+function endQuiz() {
     if (mostRecentScore == 0) {
         _endForm.style.display = 'none';
-        _finalText.innerHTML = `Sorry my friend you answered <strong>0</strong> questions correctly, not everyone is cursed with knowledge.<br>Play again to get your name on the Highscores Leaderboard.`
+        _finalText.innerHTML = `Sorry my friend you answered <strong>0</strong> questions correctly, not everyone is cursed with knowledge. Play again to get your name on the Highscores Leaderboard.`
         _finalQuote.innerHTML = `“Everybody looses a couple, and you either pack up and go home or keep fighting.” - Seabiscuit (2003)`
     } else {
         finalScore.innerHTML = `You got ${mostRecentScore} out of 10 correct!`;
@@ -34,10 +34,10 @@ function replayQuiz() {
             _finalText.innerHTML = `Not the best my friend but certainly not the worst, you have made it onto the Leaderboard.`
             _finalQuote.innerHTML = `“Worrying about losing keeps you winning.” - Sweet November (2001)`
         } else if (mostRecentScore > 3 && mostRecentScore <= 5) {
-            _finalText.innerHTML = `Now your getting there keep going young Padawan.`
+            _finalText.innerHTML = `Now you're getting there keep going young Padawan.`
             _finalQuote.innerHTML = `“You know what makes you feel okay about losing? Winning.” - Molly's Game (2017)`
         } else if (mostRecentScore > 5 && mostRecentScore <= 7) {
-            _finalText.innerHTML = `Good job my friend now that's what we want see, your heading towards the Leaderboard summit`
+            _finalText.innerHTML = `Good job my friend now that's what we want to see, your heading toward the Leaderboard summit.`
             _finalQuote.innerHTML = `“Oh, I don't lose. People who bet on me to lose lose. And they lose big.” - Ocean's 13 (2007)`
         } else if (mostRecentScore > 7 && mostRecentScore <= 9) {
             _finalText.innerHTML = `We are in the presence of greatness you are going straight to the top.`
@@ -53,7 +53,7 @@ function replayQuiz() {
 
 /**
  * Function to stop user entering empty spaces as username, also it alerts user that username has to be between 4 & 10 characters.
- * Alert will dissappear if user enters 4 or more charaters but we re-appear if more then 10 characters are entered.
+ * Alert will disappear if the user enters 4 or more characters but we re-appear if more then 10 characters are entered.
  */
 function usernameEnter() {
     let userBox = username.value;
@@ -72,7 +72,7 @@ function usernameEnter() {
 }
 
 /** 
- * Function to save the Highscores to local stroage.
+ * Function to save the Highscores to local storage. Created using information from a Brian Design video
  * It will push the username and most recent score to the Highscores table.
 */
 function saveHighScore(event) {

@@ -1,3 +1,5 @@
+// Highscores Variables
+
 const highScoresList = document.querySelector('#highScoresTable');
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 const _clearBtn = document.getElementById('clearBtn')
@@ -6,8 +8,8 @@ let day = date.getDate();
 let month = date.getMonth() + 1;
 let year = date.getFullYear();
 let currentDate = `${day}/${month}/${year}`;
-console.log(date);
 
+// Maps the name, score & date to Highscores table
 highScoresList.innerHTML =
 highScores.map(score => {
     return `
