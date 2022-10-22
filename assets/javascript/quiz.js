@@ -65,7 +65,7 @@ function startQuiz() {
 
 
 function quizTime() {
-  let timeLeft = 60;
+  let timeLeft = 600;
   quizTime = setInterval(function () {
     timeLeft--;
       if (timeLeft > 0) {

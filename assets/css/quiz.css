@@ -32,6 +32,8 @@ body {
 
 .quiz__title {
     font-size: 2rem;
+    margin-top: 3rem;
+    width: 100%;
 }
 
 .quiz__title span {
@@ -40,16 +42,17 @@ body {
 
 #timeSound {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 3rem;
-    width: 60%;
+    gap: 1rem;
+    width: 80%;
 }
 
 #timeLeft {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--main-color);
+    width: 6rem;
 
 }
 
@@ -191,7 +194,7 @@ body {
     color: var(--main-color);
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 768px) {
 
     #quizWrapper {
         display: flex;
@@ -200,8 +203,23 @@ body {
         text-align: center;
         margin: 2rem auto;
         padding: 0;
-        width: 40%;
+        width: 90%;
         height: auto;
+    }
+
+    .quiz__title {
+        font-size: 4rem;
+        line-height: 5rem;
+        width: 80%;
+        margin-top: 3rem;
+    }
+
+    #timeSound {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        width: 100%
     }
 
     #progressText {
@@ -217,6 +235,10 @@ body {
         margin-bottom: 2rem;
     }
 
+    .quiz-body {
+        width: 80%;
+    }
+
     .quiz-question {
         font-size: 1.5rem;
     }
@@ -228,9 +250,45 @@ body {
     #result {
         font-size: 1.5rem;
         padding: 1rem 0;
+        width: 80%;
     }
 
     #quotes {
         font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+    .quiz__title {
+        font-size: 4rem;
+        width: 80%;
+        margin-top: 3rem;
+    }
+
+    .quiz-body {
+        width: 80%;
+    }
+
+    #result {
+        width: 60%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .quiz__title {
+        font-size: 4rem;
+        width: 60%;
+        margin-top: 3rem;
+    }
+
+    .quiz-body {
+        width: 60%;
+    }
+
+    #result {
+        width: 60%;
     }
 }
