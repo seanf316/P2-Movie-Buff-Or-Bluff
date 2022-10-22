@@ -1,7 +1,7 @@
-// Quiz Variables/Constants
-// Images
-const _siteLogoMobile = document.getElementById('siteLogoMobile');
-const _siteLogoDesktop = document.getElementById('siteLogoDesktop');
+// Quiz Variables
+
+// Timer variables
+let _timeLeft= document.getElementById('timeLeft');
 
 // Score
 const _progressText = document.getElementById('progressText');
@@ -20,6 +20,8 @@ const incorrectAudio = new Audio("assets/sounds/incorrect-sound.mp3");
 
 // Quiz
 const _quizWrapper = document.getElementById('quizWrapper');
+const _quizTitle = document.getElementById('quizTitle');
+const _quizBody = document.getElementById('quizBody');
 const _question = document.getElementById('question');
 const _answers = document.querySelector('.quiz-answers');
 const _checkAnswer = document.getElementById('check-answer');
@@ -34,7 +36,7 @@ let availableQuestions = [];
 
 // Event Listeners 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('https://opentdb.com/api.php?amount=50&category=11&type=multiple')
+  fetch('https://opentdb.com/api.php?amount=10&category=11&type=multiple')
     .then((res) => {
         return res.json();
     })
@@ -56,9 +58,27 @@ document.addEventListener('DOMContentLoaded', () => {
 function startQuiz() {
   availableQuestions = [...questions];
   showQuestion()
-  removeHide(_siteLogoMobile, _siteLogoDesktop, _audioLogo, _progressBar, _checkAnswer)
+  quizTime()
+  removeHide(_quizTitle, _timeLeft, _audioLogo, _progressBar, _checkAnswer)
   _checkAnswer.addEventListener('click', checkAnswer)
 }
+
+
+function quizTime() {
+  let timeLeft = 60;
+  quizTime = setInterval(function () {
+    timeLeft--;
+      if (timeLeft > 0) {
+          _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> ${timeLeft}</p>`;
+      } else if (timeLeft === 0) {
+        setTimeout(() => {
+          localStorage.setItem('mostRecentScore', correctScore)
+          return window.location.assign('./end.html')
+        }, 300);
+      }
+  }, 1000);
+}
+
 
 /**
  * Function to remove hide class where required
@@ -140,6 +160,9 @@ function checkAnswer() {
   } else {
     _result.className = "result-omit";
     _result.innerHTML = `<p><i class = "fas fa-question"></i> <strong>Please select and answer!</strong></p>`;
+    setTimeout(() => {
+      _result.className = "hide";
+    }, 500);
     _checkAnswer.disabled = false;
   }
 }
