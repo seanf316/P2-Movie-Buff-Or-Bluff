@@ -19,6 +19,7 @@ const correctAudio = new Audio("assets/sounds/correct-sound.mp3");
 const incorrectAudio = new Audio("assets/sounds/incorrect-sound.mp3");
 
 // Quiz
+const _loaderBlock = document.getElementById('loaderBlock');
 const _quizWrapper = document.getElementById('quizWrapper');
 const _quizTitle = document.getElementById('quizTitle');
 const _quizBody = document.getElementById('quizBody');
@@ -59,13 +60,14 @@ function startQuiz() {
   availableQuestions = [...questions];
   showQuestion()
   quizTime()
-  removeHide(_quizTitle, _timeLeft, _audioLogo, _progressBar, _checkAnswer)
+  removeHide(_quizTitle, _timeLeft, _audioLogo, _progressText, _progressBar, _question, _answers, _checkAnswer)
+  _loaderBlock.classList.add('hide');
   _checkAnswer.addEventListener('click', checkAnswer)
 }
 
 
 function quizTime() {
-  let timeLeft = 600;
+  let timeLeft = 60;
   quizTime = setInterval(function () {
     timeLeft--;
       if (timeLeft > 0) {

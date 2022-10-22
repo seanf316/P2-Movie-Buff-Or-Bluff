@@ -11,13 +11,19 @@
     <script src="https://kit.fontawesome.com/e4bf4f6321.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/quiz.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
     <title>Movie Buff or Bluff</title>
 </head>
 
 <body>
-
+        
+        
+    <div id="loaderBlock">
+        <div class="loader"></div>
+        <div class="loading">Loading...</div>
+    </div>
     <!-- Quiz Start -->
-    <section id="quizWrapper">
+    <div id="quizWrapper">
         <h1 id="quizTitle" class="quiz__title hide">Are you a <span>Movie </span>Buff or a <span>Movie </span>Bluff?</h1>
         <div id="timeSound">
             <div id="timeLeft" class="hide"></div>
@@ -27,14 +33,14 @@
             </div>
         </div>
         <div id="progress">
-            <p id="progressText"></p>
+            <p id="progressText" class="hide"></p>
         </div>
         <div id="progressBar" class="hide">
             <div id="progressBarFull"></div>
         </div>
         <div id="quizBody" class="quiz-body">
-            <h2 class="quiz-question" id="question"></h2>
-            <ul class="quiz-answers">
+            <h2 class="quiz-question hide" id="question"></h2>
+            <ul class="quiz-answers hide">
             </ul>
         </div>
         <div id="result" class="hide"></div>
@@ -44,7 +50,7 @@
         <div class="quiz-score">
             </span><span id="correct-score"></span><span id="total-questions"></span></p>
         </div>
-    </section>
+    </div>
     <!-- Quiz End -->
 
     <!-- Javascript for Quiz Page -->
