@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function endQuiz() {
     if (mostRecentScore == 0) {
+        finalScore.style.display = 'none';
         _endForm.style.display = 'none';
         _finalText.innerHTML = `Sorry my friend you answered <strong>0</strong> questions correctly, not everyone is cursed with knowledge. Play again to get your name on the Highscores Leaderboard.`
         _finalQuote.innerHTML = `“Everybody looses a couple, and you either pack up and go home or keep fighting.” - Seabiscuit (2003)`
