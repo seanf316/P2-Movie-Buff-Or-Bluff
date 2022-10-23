@@ -126,7 +126,7 @@ h2 {
     cursor: pointer;
 }
 
-.getStartedBtn {
+#getStartedBtn {
     width: 22rem;
     padding: .4rem .6rem;
     background-color: var(--accent-color);
@@ -138,8 +138,8 @@ h2 {
     cursor: pointer;
 }
 
-.getStartedBtn:hover,
-.getStartedBtn:focus {
+#getStartedBtn:hover,
+#getStartedBtn:focus {
     border: 3px solid var(--main-color);
     color: var(--main-color);
     cursor: pointer;
