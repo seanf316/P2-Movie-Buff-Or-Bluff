@@ -7,49 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Movie Buff or Bluff is a Movie based Trivia Quiz site aimed at anyone who enjoys the world of cinema and testing their knowledge">
     <meta name="keywords" content="quiz, movie, trivia, movie-buff">
-    <script src="https://kit.fontawesome.com/e4bf4f6321.js" crossorigin="anonymous" defer></script>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="dns-prefetch" href="https://opentdb.com/api.php?amount=20&category=11&type=multiple">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/quiz.css">
-    <link rel="stylesheet" href="assets/css/media-queries.css">
     <title>Movie Buff or Bluff</title>
 </head>
 
 <body>
 
-
+    <!-- Lodaer Start -->
     <div id="loaderBlock">
         <div class="loader"></div>
         <div class="loading">Loading...</div>
     </div>
+    <!-- Loader Finish -->
+
     <!-- Quiz Start -->
     <div id="quizWrapper">
-        <h1 id="quizTitle" class="quiz__title hide">Are you a <span>Movie </span>Buff or a <span>Movie </span>Bluff?
-        </h1>
+        <a href="index.html" aria-label="Visit Home Page"><img id="logo-mobile" src="assets/images/logo.webp"
+            alt="Site Logo" width="370" height="133"></a>
+    <a href="index.html" aria-label="Visit Home Page"><img id="logo-desktop" src="assets/images/logo2.webp"
+            alt="Site Logo" width="567" height="214"></a>
         <div id="timeSound">
-            <div id="timeLeft" class="hide"></div>
-            <div id="audioLogo" class="audio-icon-logo hide">
+            <div id="timeLeft"></div>
+            <div id="audioLogo" class="audio-icon-logo">
                 <div class="sound-on hide">Sound: <i class="fas fa-volume-up"></i></div>
                 <div class="sound-off">Sound: <i class="fas fa-volume-mute"></i></div>
             </div>
         </div>
         <div id="progress">
-            <p id="progressText" class="hide"></p>
+            <p id="progressText"></p>
         </div>
-        <div id="progressBar" class="hide">
+        <div id="progressBar">
             <div id="progressBarFull"></div>
         </div>
         <div id="quizBody" class="quiz-body">
-            <h2 class="quiz-question hide" id="question">Question</h2>
-            <ul class="quiz-answers hide">
+            <h2 class="quiz-question" id="question">Question</h2>
+            <ul class="quiz-answers">
             </ul>
         </div>
-        <div id="result" class="hide"></div>
+        <div id="result"></div>
         <div class="quiz-controls">
-            <button class="btn hide" type="button" id="check-answer">Check Answer</button>
+            <button class="btn" type="button" id="check-answer">Check Answer</button>
         </div>
         <div class="quiz-score">
             <span id="correct-score"></span><span id="total-questions"></span>
@@ -58,7 +60,8 @@
     <!-- Quiz End -->
 
     <!-- Javascript for Quiz Page -->
-    <script src="assets/javascript/quiz.js"></script>
+    <script src="assets/javascript/quiz-min.js"></script>
+    <script src="https://kit.fontawesome.com/e4bf4f6321.js" crossorigin="anonymous" defer></script>
 </body>
 
 </html>

@@ -51,17 +51,6 @@ h2 {
     }
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
 /* Homepage */
 
 #homepage {
@@ -168,7 +157,7 @@ h2 {
     text-align: center;
     color: var(--light-color);
     background-color: var(--accent-color);
-    margin: 50% auto;
+    margin: 15% auto;
     padding: 1.5rem;
     border: 3px solid var(--main-color);
     border-radius: 1rem;
@@ -182,7 +171,7 @@ h2 {
 }
 
 .modal-content-list {
-    text-align: center;
+    text-align: left;
     list-style-position: inside;
     margin-bottom: 1rem;
     font-weight: 600;

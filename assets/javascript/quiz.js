@@ -38,7 +38,7 @@ let availableQuestions = [];
 // Event Listeners 
 document.addEventListener('DOMContentLoaded', () => {
   // Fetch to retrieve API learned from James Q Quick tutorial
-  fetch(`https://opentdb.com/api.php?amount=20&category=11&type=multiple`)
+  fetch(`https://opentdb.com/api.php?amount=50&category=11&type=multiple`)
     .then((res) => {
         return res.json();
     })
@@ -59,8 +59,8 @@ function startQuiz() {
   _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> 60</p>`;
   showQuestion()
   quizTime()
-  removeHide(_quizTitle, _timeLeft, _audioLogo, _progressText, _progressBar, _question, _answers, _checkAnswer)
   _loaderBlock.classList.add('hide');
+  _quizWrapper.style.display = 'flex';
   _checkAnswer.addEventListener('click', checkAnswer)
 }
 
@@ -69,7 +69,7 @@ function startQuiz() {
  * Time set to 60 seconds - after time is finished user is moved to end.html
  */
 function quizTime() {
-  let timeLeft = 60;
+  let timeLeft = 90;
   quizTime = setInterval(function () {
     timeLeft--;
       if (timeLeft > 0) {
@@ -81,15 +81,6 @@ function quizTime() {
         }, 300);
       }
   }, 1000);
-}
-
-/**
- * Function to remove hide class where required
- */
-function removeHide() {
-    for (let i = 0; i < arguments.length; i++) {
-      arguments[i].classList.remove('hide');
-    }
 }
 
 /** 
