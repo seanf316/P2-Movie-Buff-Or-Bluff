@@ -205,7 +205,7 @@ h2 {
 
 .close:hover,
 .close:focus {
-    scale: 1.25;
+    transform: scale(1.25);
     cursor: pointer;
 }
 
