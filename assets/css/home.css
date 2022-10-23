@@ -360,8 +360,9 @@ footer {
 
 #final-quote {
     margin-top: 1rem;
-    color: var(--light-color);
+    color: var(--accent-color);
     font-style: italic;
+    font-weight: 600;
 }
 
 #end {
