@@ -38,7 +38,7 @@ let availableQuestions = [];
 // Event Listeners 
 document.addEventListener('DOMContentLoaded', () => {
   // Fetch to retrieve API learned from James Q Quick tutorial
-  fetch(`https://opentdb.com/api.php?amount=50&category=11&type=multiple`)
+  fetch(`https://opentdb.com/api.php?amount=20&category=11&type=multiple`)
     .then((res) => {
         return res.json();
     })

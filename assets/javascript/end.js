@@ -24,31 +24,48 @@ document.addEventListener('DOMContentLoaded', () => {
  * Displays a movie quote to user depending on score
  */
 function endQuiz() {
-    if (mostRecentScore == 0) {
-        finalScore.style.display = 'none';
-        _endForm.style.display = 'none';
-        _finalText.innerHTML = `Sorry my friend you answered <strong>0</strong> questions correctly, not everyone is cursed with knowledge. Play again to get your name on the Highscores Leaderboard.`
-        _finalQuote.innerHTML = `“Everybody looses a couple, and you either pack up and go home or keep fighting.” - Seabiscuit (2003)`
-    } else {
-        finalScore.innerHTML = `You got ${mostRecentScore} out of 10 correct!`;
-        if (mostRecentScore <= 3) {
+    switch (true) {
+        case mostRecentScore == 0:
+            finalScore.style.display = 'none';
+            _endForm.style.display = 'none';
+            _finalText.innerHTML = `Sorry my friend you answered <strong>0</strong> questions correctly, not everyone is cursed with knowledge. Play again to get your name on the Highscores Leaderboard.`
+            _finalQuote.innerHTML = `“Everybody looses a couple, and you either pack up and go home or keep fighting.” - Seabiscuit (2003)`
+            break;
+        case mostRecentScore <= 3:
+            finalScore.innerHTML = `You got ${mostRecentScore} out of 10 correct!`;
             _finalText.innerHTML = `Not the best my friend but certainly not the worst, you have made it onto the Leaderboard.`
             _finalQuote.innerHTML = `“Worrying about losing keeps you winning.” - Sweet November (2001)`
-        } else if (mostRecentScore > 3 && mostRecentScore <= 5) {
+            _controlBtns.style.display = 'none';
+            usernameEnter();
+            break;
+        case mostRecentScore > 3 && mostRecentScore <= 5:
+            finalScore.innerHTML = `You got ${mostRecentScore} out of 10 correct!`;
             _finalText.innerHTML = `Now you're getting there keep going young Padawan.`
             _finalQuote.innerHTML = `“You know what makes you feel okay about losing? Winning.” - Molly's Game (2017)`
-        } else if (mostRecentScore > 5 && mostRecentScore <= 7) {
+            _controlBtns.style.display = 'none';
+            usernameEnter();
+            break;
+        case mostRecentScore > 5 && mostRecentScore <= 7:
+            finalScore.innerHTML = `You got ${mostRecentScore} out of 10 correct!`;
             _finalText.innerHTML = `Good job my friend now that's what we want to see, your heading toward the Leaderboard summit.`
             _finalQuote.innerHTML = `“Oh, I don't lose. People who bet on me to lose lose. And they lose big.” - Ocean's 13 (2007)`
-        } else if (mostRecentScore > 7 && mostRecentScore <= 9) {
+            _controlBtns.style.display = 'none';
+            usernameEnter();
+            break;
+        case mostRecentScore > 7 && mostRecentScore <= 9:
+            finalScore.innerHTML = `You got ${mostRecentScore} out of 10 correct!`;
             _finalText.innerHTML = `We are in the presence of greatness you are going straight to the top.`
             _finalQuote.innerHTML = `“Winners forget they're in a race, they just love to run.” - With Honors (1994)`
-        } else if (mostRecentScore == 10) {
+            _controlBtns.style.display = 'none';
+            usernameEnter();
+            break;
+        case mostRecentScore == 10:
+            finalScore.innerHTML = `You got ${mostRecentScore} out of 10 correct!`;
             _finalText.innerHTML = `I guess you really are a Movie Buff - Absolute Perfection!`
             _finalQuote.innerHTML = `“All I'm asking for is total perfection.” - The Lego Movie (2014)`
-        }
-        _controlBtns.style.display = 'none';
-        usernameEnter();
+            _controlBtns.style.display = 'none';
+            usernameEnter();
+            break;
     }
 }
 
@@ -66,7 +83,7 @@ function usernameEnter() {
     } else if (username.value.length >= 11) {
         usernameText.innerText = "Please enter a username between 4 & 10 characters without spaces"
         saveScoreBtn.disabled = true
-    }else {
+    } else {
         usernameText.innerText = ""
         saveScoreBtn.disabled = false
     }
@@ -75,7 +92,7 @@ function usernameEnter() {
 /** 
  * Function to save the Highscores to local storage. Created using information from a Brian Design video
  * It will push the username and most recent score to the Highscores table.
-*/
+ */
 function saveHighScore(event) {
     event.preventDefault()
     const score = {
