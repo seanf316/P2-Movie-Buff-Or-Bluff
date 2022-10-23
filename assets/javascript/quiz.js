@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function startQuiz() {
   availableQuestions = [...questions];
+  _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> 60</p>`;
   showQuestion()
   quizTime()
   removeHide(_quizTitle, _timeLeft, _audioLogo, _progressText, _progressBar, _question, _answers, _checkAnswer)
@@ -96,7 +97,6 @@ function removeHide() {
  * Function that takes the data from the result fetched by getQuestion and maps the questions and answers to the html
  */
 function showQuestion() {
-  _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> 60</p>`;
   _checkAnswer.disabled = false;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
