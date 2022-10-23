@@ -29,7 +29,7 @@ const _checkAnswer = document.getElementById('check-answer');
 const _result = document.getElementById('result');
 let correctAnswer = ""
 let correctScore = askedCount = 0;
-let totalQuestion = 1;
+let totalQuestion = 10;
 let questionCounter = 1;
 let currentQuestion = {};
 let questions = [];
@@ -38,7 +38,7 @@ let availableQuestions = [];
 // Event Listeners 
 document.addEventListener('DOMContentLoaded', () => {
   // Fetch to retrieve API learned from James Q Quick tutorial
-  fetch(`https://opentdb.com/api.php?amount=10&category=11&type=multiple`)
+  fetch(`https://opentdb.com/api.php?amount=50&category=11&type=multiple`)
     .then((res) => {
         return res.json();
     })
