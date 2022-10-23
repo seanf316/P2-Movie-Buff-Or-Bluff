@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then((loadedQuestions) => {
         questions = loadedQuestions.results;
-        console.log(loadedQuestions.results)
         startQuiz();
     })
     .catch((err) => {
