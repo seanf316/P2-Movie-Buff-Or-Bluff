@@ -101,9 +101,15 @@
 
     /* Signup */
 
+    #signup {
+        width: 100%;
+        background-color: var(--main-color);
+        color: var(--accent-color);
+        margin-top: 5rem;
+    }
+
     .signup__container {
         width: 80%;
-        height: 82vh;
     }
 
     .signup__title {
