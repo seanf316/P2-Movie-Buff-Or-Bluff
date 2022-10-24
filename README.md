@@ -4,7 +4,7 @@ Movie Buff or Bluff is a Movie based Trivia Quiz site aimed at anyone who enjoys
 
 Developed by Sean Finn.
 
-![Am I Responsive Website Mockup](/assets/readme/amiresponsive.JPG)
+![Am I Responsive Website Mockup](/docs/readme/techsini.PNG)
 
 [Movie Bluff or Buff - Live Webpage](https://seanf316.github.io/P2-Movie-Buff-Or-Bluff/) (Right-click to open in a new tab)
 
