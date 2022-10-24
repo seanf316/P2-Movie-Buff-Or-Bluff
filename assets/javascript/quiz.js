@@ -29,7 +29,7 @@ const _checkAnswer = document.getElementById('check-answer');
 const _result = document.getElementById('result');
 let correctAnswer = ""
 let correctScore = askedCount = 0;
-let totalQuestion = 10;
+let totalQuestion = 3;
 let questionCounter = 1;
 let currentQuestion = {};
 let questions = [];
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function startQuiz() {
   availableQuestions = [...questions];
   questionCounter = 1;
-  _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> 90</p>`;
+  _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> 100</p>`;
   showQuestion()
   quizTime()
   _loaderBlock.classList.add('hide');
@@ -70,7 +70,7 @@ function startQuiz() {
  * Time set to 60 seconds - after time is finished user is moved to end.html
  */
 function quizTime() {
-  let timeLeft = 90;
+  let timeLeft = 100;
   quizTime = setInterval(function () {
     timeLeft--;
       if (timeLeft > 0) {
@@ -82,6 +82,10 @@ function quizTime() {
         }, 300);
       }
   }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(quizTime);
 }
 
 /** 
@@ -170,6 +174,7 @@ function checkCount() {
   questionCounter++;
   if (askedCount == totalQuestion) {
     setTimeout(() => {
+      stopTimer()
       _checkAnswer.style.display = 'none';
       localStorage.setItem('mostRecentScore', correctScore)
       return window.location.assign('./end.html')
