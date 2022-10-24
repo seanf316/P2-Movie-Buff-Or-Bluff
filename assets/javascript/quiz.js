@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function startQuiz() {
   availableQuestions = [...questions];
-  questionCounter = 1;
   _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> 100</p>`;
   showQuestion()
   quizTime()
@@ -77,6 +76,7 @@ function quizTime() {
           _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> ${timeLeft}</p>`;
       } else if (timeLeft === 0) {
         setTimeout(() => {
+          stopTimer();
           localStorage.setItem('mostRecentScore', correctScore)
           return window.location.assign('./end.html')
         }, 300);
@@ -174,7 +174,7 @@ function checkCount() {
   questionCounter++;
   if (askedCount == totalQuestion) {
     setTimeout(() => {
-      stopTimer()
+      startQuiz()
       _checkAnswer.style.display = 'none';
       localStorage.setItem('mostRecentScore', correctScore)
       return window.location.assign('./end.html')

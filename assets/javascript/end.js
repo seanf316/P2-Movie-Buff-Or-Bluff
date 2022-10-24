@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     endQuiz();
 })
 
+
 /**
  * Function to stop user entering a username for Leaderboard if score is 0.
  * Displays a message to user depending on score
