@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
+window.onpopstate = function() {
+    alert("clicked back button");
+ }; history.pushState({}, 'https://seanf316.github.io/P2-Movie-Buff-Or-Bluff/');
+
+
 /**
  * Function to stop user entering a username for Leaderboard if score is 0.
  * Displays a message to user depending on score
