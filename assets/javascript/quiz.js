@@ -176,7 +176,7 @@ function checkCount() {
     setTimeout(() => {
       _checkAnswer.style.display = 'none';
       localStorage.setItem('mostRecentScore', correctScore)
-      resetQuiz();
+      location.reload();
       return window.location.assign('./end.html')
     }, 300);
   }
@@ -186,14 +186,14 @@ function checkCount() {
 }
 
 
-function resetQuiz() {
-correctScore = askedCount = 0;
-totalQuestion = 5;
-questionCounter = 1;
-currentQuestion = {};
-questions = [];
-availableQuestions = [];
-}
+// function resetQuiz() {
+// correctScore = askedCount = 0;
+// totalQuestion = 5;
+// questionCounter = 1;
+// currentQuestion = {};
+// questions = [];
+// availableQuestions = [];
+// }
 
 // Sound Functions
 
