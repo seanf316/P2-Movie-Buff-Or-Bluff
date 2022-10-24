@@ -174,7 +174,6 @@ function checkCount() {
   questionCounter++;
   if (askedCount == totalQuestion) {
     setTimeout(() => {
-      startQuiz()
       _checkAnswer.style.display = 'none';
       localStorage.setItem('mostRecentScore', correctScore)
       return window.location.assign('./end.html')
