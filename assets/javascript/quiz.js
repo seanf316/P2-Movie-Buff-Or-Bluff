@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function startQuiz() {
   availableQuestions = [...questions];
-  _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> 60</p>`;
+  questionCounter = 1;
+  _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> 90</p>`;
   showQuestion()
   quizTime()
   _loaderBlock.classList.add('hide');
