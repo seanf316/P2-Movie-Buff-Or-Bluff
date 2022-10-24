@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 window.onpopstate = function() {
-    alert("clicked back button");
+    window.location.assign("https://seanf316.github.io/P2-Movie-Buff-Or-Bluff/index.html")
  }; history.pushState({}, 'https://seanf316.github.io/P2-Movie-Buff-Or-Bluff/');
 
 
