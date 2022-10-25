@@ -1,6 +1,6 @@
 # Movie Buff or Bluff
 
-Movie Buff or Bluff is a Movie based Trivia Quiz site aimed at anyone who enjoys the world of cinema and testing their knowledge.
+Movie Buff or Bluff is a Movie based Trivia Quiz site aimed at anyone who enjoys the world of cinema and testing their knowledge. It consists of 10 questions with a 90 second timer and a Leaderboard so you can boast about your highscore.
 
 Developed by Sean Finn.
 
@@ -32,11 +32,11 @@ Developed by Sean Finn.
 
 ## Project Goals
 
-This is my first portfolio project for [Code Institute](https://codeinstitute.net/) and my goal with this project is to display my newly acquired HTML & CSS skills. I wanted to design an aesthetically pleasing and responsive website that provides the best possible sites and apps to help any new or existing Guardian who decides to join or is already part of the Destiny game player base.
+This is my second portfolio project for [Code Institute](https://codeinstitute.net/) and my goal with this project is to display my newly acquired Javascript skills. I decided to build a Movie based quiz site that will allow repeated playability. To do this I setup the quiz to call on an API - [opentdb.com](https://opentdb.com/), to retrieve the questions and answers etc. This was very challenging.
 
 ## Target Audience
 
-The target audience for this site is new and existing players of the Destiny Franchise, Destiny can be overwhelming for new players so having all the best Destiny-related apps in one location should provide a huge benefit to the player. It should also benefit existing players who may not be aware of these sites and apps.
+The target audience for this site is anyone who enjoys the world of cinema and testing their knowledge via a quiz based game.
 
 ## User Experience (UX)
 
@@ -45,18 +45,18 @@ The target audience for this site is new and existing players of the Destiny Fra
     - #### First Time Visitor Goals
 
         -   As a First Time Visitor, I want to easily understand the main purpose of the site.
-        -   As a First Time Visitor, I want to be able to easily navigate through the site to find content specific to my needs.
+        -   As a First Time Visitor, I want to understand the rules of the quiz
         -   As a First Time Visitor, I want to be able to view the site on multiple devices.
 
     -   #### Returning Visitor Goals
 
-        -   As a Returning Visitor, I want to find out more information about the best third-party sites and apps for the Destiny gaming franchise.
-        -   As a Returning Visitor, I want to learn more about the Destiny story and Lore.
+        -   As a Returning Visitor, I want to see new questions.
+        -   As a Returning Visitor, I want to learn more about any updates.
         -   As a Returning Visitor, I want to find the best way to get in contact with the site developer.
 
     -   #### Frequent User Goals
 
-        -   As a Frequent User, I want to check to see if there are any newly added sites or apps.
+        -   As a Frequent User, I want to be able to view my best scores
         -   As a Frequent User, I want to check to see if there are any new sections added to the site.
         -   As a Frequent User, I want to sign up so that I am emailed any major updates and/or changes to the website.
 
@@ -64,16 +64,16 @@ The target audience for this site is new and existing players of the Destiny Fra
 
     -   #### Imagery
 
-        -   The large, background hero image on the splash page is designed to be striking and catch the user's attention. I wanted a Destiny-related image that had a futuristic sci-fi aesthetic.
+        -   I have included a custom logo created with Canva, the colors of which match the color scheme for the website.
 
     -   #### Colour Scheme
 
-        -   I wanted the color scheme to match the hero image so variations of green and cream were used for backgrounds in the sections. I used WhiteSmoke and grey for the paragraphs and variations of green for all the headings. Black was used for the navbar/footer and hover effect on the anchor/button elements to contrast well with the greens chosen for the site. For the card background, I used some linear gradient colors to add vibrancy to the aesthetic.
-        ![Coolors Image](/assets/readme/coolors.png)
+        -   I wanted the color scheme to be simple but ascetically pleasing. I chose 4 colors that where implemented across all the site pages and they contrast well together.
+        ![Coolors Image](/docs/readme/coolors.png)
 
     -   #### Typography
 
-        -   The Poppins font is the main font used for the paragraphs throughout the website with Sans Serif as the fallback. I used font Exo 2 for all my headings. I felt that Poppins and Exo 2 worked really well together to provide that gaming text looks for the site. All fonts were taken from Google Fonts and applied via the @import method to the CSS file.
+        -   The Poppins font is the main font used throughout the website with Sans Serif as the fallback. I used variations of font weight for the headers and and question text etc.
 
 *   ### Wireframes
 
@@ -98,50 +98,56 @@ This is the prototype of the project that may change during its development.
 
 ## Features
 
-### Navbar
+### Highscores
+![Desktop Highscores](/docs/readme/desktop-highscores.PNG)
+The Highscores page can be accessed via the Highscores button on the homepage of the website, when clicked it will display the users Highscores and give the option to return Home, Play Quiz or Clear Highscores. I was in 2 minds to include the Clear Highscores button but from who I spoke to (class mates/family/mentor) majority feedback was that they were happy to have it there. 
 
-![Desktop Navbar](/assets/readme/desktop-nav.PNG)
-![Responsive Navbar](/assets/readme/tablet-mobile-nav.PNG)
-![Responsive Navbar Opened](/assets/readme/hamburger-nav.PNG)
-![Responsive Navbar Landscape Opened](/assets/readme/hamburger-nav-landscape.PNG)
-The navigation bar is present on the homepage and hides when scrolling down but appears when scrolling up. The user will find that it is easily noticeable, intuitive, and easy to use. On the left side is the site Logo with the navigation links to the right, the navbar is responsive and changes to the common hamburger menu style when moving to Tablet or Mobile devices. Navlinks flex direction was changed in a media query for mobile landscape.
+### Instructions Modal
 
-### About Vanguard Section
+![Desktop Instructions Modal](/docs/readme/desktop-instructions.PNG)
+The Instructions Modal can be accessed via the Instructions button on the homepage of the website, when clicked it will display the instructions for the quiz and advise the user that local storage will be used to store Highscores.
 
-![About Vanguard Section](/assets/readme/about-vanguard.PNG)
-The About Vanguard Section consists of a mission statement along with some flex boxes containing snippets of info from the game. Linear Gradient colors were used here to provide a bit of vibrancy to the boxes and a scale-up-down animation for a pleasing experience. The mission statement is clear and should provide the user with a clear description of what the site is about.
+### Sign Up/Feedback
 
-### Destiny's Story for Beginners Section
-
-![Destiny's Story for Beginners Section](/assets/readme/about-destiny.PNG)
-The Destiny's Story for Beginners Section provides the user with 4 videos detailing some of the history and lore of the Destiny game which can help the user understand the game and its universe. They were created and narrated by popular Destiny Youtuber " My name is Byf".
-
-### Best Sites Section
-
-![Best Sites Section](/assets/readme/best-sites.PNG)
-The Best Sites Section provides the user with a nice 4-card vertical layout with each card containing an image, title, site description, and anchor tag linking to the site itself. The sites provided are the most popular third-party sites for the Destiny Franchise and each site has its own purpose.
-
-### Best Apps Section
-
-![Best Apps Section](/assets/readme/best-apps.PNG)
-The Best Apps Section provides the user with a nice 4-card horizontal layout with each card containing an image, title, site description, and anchor tag linking to the Apple app store and the Google play store. The apps provided are the most popular third-party apps for the Destiny Franchise and each site has its own purpose.
-
-### Join Us Section
-
-![Join Us Section](/assets/readme/join-us.PNG)
-In the Join Us Section at the beginning of the section, the user will see a quote from one of the Destiny Franchise characters and a bit of incentive text to join us. There is a form below that also contains a feedback area which the user can avail of to let us know what they would like to see in future updates. There are also some custom merchandise images which the user can possibly win by joining up.
-
-### Thank You Message
-
-![Thank You Message](/assets/readme/thank-you.PNG)
-When the user clicks Join Us on the form they are met with a Thank You message and confirmation that their registration is complete. There is an anchor tag linked back to the main site.
+![Desktop Signup](/docs/readme/desktop-signup.PNG)
+The Sign Up/Feedback section is available on the homepage, it allows the user to signup for the site newsletter and offer their feedback on the site/quiz.
 
 ### Footer
 
-![Footer](/assets/readme/footer.PNG)
-The footer is placed at the bottom of the page. It contains the custom site logo which acts as a link to the site and the social media links displayed with icons provided by Font Awesome. There is also a small portion of text for the Copyright/Disclaimer. This is where the user can click on a social media link and reach out to the developer for news and updates.
+![Desktop Footer](/docs/readme/desktop-footer.PNG)
+The footer is placed at the bottom of the page. It contains the social media links displayed with icons provided by Font Awesome. There is also a small portion of text for the Copyright/Disclaimer. This is where the user can click on a social media link and reach out to the developer for news and updates.
 
-[Back to top &uarr;](#Vanguard)
+### Quiz
+
+![Desktop Quiz](/docs/readme/desktop-quiz.PNG)
+![Desktop Quiz Hover](/docs/readme/desktop-quiz-hover.PNG)
+![Desktop Quiz Correct](/docs/readme/desktop-quiz-correct.PNG)
+![Desktop Quiz Incorrect](/docs/readme/desktop-quiz-incorrect.PNG)
+![Desktop Quiz Select Answer](/docs/readme/desktop-quiz-check.PNG)
+The Quiz content can be accessed from the "Let's get started ->" button on the Homepage. It features a timer, sound effects which can be toggled on/off (sound toggled off as standard), progress bar/text, question, answers and a check answer button. The timer is set to 90 seconds, if the user does not answer the 10 questions in the allocated time the quiz will automatically finish. There is a sound effect for correct answer, incorrect answer and click for when selected an answer. The progress bar/text are both dynamic and update with each question asked. The questions and answers are fetched from the Opentdb API to allow for more re-playability. As a design choice I wanted a check answer button instead of just displaying correct answer instantly, the reason for this is I found that a user may click an answer they didn't want sometimes by mistake and at least with the check answer button it should remedy that situation. When the user does click on an answer and then selects the "CHECK ANSWER" button the button hides and the result appears in its place. The correct answer will be signified with green background and text confirming Correct Answer. When the answer selected is incorrect the result will be signified with a red background and text confirming Incorrect Answer and text signifying what the correct answer was. If the user doesn't click on an answer and then selects the "CHECK ANSWER" button the result area will display briefly the following text "Please select an answer!".
+
+### End of Quiz
+
+![Desktop Quiz No Score](/docs/readme/desktop-end-noscore.PNG)
+![Desktop Quiz Score One](/docs/readme/desktop-end-score.PNG)
+![Desktop Quiz Username](/docs/readme/desktop-end-username.PNG)
+![Desktop Quiz Username Alert](/docs/readme/desktop-end-username-alert.PNG)
+![Desktop Quiz Score Four](/docs/readme/desktop-end-score4.PNG)
+![Desktop Quiz Score Six](/docs/readme/desktop-end-score6.PNG)
+![Desktop Quiz Score Eight](/docs/readme/desktop-end-score8.PNG)
+![Desktop Quiz Score Ten](/docs/readme/desktop-end-score10.PNG)
+When the user has finished the quiz the end results will display. If the user has not answered any questions correctly the username entry will be hidden and they will be instructed to Play Again to get their name on the Leaderboard. If the user does answer some questions correctly their results will be show along with a message and movie quote - these will change based off users results. They will now be able to enter a username - there is an indication to tell the user that their username needs to be between 4 and 10 characters with no spaces (spaces have been disabled in the code). If the user enters less than 4 characters or more than 10 and try's to save the Save button will be disabled, if the user enters a username between 4 & 10 characters the indication text will hide and user and save their username. When the user saves their username they will be redirected to the Highscores page.
+
+### Thank You
+
+![Desktop Thank You](/docs/readme/desktop-thankyou.PNG)
+When the user fills out form sections and clicks "SIGN UP" button a Thank You message will be displayed along with text to indicate they have been registered and a movie quote. There is a "Return Home" button to redirect the user back to the main site.
+
+### 404
+![Desktop 404](/docs/readme/desktop-404.PNG)
+If user enters incorrect url a 404 page will appear, it indicates something went wrong and includes a movie quote and a "Home" button that directs the user to the site.
+
+[Back to top &uarr;](#Movie Buff or Bluff)
 
 ## Technologies Used
 
