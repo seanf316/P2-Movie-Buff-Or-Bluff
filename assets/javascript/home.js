@@ -10,10 +10,10 @@ instructionsBtn.addEventListener('click', modalShow);
 closeIcon.addEventListener('click', modalHide);
 highScoreBtn.addEventListener("click", () => {
   return window.location.assign('./highscores.html')
-})
+});
 getStartedBtn.addEventListener("click", () => {
   return window.location.assign('./quiz.html')
-})
+});
 
 // Homepage Functions
 function modalShow() {  

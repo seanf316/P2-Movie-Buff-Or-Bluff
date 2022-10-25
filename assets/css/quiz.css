@@ -29,6 +29,11 @@ ul li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+
 h1,
 h2 {
     color: var(--main-color);
@@ -99,7 +104,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding: 1.5rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     width: 90%;
     text-align: center;
 }
@@ -195,34 +200,24 @@ h2 {
 
 #result {
     width: 100%;
-}
-
-.result-correct {
+    padding: .5rem .5rem;
     font-size: 1.2rem;
-    padding: .5rem 0;
     border: 3px solid var(--light-color);
     border-style: double;
     border-radius: .5rem;
+}
+
+.result-correct {
     background-color: green;
     color: var(--light-color);
 }
 
 .result-incorrect {
-    font-size: 1.2rem;
-    padding: .5rem 0;
-    border: 3px solid var(--light-color);
-    border-style: double;
-    border-radius: .5rem;
     background-color: rgb(182, 26, 26);
     color: var(--light-color);
 }
 
 .result-omit {
-    font-size: 1.2rem;
-    padding: .5rem 0;
-    border: 3px solid var(--light-color);
-    border-style: double;
-    border-radius: .5rem;
     background-color: var(--main-color);
     color: var(--accent-color);
 }
@@ -244,7 +239,8 @@ h2 {
 /* End */
 
 #endPage {
-    display: none;
+    display: flex;
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 #finalScore {
@@ -274,6 +270,11 @@ h2 {
     color: var(--accent-color);
     font-style: italic;
     font-weight: 600;
+}
+
+#endPage {
+    width: 100%;
+    display: none;
 }
 
 #end {
@@ -394,8 +395,7 @@ h2 {
     }
 
     #progressBar {
-        width: 25rem;
-        height: 2rem;
+        width: 80%;
         margin-bottom: 2rem;
     }
 
@@ -417,9 +417,61 @@ h2 {
         padding: 1rem 0;
         width: 80%;
     }
+
+    /* End */
+
+    #endPage {
+        width: 80%;
+    }
+
+    #finalScore {
+        font-size: 2rem;
+    }
+
+    #finalTextContainer {
+        width: 100%;
+    }
+
+    #final-text {
+        font-size: 1.8rem;
+    }
+
+    #final-quote {
+        margin-top: 1.2rem;
+    }
+
+    #end-form {
+        width: 100%;
+    }
+
+    #end-form input {
+        margin: 1rem auto 0 auto;
+    }
+
+    #username-text {
+        font-size: 1rem;
+        margin: .5rem auto 1.5rem auto;
+    }
+
+    #control-buttons {
+        width: 100%;
+        margin: 2rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #control-buttons a {
+        width: 46%;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 1200px) {
+
+    #progressBar {
+        width: 50%;
+    }
 
     .quiz-body {
         width: 50%;
@@ -437,5 +489,9 @@ h2 {
 
     #result {
         width: 50%;
+    }
+
+    #endPage {
+        width: 60%;
     }
 }

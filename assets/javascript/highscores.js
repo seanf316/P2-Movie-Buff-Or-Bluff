@@ -18,7 +18,7 @@ highScores.map(score => {
         <td>${score.score}</td>
         <td>${currentDate}</td>
         </tr>`
-}).join('')
+}).join('');
 
 _clearBtn.addEventListener('click', removeHighscores);
 
