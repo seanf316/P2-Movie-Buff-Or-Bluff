@@ -50,7 +50,7 @@ username.addEventListener('input', usernameEnter);
 saveScoreBtn.addEventListener('click', saveHighScore);
 document.addEventListener('DOMContentLoaded', () => {
   // Fetch to retrieve API learned from James Q Quick tutorial
-  fetch(`https://opentdb.com/api.php?amount=50&category=11&type=multiple`)
+  fetch(`https://opentdb.com/api.php?amount=10&category=11&type=multiple`)
     .then((res) => {
       return res.json();
     })
@@ -158,7 +158,7 @@ function checkAnswer() {
   if (quizAnswers.querySelector('.selected')) {
     let selectAnswer = quizAnswers.querySelector('.selected span').textContent;
     checkCount();
-    if (selectAnswer == correctAnswer) {
+    if (selectAnswer == HTMLDecode(correctAnswer)) {
       correctSound();
       answerCheck.style.display = 'none';
       correctScore++;
@@ -179,6 +179,15 @@ function checkAnswer() {
     }, 500);
     answerCheck.disabled = false;
   }
+}
+
+
+/**
+ * Function to decodeHtml for the correctAnswers(removes Special Character Codes for HTML)
+ */
+ function HTMLDecode(textString) {
+  let doc = new DOMParser().parseFromString(textString, "text/html");
+  return doc.documentElement.textContent;
 }
 
 /**
