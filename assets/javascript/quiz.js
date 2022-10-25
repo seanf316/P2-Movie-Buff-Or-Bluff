@@ -5,13 +5,11 @@ let quizTime = document.getElementById('timeLeft');
 
 // Score
 const progressText = document.getElementById('progressText');
-const progressBar = document.getElementById('progressBar');
 const progressBarFull = document.getElementById('progressBarFull');
 const totalQuestionsText = document.getElementById('total-questions');
 
 // Sounds
 let isPlaying = false;
-const audioLogo = document.getElementById('audioLogo');
 const audioOffIcon = document.getElementsByClassName("sound-off");
 const audioOnIcon = document.getElementsByClassName("sound-on");
 const buttonAudio = new Audio("assets/sounds/button-click.mp3");
@@ -25,6 +23,7 @@ const quizQuestion = document.getElementById('question');
 const quizAnswers = document.querySelector('.quiz-answers');
 const answerCheck = document.getElementById('check-answer');
 const answerResult = document.getElementById('result');
+let timeLeft;
 let correctAnswer = "";
 let correctScore = 0;
 let totalQuestion = 10;
@@ -61,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch((err) => {
       console.error(err);
     });
-})
+});
 
 /** 
  * Main Function to start the Quiz 
@@ -143,8 +142,8 @@ function selectAnswer() {
       }
       buttonSound();
       answer.classList.add('selected');
-    })
-  })
+    });
+  });
 }
 
 /**
@@ -162,7 +161,6 @@ function checkAnswer() {
       correctSound();
       answerCheck.style.display = 'none';
       correctScore++;
-      console.log(correctScore)
       answerResult.className = "result-correct";
       answerResult.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer!</p>`;
     } else {
@@ -284,7 +282,7 @@ function usernameEnter() {
  * It will push the username and most recent score to the Highscores table.
  */
 function saveHighScore(event) {
-  event.preventDefault()
+  event.preventDefault();
   const score = {
     score: correctScore,
     name: username.value
@@ -292,7 +290,7 @@ function saveHighScore(event) {
   //Allows up to 10 Highscores and after that it will replace the lowest score
   highScores.push(score);
   highScores.sort((a, b) => {
-    return b.score - a.score
+    return b.score - a.score;
   });
   highScores.splice(10);
   localStorage.setItem('highScores', JSON.stringify(highScores));
@@ -306,16 +304,14 @@ function saveHighScore(event) {
  */
 let audioIconLogo = document.getElementsByClassName("audio-icon-logo");
 for (let i = 0; i < audioIconLogo.length; i++) {
-  audioIconLogo[i].addEventListener("click", () => {
-    toggleAudio();
-  });
+  audioIconLogo[i].addEventListener("click", toggleAudio);
 }
 
 /**
  * Lets the player have the option whether to have sounds on or not
  */
 function toggleAudio() {
-  isPlaying ? toggleAudioOff() : toggleAudioOn();
+  return isPlaying ? toggleAudioOff() : toggleAudioOn();
 }
 
 /**
@@ -346,8 +342,6 @@ function toggleAudioOff() {
 function correctSound() {
   if (isPlaying) {
     correctAudio.play();
-  } else {
-    correctAudio.pause();
   }
 }
 
@@ -357,8 +351,6 @@ function correctSound() {
 function incorrectSound() {
   if (isPlaying) {
     incorrectAudio.play();
-  } else {
-    incorrectAudio.pause();
   }
 }
 
@@ -368,7 +360,5 @@ function incorrectSound() {
 function buttonSound() {
   if (isPlaying) {
     buttonAudio.play();
-  } else {
-    buttonAudio.pause();
   }
 }
