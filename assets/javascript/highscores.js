@@ -17,12 +17,12 @@ highScores.map(score => {
         <td>${score.name}</td>
         <td>${score.score}</td>
         <td>${currentDate}</td>
-        </tr>`
+        </tr>`;
 }).join('');
 
 _clearBtn.addEventListener('click', removeHighscores);
 
 function removeHighscores() {
     localStorage.clear();
-    return window.location.assign('./index.html')
+    return window.location.assign('./index.html');
 }

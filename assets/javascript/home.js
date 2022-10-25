@@ -9,10 +9,10 @@ const closeIcon = document.getElementsByClassName("close")[0];
 instructionsBtn.addEventListener('click', modalShow);
 closeIcon.addEventListener('click', modalHide);
 highScoreBtn.addEventListener("click", () => {
-  return window.location.assign('./highscores.html')
+  return window.location.assign('./highscores.html');
 });
 getStartedBtn.addEventListener("click", () => {
-  return window.location.assign('./quiz.html')
+  return window.location.assign('./quiz.html');
 });
 
 // Homepage Functions
@@ -28,4 +28,4 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};

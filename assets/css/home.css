@@ -74,7 +74,7 @@ h2 {
 .homepage_content__title {
     text-align: center;
     font-size: 1.8rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding: 1rem 1rem;
 }
 
@@ -322,99 +322,6 @@ footer {
 .devloped-text i:hover,
 .devloped-text i:focus {
     color: var(--light-color);
-}
-
-/* End */
-
-#finalScore {
-    margin-top: 1rem;
-}
-
-#finalTextContainer {
-    margin-top: 1rem;
-    background-color: var(--main-color);
-    border: 3px solid var(--light-color);
-    padding: 1rem;
-    border-radius: .5rem;
-}
-
-#final-text {
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-#final-text strong {
-    color: var(--light-color);
-}
-
-#final-quote {
-    margin-top: 1rem;
-    color: var(--accent-color);
-    font-style: italic;
-    font-weight: 600;
-}
-
-#end {
-    width: 90%;
-    margin: 1rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-#username {
-    width: 100%;
-}
-
-#saveScoreBtn {
-    width: 100%;
-}
-
-#end-form {
-    width: 100%;
-}
-
-#end-form input {
-    border: 5px solid var(--main-color);
-    border-radius: .5rem;
-    font-size: 1.5rem;
-    background-color: var(--accent-color);
-    margin: 1rem auto;
-    padding: .3rem .8rem;
-    color: var(--light-color);
-}
-
-#end-form input:focus {
-    outline: none;
-}
-
-#end-form input::placeholder {
-    color: var(--main-color);
-}
-
-#username-text {
-    width: 90%;
-    font-size: small;
-    font-weight: 600;
-    margin: 0 auto 1rem auto;
-    font-style: italic;
-    color: var(--light-color);
-}
-
-#control-buttons {
-    width: 100%;
-    margin: 3rem auto;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#control-buttons a {
-    width: 50%;
-    text-align: center;
 }
 
 /* Highscores */

@@ -99,35 +99,37 @@ This is the prototype of the project that may change during its development.
 ## Features
 
 ### Highscores
-![Desktop Highscores](/docs/readme/desktop-highscores.PNG)
+
 The Highscores page can be accessed via the Highscores button on the homepage of the website, when clicked it will display the users Highscores and give the option to return Home, Play Quiz or Clear Highscores. I was in 2 minds to include the Clear Highscores button but from who I spoke to (class mates/family/mentor) majority feedback was that they were happy to have it there. 
+![Desktop Highscores](/docs/readme/desktop-highscores.PNG)
 
 ### Instructions Modal
 
+The Instructions Modal can be accessed via the Instructions button on the homepage of the website, when clicked it will display the instructions for the quiz and advise the user that local storage will be used to store Highscores. The user can close the modal by clicking on the "X" icon displayed at the top of modal or can click anywhere out side it the modal space.
 ![Desktop Instructions Modal](/docs/readme/desktop-instructions.PNG)
-The Instructions Modal can be accessed via the Instructions button on the homepage of the website, when clicked it will display the instructions for the quiz and advise the user that local storage will be used to store Highscores.
 
 ### Sign Up/Feedback
 
-![Desktop Signup](/docs/readme/desktop-signup.PNG)
 The Sign Up/Feedback section is available on the homepage, it allows the user to signup for the site newsletter and offer their feedback on the site/quiz.
+![Desktop Signup](/docs/readme/desktop-signup.PNG)
 
 ### Footer
 
-![Desktop Footer](/docs/readme/desktop-footer.PNG)
 The footer is placed at the bottom of the page. It contains the social media links displayed with icons provided by Font Awesome. There is also a small portion of text for the Copyright/Disclaimer. This is where the user can click on a social media link and reach out to the developer for news and updates.
+![Desktop Footer](/docs/readme/desktop-footer.PNG)
 
 ### Quiz
 
+The Quiz content can be accessed from the "Let's get started ->" button on the Homepage. It features a timer, sound effects which can be toggled on/off (sound toggled off as standard), progress bar/text, question, answers and a check answer button. The timer is set to 90 seconds, if the user does not answer the 10 questions in the allocated time the quiz will automatically finish. There is a sound effect for correct answer, incorrect answer and click for when selected an answer. The progress bar/text are both dynamic and update with each question asked. The questions and answers are fetched from the Opentdb API to allow for more re-playability. As a design choice I wanted a check answer button instead of just displaying correct answer instantly, the reason for this is I found that a user may click an answer they didn't want sometimes by mistake and at least with the check answer button it should remedy that situation. When the user does click on an answer and then selects the "CHECK ANSWER" button the button hides and the result appears in its place. The correct answer will be signified with green background and text confirming Correct Answer. When the answer selected is incorrect the result will be signified with a red background and text confirming Incorrect Answer and text signifying what the correct answer was. If the user doesn't click on an answer and then selects the "CHECK ANSWER" button the result area will display briefly the following text "Please select an answer!".
 ![Desktop Quiz](/docs/readme/desktop-quiz.PNG)
 ![Desktop Quiz Hover](/docs/readme/desktop-quiz-hover.PNG)
 ![Desktop Quiz Correct](/docs/readme/desktop-quiz-correct.PNG)
 ![Desktop Quiz Incorrect](/docs/readme/desktop-quiz-incorrect.PNG)
 ![Desktop Quiz Select Answer](/docs/readme/desktop-quiz-check.PNG)
-The Quiz content can be accessed from the "Let's get started ->" button on the Homepage. It features a timer, sound effects which can be toggled on/off (sound toggled off as standard), progress bar/text, question, answers and a check answer button. The timer is set to 90 seconds, if the user does not answer the 10 questions in the allocated time the quiz will automatically finish. There is a sound effect for correct answer, incorrect answer and click for when selected an answer. The progress bar/text are both dynamic and update with each question asked. The questions and answers are fetched from the Opentdb API to allow for more re-playability. As a design choice I wanted a check answer button instead of just displaying correct answer instantly, the reason for this is I found that a user may click an answer they didn't want sometimes by mistake and at least with the check answer button it should remedy that situation. When the user does click on an answer and then selects the "CHECK ANSWER" button the button hides and the result appears in its place. The correct answer will be signified with green background and text confirming Correct Answer. When the answer selected is incorrect the result will be signified with a red background and text confirming Incorrect Answer and text signifying what the correct answer was. If the user doesn't click on an answer and then selects the "CHECK ANSWER" button the result area will display briefly the following text "Please select an answer!".
 
 ### End of Quiz
 
+When the user has finished the quiz the end results will display. If the user has not answered any questions correctly the username entry will be hidden and they will be instructed to Play Again to get their name on the Leaderboard. If the user does answer some questions correctly their results will be show along with a message and movie quote - these will change based off users results. They will now be able to enter a username - there is an indication to tell the user that their username needs to be between 4 and 10 characters with no spaces (spaces have been disabled in the code). If the user enters less than 4 characters or more than 10 and try's to save the Save button will be disabled, if the user enters a username between 4 & 10 characters the indication text will hide and user and save their username. When the user saves their username they will be redirected to the Highscores page.
 ![Desktop Quiz No Score](/docs/readme/desktop-end-noscore.PNG)
 ![Desktop Quiz Score One](/docs/readme/desktop-end-score.PNG)
 ![Desktop Quiz Username](/docs/readme/desktop-end-username.PNG)
@@ -136,18 +138,18 @@ The Quiz content can be accessed from the "Let's get started ->" button on the H
 ![Desktop Quiz Score Six](/docs/readme/desktop-end-score6.PNG)
 ![Desktop Quiz Score Eight](/docs/readme/desktop-end-score8.PNG)
 ![Desktop Quiz Score Ten](/docs/readme/desktop-end-score10.PNG)
-When the user has finished the quiz the end results will display. If the user has not answered any questions correctly the username entry will be hidden and they will be instructed to Play Again to get their name on the Leaderboard. If the user does answer some questions correctly their results will be show along with a message and movie quote - these will change based off users results. They will now be able to enter a username - there is an indication to tell the user that their username needs to be between 4 and 10 characters with no spaces (spaces have been disabled in the code). If the user enters less than 4 characters or more than 10 and try's to save the Save button will be disabled, if the user enters a username between 4 & 10 characters the indication text will hide and user and save their username. When the user saves their username they will be redirected to the Highscores page.
 
 ### Thank You
 
-![Desktop Thank You](/docs/readme/desktop-thankyou.PNG)
 When the user fills out form sections and clicks "SIGN UP" button a Thank You message will be displayed along with text to indicate they have been registered and a movie quote. There is a "Return Home" button to redirect the user back to the main site.
+![Desktop Thank You](/docs/readme/desktop-thankyou.PNG)
 
 ### 404
-![Desktop 404](/docs/readme/desktop-404.PNG)
-If user enters incorrect url a 404 page will appear, it indicates something went wrong and includes a movie quote and a "Home" button that directs the user to the site.
 
-[Back to top &uarr;](#Movie Buff or Bluff)
+If user enters incorrect url a 404 page will appear, it indicates something went wrong and includes a movie quote and a "Home" button that directs the user to the site.
+![Desktop 404](/docs/readme/desktop-404.PNG)
+
+[Back to top &uarr;](#MovieBufforBluff)
 
 ## Technologies Used
 
@@ -160,39 +162,37 @@ If user enters incorrect url a 404 page will appear, it indicates something went
 ### Frameworks and Tools Used
 
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Poppins' and 'Exo 2' fonts into the style.css file which is used on all pages throughout the project.
+    - Google fonts were used to import the 'Poppins' font into the .css files used on all pages throughout the project.
 1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used for the icons in the About Vanguard section and the social media icons in the footer for aesthetic and UX purposes.
+    - Font Awesome was used for the icons throughout the project and the social media icons in the footer for aesthetic and UX purposes.
 1. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the project's code after being pushed from Git.
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/seanf316/P1-Vanguard/tree/main/assets/wireframes) during the design process.
-1. [ILoveIMG:](https://www.iloveimg.com/)
-    - ILoveIMG was used to resize multiple images during the design process.
-1. [Placeit.net:](https://placeit.net//)
-    - Placeit.net was used to create a custom logo and merchandise images.
 1. [XConvert](www.xconvert.com)
     - XConvert was used to convert images to webp or png where required.
-1. [DEV](https://dev.to/)
-    - DEV provided the tutorial to create the mobile [hamburger menu](https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci).
+1. [Stackoverflow](https://stackoverflow.com/)
+    - Stackoverflow was used on many occasions to figure out some troublesome code.
 1. [W3schools](https://www.w3schools.com/)
-    - W3schools provided the tutorial to create the ["Hide Menu on Scroll"](https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp) that has been implemented on the site.
+    - W3schools provided the tutorial to create the ["Modal Box"](https://www.w3schools.com/howto/howto_css_modals.asp) that was used for the site instructions.
 1. [W3C HTML Validator](https://validator.w3.org/)
     - I used W3C HTML Validator for the validation of the site's HTML code.
 1. [W3C JigSaw Validator](https://jigsaw.w3.org/css-validator/)
    - I used W3C JigSaw Validator for the validation of the site CSS code.
+1. [JSHint](https://jshint.com/)
+   - I used JSHint for the validation of the site js code.
 1. [Grammarly](https://www.grammarly.com/)
     - Grammarly was used to check typography.
-1. [Am I Responsive](https://ui.dev/amiresponsive)
-    - Am I Responsive was used to produce the website mockup.
+1. [Techsini.com](https://techsini.com/multi-mockup/)
+    - Techsini.com was used to produce the website mockup.
 1. [favicon.io](https://favicon.io/)
     - favicon.io was used to create my site's favicon.
-1. [uiGradients](https://uigradients.com/)
-    - uiGradients provided the linear gradient colors used on the cards in the site.
+1. [Canva](https://www.canva.com/)
+    - Canva was used to create the site logo.
 
-[Back to top &uarr;](#Vanguard)
+[Back to top &uarr;](#MovieBufforBluff)
 
 ## Testing
 
@@ -201,19 +201,25 @@ If user enters incorrect url a 404 page will appear, it indicates something went
 The W3C Markup Validator and W3C CSS Validator Services were used to validate the code used in the project to ensure there were no syntax errors.
 <details><summary>W3C Markup Validator</summary>
 
-![W3C Markup Validator Results](/assets/readme/w3-validator-html.PNG)
+![W3C Markup Validator Homepage Results](/docs/readme/validation/homepage-results.PNG)
+![W3C Markup Validator Quiz Results](/docs/readme/validation/quiz-results.PNG)
+![W3C Markup Validator Highscores Results](/docs/readme/validation/highscores-results.PNG)
+![W3C Markup Validator Thank You Results](/docs/readme/validation/thankyou-results.PNG)
+![W3C Markup Validator 404 Results](/docs/readme/validation/404-results.PNG)
 
 </details>
 <details><summary>W3C CSS Validator</summary>
 
-![W3C CSS Validator Results](/assets/readme/w3-validator-css.PNG)
+![W3C CSS Validator Results](/docs/readme/validation/css-results.PNG)
 
 </details>
 
-The warnings that appear in the W3C CSS Validator are for the below which are being used for the linear gradient backgrounds as a fallback for old browsers:
-<details><summary>W3C CSS Validator Warnings</summary>
+<details><summary>JSHint</summary>
 
-![W3C CSS Validator Warnings](/assets/readme/w3-validator-css-warnings.PNG)
+Any warnings that could be fixed have been resolved, the only remaining warnings are all support based warnings regarding let's/const's etc.
+![JSHint Quiz Results](/docs/readme/validation/jshint-quiz.PNG)
+![JSHint Homepage Results](/docs/readme/validation/jshint-homepage.PNG)
+![JSHint Highscores Results](/docs/readme/validation/jshint-highscores.PNG)
 
 </details>
 
@@ -228,92 +234,56 @@ To check the accessibility of my site, I used the [WAVE Web Accessibility Evalua
 
 For performance and more accessibility testing, I used Google Lighthouse throughout:
 
-#### Main Page - Desktop
+#### Lighthouse Results
 
-![Lighthouse Desktop Score](/assets/readme/lighthouse-desktop.PNG)
-<details><summary>Performance</summary>
+<details><summary>Desktop</summary>
 
-![Lighthouse Desktop Performance Score](/assets/readme/lighthouse-desktop-performance.PNG)
+Homepage
+![Lighthouse Desktop Score](/docs/readme/validation/desktop-homepage-results.PNG)
 
-</details>
-<details><summary>Accessibility</summary>
+Highscores
+![Lighthouse Desktop Score](/docs/readme/validation/desktop-highscores-results.PNG)
 
-![Lighthouse Desktop Accessibility Score](/assets/readme/lighthouse-desktop-accessibility.PNG)
+Quiz
+![Lighthouse Desktop Score](/docs/readme/validation/desktop-quiz-results.PNG)
 
-</details>
-<details><summary>Best Practices</summary>
+Thank You
+![Lighthouse Desktop Score](/docs/readme/validation/desktop-thankyou-results.PNG)
 
-![Lighthouse Desktop Best Practices Score](/assets/readme/lighthouse-desktop-best-practices.PNG)
-
-</details>
-<details><summary>SEO</summary>
-
-![Lighthouse Desktop SEO Score](/assets/readme/lighthouse-desktop-seo.PNG)
+404
+![Lighthouse Desktop Score](/docs/readme/validation/desktop-404-results.PNG)
 
 </details>
 
-#### Main Page - Mobile
+<details><summary>Mobile</summary>
 
-![Lighthouse Mobile Score](/assets/readme/lighthouse-mobile.PNG)
-<details><summary>Performance</summary>
+Homepage
+![Lighthouse Desktop Score](/docs/readme/validation/mobile-homepage-results.PNG)
 
-![Lighthouse Mobile Performance Score](/assets/readme/lighthouse-mobile-performance.PNG)
+Highscores
+![Lighthouse Desktop Score](/docs/readme/validation/mobile-highscores-results.PNG)
 
-</details>
-<details><summary>Accessibility</summary>
+Quiz
+![Lighthouse Desktop Score](/docs/readme/validation/mobile-quiz-results.PNG)
 
-![Lighthouse Mobile Accessibility Score](/assets/readme/lighthouse-mobile-accessibility.PNG)
+Thank You
+![Lighthouse Desktop Score](/docs/readme/validation/mobile-thankyou-results.PNG)
 
-</details>
-<details><summary>Best Practices</summary>
-
-![Lighthouse Mobile Best Practices Score](/assets/readme/lighthouse-mobile-best-practices.PNG)
-
-</details>
-<details><summary>SEO</summary>
-
-![Lighthouse Mobile SEO Score](/assets/readme/lighthouse-mobile-seo.PNG)
+404
+![Lighthouse Desktop Score](/docs/readme/validation/mobile-404-results.PNG)
 
 </details>
-
-#### Thank You Page - Desktop
-
-![Lighthouse Desktop Score](/assets/readme/thank-you-desktop.PNG)
-
-#### Thank You Page - Mobile
-
-![Lighthouse Mobile Score](/assets/readme/thank-you-mobile.PNG)
 
 #### Lighthouse errors
 
-At Desktop & Mobile, the Best Practices score is 92 - This is a cookie issue with embedded YouTube videos. Below, you will find some screenshots detailing the errors:
+At Mobile, the Performance score is between 95-100 - This is due to Cumulative Layout Shift. As the site is setup to move dynamically depending on what should be displayed this is the highest score achievable at the moment, in future I will look to see what else can be done.
 <details><summary>Desktop/Mobile Chrome Devtools Errors</summary>
-
-![Devtools Error](/assets/readme/lighthouse-desktop-dev-tools-warning.PNG)
-![Devtools Error](/assets/readme/lighthouse-desktop-dev-tools-warning2.PNG)
-![Devtools Error](/assets/readme/lighthouse-desktop-dev-tools-warning3.PNG)
-
-</details>
-I have researched this issue on StackOverflow and spoke to my mentor and have come to the conclusion I can't fix it at this time but will look to resolve it in future updates. When YouTube videos are removed and Lighthouse is run, I received a score of 100 in Best Practices:
-<details><summary>YouTube Videos Removed</summary>
-
-![Lighthouse Best Practices Score with Youtube Videos Removed](/assets/readme/lighthouse-desktop-best-practices-youtube-videos-removed.PNG)
-
-</details>
-
-At Mobile, the Performance score is 92 - Below you will find some screenshots detailing the errors:
-<details><summary>Mobile Performance Errors</summary>
-
-![Lighthouse Mobile Performance Errors](/assets/readme/lighthouse-mobile-performance-issues.PNG)
-
-</details>
-I have researched this issue by clicking the Learn more link in Lighthouse and the fixes require knowledge of JavaScript/Plugins, so I have concluded I can't fix it at this time but will look to resolve it in future updates.
 
 ### Further Testing
 
 - The website was tested on Google Chrome, Internet Explorer, Microsoft Edge, Mozilla Firefox, and Safari browsers.
 - The website was viewed on a variety of devices such as desktops, Laptops, Apples Products (Macbook, IPad Pro, iPhone 13 Pro, iPhone 8), and a range of Android devices (Samsung Note 10+, Samsung S20 Plus, Samsung Tab S7+, Oppo mobile).
-- A large amount of testing was done to ensure that all pages were linking correctly.
+- A large amount of testing was done to ensure that everything functions as expected.
 - I asked friends and family members to review the site and document any bugs and/or user experience issues. Some co-workers also helped out with testing.
 
 ### Testing User Stories from the User Experience (UX) Section
@@ -321,7 +291,7 @@ I have researched this issue by clicking the Learn more link in Lighthouse and t
 - #### First Time Visitor Goals
 
     -   As a First Time Visitor, I want to easily understand the main purpose of the site.
-        - Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the section of their choice. Underneath there is a Hero Image with Text and a "Learn More" Call to action button.
+        - Upon entering the site, users are automatically greeted with a clean homepage with site logo. Underneath the logo is some detailing information about 
         - The user will be able to understand what the site is about with the text that appears on the Hero Image.
         - The user has two options: click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the website.
     -   As a First Time Visitor, I want to be able to easily navigate through the site to find content specific to my needs.

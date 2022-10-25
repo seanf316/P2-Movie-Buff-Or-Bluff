@@ -26,7 +26,7 @@ const answerResult = document.getElementById('result');
 let timeLeft;
 let correctAnswer = "";
 let correctScore = 0;
-let totalQuestion = 10;
+let totalQuestion = 50;
 let questionCounter = 1;
 let currentQuestion = {};
 let questions = [];
@@ -203,7 +203,7 @@ function checkCount() {
   setTimeout(() => {
     questionCounter++;
     showQuestion();
-  }, 900);
+  }, 2000);
 }
 
 /**
