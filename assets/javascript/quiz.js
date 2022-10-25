@@ -1,7 +1,7 @@
 // Quiz Variables
 
 // Timer variables
-let _timeLeft= document.getElementById('timeLeft');
+let _timeLeft = document.getElementById('timeLeft');
 
 // Score
 const _progressText = document.getElementById('progressText');
@@ -40,14 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Fetch to retrieve API learned from James Q Quick tutorial
   fetch(`https://opentdb.com/api.php?amount=50&category=11&type=multiple`)
     .then((res) => {
-        return res.json();
+      return res.json();
     })
     .then((loadedQuestions) => {
-        questions = loadedQuestions.results;
-        startQuiz();
+      questions = loadedQuestions.results;
+      startQuiz();
     })
     .catch((err) => {
-        console.error(err);
+      console.error(err);
     });
 })
 
@@ -69,18 +69,20 @@ function startQuiz() {
  * Time set to 60 seconds - after time is finished user is moved to end.html
  */
 function quizTime() {
-  let timeLeft = 90;
+  let timeLeft = 30;
   quizTime = setInterval(function () {
     timeLeft--;
-      if (timeLeft > 0) {
-          _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> ${timeLeft}</p>`;
-      } else if (timeLeft === 0) {
-        setTimeout(() => {
-          stopTimer();
-          localStorage.setItem('mostRecentScore', correctScore)
-          return window.location.assign('./end.html')
-        }, 300);
-      }
+    if (timeLeft > 0) {
+      _timeLeft.innerHTML = `<p><i class="fas fa-stopwatch"> ${timeLeft}</p>`;
+    } else if (timeLeft === 0) {
+      setTimeout(() => {
+        stopTimer();
+        _quizWrapper.style.display = 'none';
+        endPage.style.display = 'flex';
+        endQuiz();
+        localStorage.setItem('mostRecentScore', correctScore)
+      }, 300);
+    }
   }, 1000);
 }
 
@@ -148,6 +150,7 @@ function checkAnswer() {
       correctSound()
       _checkAnswer.style.display = 'none'
       correctScore++;
+      console.log(correctScore)
       _result.className = "result-correct";
       _result.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer!</p>`;
     } else {
@@ -174,16 +177,169 @@ function checkCount() {
   questionCounter++;
   if (askedCount == totalQuestion) {
     setTimeout(() => {
-      _checkAnswer.style.display = 'none';
+      _quizWrapper.style.display = 'none';
+      endPage.style.display = 'flex';
+      endQuiz();
       localStorage.setItem('mostRecentScore', correctScore)
-      location.reload();
-      return window.location.assign('./end.html')
     }, 300);
   }
   setTimeout(() => {
     showQuestion();
   }, 900);
 }
+
+
+// End Page Variables
+const username = document.querySelector('#username');
+const usernameText = document.querySelector('#username-text');
+const _endForm = document.getElementById('end-form');
+const endPage = document.getElementById('endPage');
+const finalScore = document.querySelector('#finalScore');
+const _finalText = document.getElementById('final-text');
+const _finalQuote = document.getElementById('final-quote');
+const saveScoreBtn = document.querySelector('#saveScoreBtn');
+const _controlBtns = document.getElementById('control-buttons');
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+
+// Event Listeners
+username.addEventListener('input', usernameEnter);
+saveScoreBtn.addEventListener('click', saveHighScore);
+
+
+/**
+ * Function to stop user entering a username for Leaderboard if score is 0.
+ * Displays a message to user depending on score
+ * Displays a movie quote to user depending on score
+ */
+function endQuiz() {
+  console.log(correctScore)
+  switch (true) {
+    case correctScore == 0:
+      finalScore.style.display = 'none';
+      _endForm.style.display = 'none';
+      _finalText.innerHTML = `Sorry my friend you answered <strong>0</strong> questions correctly, not everyone is cursed with knowledge. Play again to get your name on the Highscores Leaderboard.`
+      _finalQuote.innerHTML = `“Everybody looses a couple, and you either pack up and go home or keep fighting.” - Seabiscuit (2003)`
+      break;
+    case correctScore <= 3:
+      finalScore.innerHTML = `You got ${correctScore} out of 10 correct!`;
+      _finalText.innerHTML = `Not the best my friend but certainly not the worst, you have made it onto the Leaderboard.`
+      _finalQuote.innerHTML = `“Worrying about losing keeps you winning.” - Sweet November (2001)`
+      _controlBtns.style.display = 'none';
+      usernameEnter();
+      break;
+    case correctScore > 3 && correctScore <= 5:
+      finalScore.innerHTML = `You got ${correctScore} out of 10 correct!`;
+      _finalText.innerHTML = `Now you're getting there keep going young Padawan.`
+      _finalQuote.innerHTML = `“You know what makes you feel okay about losing? Winning.” - Molly's Game (2017)`
+      _controlBtns.style.display = 'none';
+      usernameEnter();
+      break;
+    case correctScore > 5 && correctScore <= 7:
+      finalScore.innerHTML = `You got ${correctScore} out of 10 correct!`;
+      _finalText.innerHTML = `Good job my friend now that's what we want to see, your heading toward the Leaderboard summit.`
+      _finalQuote.innerHTML = `“Oh, I don't lose. People who bet on me to lose lose. And they lose big.” - Ocean's 13 (2007)`
+      _controlBtns.style.display = 'none';
+      usernameEnter();
+      break;
+    case correctScore > 7 && correctScore <= 9:
+      finalScore.innerHTML = `You got ${correctScore} out of 10 correct!`;
+      _finalText.innerHTML = `We are in the presence of greatness you are going straight to the top.`
+      _finalQuote.innerHTML = `“Winners forget they're in a race, they just love to run.” - With Honors (1994)`
+      _controlBtns.style.display = 'none';
+      usernameEnter();
+      break;
+    case correctScore == 10:
+      finalScore.innerHTML = `You got ${correctScore} out of 10 correct!`;
+      _finalText.innerHTML = `I guess you really are a Movie Buff - Absolute Perfection!`
+      _finalQuote.innerHTML = `“All I'm asking for is total perfection.” - The Lego Movie (2014)`
+      _controlBtns.style.display = 'none';
+      usernameEnter();
+      break;
+  }
+}
+
+/**
+ * Function to stop user entering empty spaces as username, also it alerts user that username has to be between 4 & 10 characters.
+ * Alert will disappear if the user enters 4 or more characters but we re-appear if more then 10 characters are entered.
+ */
+function usernameEnter() {
+  let userBox = username.value;
+  userBox = userBox.replace(/\s/g, '');
+  username.value = userBox;
+  if (username.value.length <= 3) {
+    usernameText.innerText = "Please enter a username between 4 & 10 characters without spaces"
+    saveScoreBtn.disabled = true
+  } else if (username.value.length >= 11) {
+    usernameText.innerText = "Please enter a username between 4 & 10 characters without spaces"
+    saveScoreBtn.disabled = true
+  } else {
+    usernameText.innerText = ""
+    saveScoreBtn.disabled = false
+  }
+}
+
+/** 
+ * Function to save the Highscores to local storage. Created using information from a Brian Design video
+ * It will push the username and most recent score to the Highscores table.
+ */
+function saveHighScore(event) {
+  event.preventDefault()
+  const score = {
+    score: correctScore,
+    name: username.value
+  }
+  //Allows up to 10 Highscores and after that it will replace the lowest score
+  highScores.push(score)
+  highScores.sort((a, b) => {
+    return b.score - a.score
+  })
+  highScores.splice(10)
+  localStorage.setItem('highScores', JSON.stringify(highScores))
+  window.location.assign('./highscores.html')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function resetQuiz() {
