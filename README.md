@@ -8,7 +8,7 @@ Developed by Sean Finn.
 
 [Movie Bluff or Buff - Live Webpage](https://seanf316.github.io/P2-Movie-Buff-Or-Bluff/) (Right-click to open in a new tab)
 
-## Table of Content
+## Contents
 
 1. [Project Goals](#project-goals)
 1. [Target Audience](#target-audience)
@@ -94,62 +94,62 @@ This is the prototype of the project that may change during its development.
 
 </details>
 
-[Back to top &uarr;](#Vanguard)
+[Back to top &uarr;](#contents)
 
 ## Features
 
 ### Highscores
 
 The Highscores page can be accessed via the Highscores button on the homepage of the website, when clicked it will display the users Highscores and give the option to return Home, Play Quiz or Clear Highscores. I was in 2 minds to include the Clear Highscores button but from who I spoke to (class mates/family/mentor) majority feedback was that they were happy to have it there. 
-![Desktop Highscores](/docs/readme/desktop-highscores.PNG)
+![Desktop Highscores](/docs/readme/features/desktop-highscores.PNG)
 
 ### Instructions Modal
 
 The Instructions Modal can be accessed via the Instructions button on the homepage of the website, when clicked it will display the instructions for the quiz and advise the user that local storage will be used to store Highscores. The user can close the modal by clicking on the "X" icon displayed at the top of modal or can click anywhere out side it the modal space.
-![Desktop Instructions Modal](/docs/readme/desktop-instructions.PNG)
+![Desktop Instructions Modal](/docs/readme/features/desktop-instructions.PNG)
 
 ### Sign Up/Feedback
 
 The Sign Up/Feedback section is available on the homepage, it allows the user to signup for the site newsletter and offer their feedback on the site/quiz.
-![Desktop Signup](/docs/readme/desktop-signup.PNG)
+![Desktop Signup](/docs/readme/features/desktop-signup.PNG)
 
 ### Footer
 
 The footer is placed at the bottom of the page. It contains the social media links displayed with icons provided by Font Awesome. There is also a small portion of text for the Copyright/Disclaimer. This is where the user can click on a social media link and reach out to the developer for news and updates.
-![Desktop Footer](/docs/readme/desktop-footer.PNG)
+![Desktop Footer](/docs/readme/features/desktop-footer.PNG)
 
 ### Quiz
 
 The Quiz content can be accessed from the "Let's get started ->" button on the Homepage. It features a timer, sound effects which can be toggled on/off (sound toggled off as standard), progress bar/text, question, answers and a check answer button. The timer is set to 90 seconds, if the user does not answer the 10 questions in the allocated time the quiz will automatically finish. There is a sound effect for correct answer, incorrect answer and click for when selected an answer. The progress bar/text are both dynamic and update with each question asked. The questions and answers are fetched from the Opentdb API to allow for more re-playability. As a design choice I wanted a check answer button instead of just displaying correct answer instantly, the reason for this is I found that a user may click an answer they didn't want sometimes by mistake and at least with the check answer button it should remedy that situation. When the user does click on an answer and then selects the "CHECK ANSWER" button the button hides and the result appears in its place. The correct answer will be signified with green background and text confirming Correct Answer. When the answer selected is incorrect the result will be signified with a red background and text confirming Incorrect Answer and text signifying what the correct answer was. If the user doesn't click on an answer and then selects the "CHECK ANSWER" button the result area will display briefly the following text "Please select an answer!".
-![Desktop Quiz](/docs/readme/desktop-quiz.PNG)
-![Desktop Quiz Hover](/docs/readme/desktop-quiz-hover.PNG)
-![Desktop Quiz Correct](/docs/readme/desktop-quiz-correct.PNG)
-![Desktop Quiz Incorrect](/docs/readme/desktop-quiz-incorrect.PNG)
-![Desktop Quiz Select Answer](/docs/readme/desktop-quiz-check.PNG)
+![Desktop Quiz](/docs/readme/features/desktop-quiz.PNG)
+![Desktop Quiz Hover](/docs/readme/features/desktop-quiz-hover.PNG)
+![Desktop Quiz Correct](/docs/readme/features/desktop-quiz-correct.PNG)
+![Desktop Quiz Incorrect](/docs/readme/features/desktop-quiz-incorrect.PNG)
+![Desktop Quiz Select Answer](/docs/readme/features/desktop-quiz-check.PNG)
 
 ### End of Quiz
 
 When the user has finished the quiz the end results will display. If the user has not answered any questions correctly the username entry will be hidden and they will be instructed to Play Again to get their name on the Leaderboard. If the user does answer some questions correctly their results will be show along with a message and movie quote - these will change based off users results. They will now be able to enter a username - there is an indication to tell the user that their username needs to be between 4 and 10 characters with no spaces (spaces have been disabled in the code). If the user enters less than 4 characters or more than 10 and try's to save the Save button will be disabled, if the user enters a username between 4 & 10 characters the indication text will hide and user and save their username. When the user saves their username they will be redirected to the Highscores page.
-![Desktop Quiz No Score](/docs/readme/desktop-end-noscore.PNG)
-![Desktop Quiz Score One](/docs/readme/desktop-end-score.PNG)
-![Desktop Quiz Username](/docs/readme/desktop-end-username.PNG)
-![Desktop Quiz Username Alert](/docs/readme/desktop-end-username-alert.PNG)
-![Desktop Quiz Score Four](/docs/readme/desktop-end-score4.PNG)
-![Desktop Quiz Score Six](/docs/readme/desktop-end-score6.PNG)
-![Desktop Quiz Score Eight](/docs/readme/desktop-end-score8.PNG)
-![Desktop Quiz Score Ten](/docs/readme/desktop-end-score10.PNG)
+![Desktop Quiz No Score](/docs/readme/features/desktop-end-noscore.PNG)
+![Desktop Quiz Score One](/docs/readme/features/desktop-end-score.PNG)
+![Desktop Quiz Username](/docs/readme/features/desktop-end-username.PNG)
+![Desktop Quiz Username Alert](/docs/readme/features/desktop-end-username-alert.PNG)
+![Desktop Quiz Score Four](/docs/readme/features/desktop-end-score4.PNG)
+![Desktop Quiz Score Six](/docs/readme/features/desktop-end-score6.PNG)
+![Desktop Quiz Score Eight](/docs/readme/features/desktop-end-score8.PNG)
+![Desktop Quiz Score Ten](/docs/readme/features/desktop-end-score10.PNG)
 
 ### Thank You
 
 When the user fills out form sections and clicks "SIGN UP" button a Thank You message will be displayed along with text to indicate they have been registered and a movie quote. There is a "Return Home" button to redirect the user back to the main site.
-![Desktop Thank You](/docs/readme/desktop-thankyou.PNG)
+![Desktop Thank You](/docs/readme/features/desktop-thankyou.PNG)
 
 ### 404
 
 If user enters incorrect url a 404 page will appear, it indicates something went wrong and includes a movie quote and a "Home" button that directs the user to the site.
-![Desktop 404](/docs/readme/desktop-404.PNG)
+![Desktop 404](/docs/readme/features/desktop-404.PNG)
 
-[Back to top &uarr;](#MovieBufforBluff)
+[Back to top &uarr;](#contents)
 
 ## Technologies Used
 
@@ -192,7 +192,7 @@ If user enters incorrect url a 404 page will appear, it indicates something went
 1. [Canva](https://www.canva.com/)
     - Canva was used to create the site logo.
 
-[Back to top &uarr;](#MovieBufforBluff)
+[Back to top &uarr;](#contents)
 
 ## Testing
 
@@ -228,7 +228,7 @@ Any warnings that could be fixed have been resolved, the only remaining warnings
 To check the accessibility of my site, I used the [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) and received no errors in the result:
 <details><summary>WAVE Web Accessibility Evaluation Tool</summary>
 
-![WAVE Web Accessibility Evaluation Tool Results](/assets/readme/wave-webaim-test.PNG)
+![WAVE Web Accessibility Evaluation Tool Results](/docs/readme/validation/wave-results.PNG)
 
 </details>
 
@@ -277,7 +277,6 @@ Thank You
 #### Lighthouse errors
 
 At Mobile, the Performance score is between 95-100 - This is due to Cumulative Layout Shift. As the site is setup to move dynamically depending on what should be displayed this is the highest score achievable at the moment, in future I will look to see what else can be done.
-<details><summary>Desktop/Mobile Chrome Devtools Errors</summary>
 
 ### Further Testing
 
@@ -291,60 +290,89 @@ At Mobile, the Performance score is between 95-100 - This is due to Cumulative L
 - #### First Time Visitor Goals
 
     -   As a First Time Visitor, I want to easily understand the main purpose of the site.
-        - Upon entering the site, users are automatically greeted with a clean homepage with site logo. Underneath the logo is some detailing information about 
-        - The user will be able to understand what the site is about with the text that appears on the Hero Image.
-        - The user has two options: click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the website.
-    -   As a First Time Visitor, I want to be able to easily navigate through the site to find content specific to my needs.
-        - The site has been designed to be fluid and easy to navigate. At the top of the page, there is a clear navigation bar, each link describes the page they will end up at clearly.
-        - The navbar disappears when the user scrolls down but re-appears when the user scrolls up to allow ease of access to the navbar.
-        - The logo in the footer also acts as a link to the site, so by clicking the user will be brought back to the homepage.
+        - Upon entering the site, users are automatically greeted with a clean homepage with site logo.
+        - The user will be able to understand what the site is about with the text that appears under the logo.
+    -   As a First Time Visitor, I want to understand the rules of the quiz.
+        - The user will be greeted with some descriptive text of the quiz but there is also an Instructions button that the user can access that goes into further detail on the quiz.
     -   As a First Time Visitor, I want to be able to view the site on multiple devices.
         - I have applied media queries to allow the site to function responsively across multiple devices.
 
 - #### Returning Visitor Goals
 
-    -   As a Returning Visitor, I want to find out more information about the best third-party sites and apps for the Destiny gaming franchise.
-        - By selecting the Best Sites or Best Apps links from the navbar the user will be able to locate the information that they require.
-        - There is a call to action for each item in the Best Sites and Best Apps sections.
-    -   As a Returning Visitor, I want to learn more about the Destiny story and Lore.
-        - By selecting the About Vanguard section from the navbar, the user will be able to find out about the site itself and the Destiny story with 4 videos provided.
+    -   As a Returning Visitor, I want to see new questions.
+        - The quiz has been setup to fetch questions from the Opentdb API so the user should see new questions when playing again.
+    -   As a Returning Visitor, I want to learn more about any updates.
+        - There is a sign up section included on the site, by signing up the user will be registered for newsletter which will include news on future updates to the site and any new content released.
     -   As a Returning Visitor, I want to find the best way to get in contact with the site developer.
-        - If the user selects the Join Us section in the navbar they will be able to join the website and provide feedback, also social media links are provided by way of icons in the footer.
+        - The user can sign up and offer their feedback on the site, alternatively they can contact the developer via the social media links provided in the footer. 
 
 -   #### Frequent User Goals
 
-    -   As a Frequent User, I want to check to see if there are any newly added sites or apps.
-        - The user would already be comfortable with the website layout and would be able to navigate to the Best Sites and Best Apps sections to see if any new sites/apps have been added.
+    -   As a Frequent User, I want to be able to view my best scores
+        - The site contains a highscores page containing a Leaderboard. The quiz is setup to store the users Quiz scores via local storage of the users device.
     -   As a Frequent User, I want to check to see if there are any new sections added to the site.
         - The user would already be familiar with the website layout and would be able to navigate the site to see if new sections have been added.
     -   As a Frequent User, I want to sign up so that I am emailed any major updates and/or changes to the website.
-        - In the Join Us section, which can be accessed easily from the navbar or by scrolling, there is a sign-up form. Alternatively, users could check out our social media accounts for updated announcements.
+        - If user signs up they will receive a newsletter containing updates.
 
 ### Bugs and Fixes
 
-Lighthouse Best Practice Score dropped to 83
-<details><summary>Bug</summary>
-When placing YouTube videos into HTML the Lighthouse best practice score went from 100 to 83 
-</details>
-<details><summary>Fix</summary>
-Upon researching this issue, I was able to get the score into the 90s by removing the enhanced privacy mode in the iframes
-</details>
-Best Apps Layout not functioning as expected
-<details><summary>Bug</summary>
-When reducing the screen size, the 2nd and 4th card content were not flowing the same as the 1st and 3rd due to my layout, so the images were appearing under the text due to flex-direction being defaulted to row.
-</details>
-<details><summary>Fix</summary>
-To resolve the issue, I applied a flex-direction: row-reverse class to the 2nd and 4th cards only.
-</details>
-Best Sites card Tablet Layout
-<details><summary>Bug</summary>
-The Best Sites cards were not spacing correctly in tablet view and were grouped to the left of the screen.
-</details>
-<details><summary>Fix</summary>
-I applied justify-content: space-around; to the parent, flex container.
+<details><summary>Bug - User receiving Incorrect result after selecting Correct Answer.</summary>
+
+When questions where fetched from the API special characters where causing an issue when the user would select the correct answer they would get the incorrect result.
+![Question Bug](/docs/readme/bugs/question-bug.PNG)
+![Question Bug Reason](/docs/readme/bugs/question-bug-reason.PNG)
+
+Fix - Upon researching this issue, I was able to resolve this by creating a function to decode the Html of the correct answer and just display the plain text.
 </details>
 
-[Back to top &uarr;](#Vanguard)
+<details><summary>Bug - At end page browser/mobile back button not reloading quiz</summary>
+
+When the user was on the end of quiz results page they are indicated to enter a username if they score more then 0 or if 0 they are indicated to play again. There is a play again button that would direct them back to the quiz page and all worked as expected but if the user was to click the browser/mobile back button instead the quiz would start again but would not be reloaded to its original state. This caused the amount of questions to go over what was expected and the progressbar width grew outside its container. The problem was not evident in VS Code and could not be replicated there so several commits where done in the testing period to try and resolve.
+![End Page Bug](/docs/readme/bugs/endpage-bug.png)
+
+Fix - After numerous attempts and alot of commits testing various code to try and override/change the back button behavior I decided to remove the endpage.html and implement all the code into the quiz.html. I set the end page section to hidden and revealed it with javascript code at the time required. Now when a user presses the browser/mobile back button they are brought back to the homepage instead of the quiz.
+</details>
+
+<details><summary>Bug - Mobile Lighthouse Performance</summary>
+
+Maybe technically not a bug but when the quiz was created and styled I ran my lighthouse checks, on desktop I was getting 100% in Performance but on mobile Performance was between 60%-70%.
+![Mobile Performance](/docs/readme/bugs/mobile-lighthouse-bug.png)
+
+Fix - To increase Performance there were several actions I made:
+1. Removed Font Awesome script in Header and placed at end of body.
+2. Added the following to the Head - <link rel="preconnect" href="https://opentdb.com/api.php?amount=20&category=11&type=multiple">
+3. Removed the global media queries css file and placed the required css into the quiz.css file.
+4. Removed the mediaqueries.css link from the head
+5. Went through the css and removed or altered css that was not need or was duplicated for some properties.
+6. Reduced margins of the quiz container. Gave some specific widths to elements.
+7. Added favicon to remove console errors.
+</details>
+
+<details><summary>Bug - API Fetch Issues</summary>
+
+Originally I had the quiz setup to fetch 10 questionS and display 1 at a time. I quickly noticed from testing and feedback that there was a small delay between each question as instead of displaying the next question of the 10 fetched it was fetching 10 questions each time.
+
+Fix - To resolve this issue I had watched a James Q Quick video on fetching from an API and took some of the code he had written and applied it to the quiz I had setup. It took awhile to understand the API call but after hours of testing and gaining knowledge it now fetches the 10 questions only once and displays each question from the 10 fetched without delays.
+
+Another issue that came up in testing and from feedback was that the user was sometimes seeing the same question in the same instance of a quiz i.e. 2 of the 10 questions in one game were the same
+
+Fix - To resolve this I simply removed the question that was displayed from the questions array using splice - availableQuestions.splice(questionIndex, 1);
+</details>
+
+<details><summary>Bug - Username Input Issues</summary>
+
+Originally I the input function set to "keyup" event and all seems well until a class mate noticed that the "Save" button was disabled when the tried to copy and paste their username in.
+
+Fix - To resolve this issue I changed the "keyup" event to "input" and user was now able to copy and paste.
+
+I noticed with testing the user could enter 4 blank spaces as a username and was able to save. This cause the Leaderboard to look bad with no names showing.
+![Mobile Performance](/docs/readme/bugs/username-code.PNG)
+
+Fix - To resolved I disabled spaces in the input field and added some instruction text under the input field for the user to review.
+</details>
+
+[Back to top &uarr;](#contents)
 
 ## Deployment
 
@@ -352,46 +380,42 @@ I applied justify-content: space-around; to the parent, flex container.
 
 The project was deployed to GitHub Pages using the following steps...
 
-1. Log in to GitHub and locate the repository [P1-Vanguard](https://github.com/seanf316/P1-Vanguard)
+1. Log in to GitHub and locate the repository [P2-Movie-Buff-Or-Bluff](https://github.com/seanf316/P2-Movie-Buff-Or-Bluff)
 2. At the top of the Repository (not the top of the page), locate the "Settings" Button on the menu.
 3. Scroll down the Settings page until you locate the "Pages" Section on the left side of the page. Click "Pages".
 4. In the "Pages" section under "Source" there is a "Branch" section, click the dropdown called "None" select "main" and click save.
 5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://seanf316.github.io/P1-Vanguard/) in the "GitHub Pages" section.
+6. Scroll back down through the page to locate the now published site [link](https://seanf316.github.io/P2-Movie-Buff-Or-Bluff/) in the "GitHub Pages" section.
 
 ### Forking the GitHub Repository
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
-1. Log in to GitHub and locate the repository [P1-Vanguard](https://github.com/seanf316/P1-Vanguard)
+1. Log in to GitHub and locate the repository [P2-Movie-Buff-Or-Bluff](https://github.com/seanf316/P2-Movie-Buff-Or-Bluff)
 2. At the top of the Repository (not the top of the page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
-[Back to top &uarr;](#Vanguard)
+[Back to top &uarr;](#contents)
 
 ## Credits
 
 1. [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template)
     - This repository was created using the template provided by Code Institute. Also, without the knowledge gained through the course work, I could not be able to create this site so thank you Code Institute.
-1. [Wallpaper Abyss](https://wall.alphacoders.com/)
-    - Wallpaper Abyss had a wide range of fantastic Destiny-related images and it was here that I got my hero image.
-1. [DEV](https://dev.to/)
-    - DEV provided the tutorial to create the mobile [hamburger menu](https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci).
-1. [Wallpaper Abyss](https://wall.alphacoders.com/)
-    - Wallpaper Abyss had a wide range of fantastic Destiny-related images and it was here that I got my hero image.
-1. [Bungie](https://www.bungie.net/), [Braytech](https://bray.tech/), [Destiny Item Manager](https://app.destinyitemmanager.com/login), [Destiny Recipes](https://destinyrecipes.com/), [Destiny Reddit](https://www.reddit.com/r/DestinyTheGame/), [Destiny Companion](https://play.google.com/store/apps/details?id=com.bungieinc.bungiemobile&gl=IE), [Ishtar Commander](https://play.google.com/store/apps/details?id=com.unintuitive.IshtarCommander&gl=IE), [Destiny Trials Report](https://play.google.com/store/apps/details?id=com.plafhop.trialsreport&hl=en_IE&gl=US), [Where is Xur?](https://play.google.com/store/apps/details?id=com.crocusgames.whereisxur&gl=IE), [My name is Byf ](https://www.youtube.com/c/MynameisByf).
-    - Big credit goes out to the developers of all the sites & apps I have included on my site, each site or app provided the screenshots and descriptive text used on the site, and having them all in one location was my motivation for this site. Credit to My name is Byf who continues to create fantastic Destiny Lore videos on Youtube.
 1. [W3schools](https://www.w3schools.com/)
-    - W3schools provided the tutorial to create the ["Hide Menu on Scroll"](https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp) that has been implemented on the site. I would often use W3schools exercises as a break sometimes and gathered a lot of knowledge there as well.
-1. [DesignCourse](https://www.youtube.com/c/DesignCourse), [Kevin Powell](https://www.youtube.com/kepowob), [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified).
-    - All of the above for creating fantastic videos on HTML & CSS, a lot of knowledge was gained from hours of viewing.
+    - W3schools was used throughout the project process for answering any queries I had. I was able to build modal and loader using the guides provided.
+1. [James Q Quick](https://www.youtube.com/c/JamesQQuick), [Kevin Powell](https://www.youtube.com/kepowob), [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified), [Code with Ania Kubów](https://www.youtube.com/c/AniaKub%C3%B3w), [Brian Design](https://www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A).
+    - All of the above for creating fantastic videos on HTML/CSS & Javascript. Javascript was very tough to grasp but with what was learned on the course coupled with the knowledge gained from all of the above and the tutorial videos they produced it slowly started to make sense.
+1. [Stackoverflow](https://stackoverflow.com/)
+    - I found myself on Stackoverflow so many times researching issues with javascript code or the occasional Html/CSS issue. This a fantastic place to learn and troubleshoot code.
+1. [Slack](https://slack.com/intl/en-ie/)
+    - After finishing the javascript essentials and Love Maths project it was very daunting sitting in front of an empty .js file. The people on slack and especially my class mates where always willing to lend a hand and some of the mentors on there are just amazing.
 
 ## Acknowledgements
 
 - To my amazing wife Denise who has supported me every day and kept me motivated while I have been spending long hours studying and building the site she had to look after and entertain our 5-year-old son so I think I had an easier time of it.
 - My son Alex for always making me laugh when I'm tired from a long night of study/coding.
 - To my family and friends - for being a great support and providing a lot of the user testing for me.
-- To my mentor Narender for all his guidance, support, tips, and feedback.
-- The Code Institute community on slack and my classmates its been a pleasure so far.
+- To my mentor Daisy Mc Girr, we have only had a few sessions together but she has been a huge help to me.
+- My class mate Sean Johnston for reviewing and testing my Project throughout the course.
 
-[Back to top &uarr;](#Vanguard)
+[Back to top &uarr;](#contents)
