@@ -74,8 +74,7 @@ h2 {
 .homepage_content__title {
     text-align: center;
     font-size: 1.8rem;
-    margin-top: 1rem;
-    padding: 1rem 1rem;
+    padding: 1rem 0;
 }
 
 .homepage_content__title span {
