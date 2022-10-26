@@ -97,10 +97,11 @@ h2 {
 }
 
 .buttons {
-    width: 22rem;
+    width: 100%;
     padding: 2rem 0;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -116,8 +117,8 @@ h2 {
 }
 
 #getStartedBtn {
-    width: 22rem;
-    padding: .4rem .6rem;
+    width: 100%;
+    padding: .4rem 2rem;
     background-color: var(--accent-color);
     border: 3px solid var(--light-color);
     border-radius: .5rem;
@@ -261,7 +262,7 @@ h2 {
     font-weight: 600;
     cursor: pointer;
     text-align: center;
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
 }
 

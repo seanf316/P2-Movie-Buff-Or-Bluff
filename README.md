@@ -417,6 +417,15 @@ The project was deployed to GitHub Pages using the following steps...
 5. The page will automatically refresh.
 6. Scroll back down through the page to locate the now published site [link](https://seanf316.github.io/P2-Movie-Buff-Or-Bluff/) in the "GitHub Pages" section.
 
+### Version Control
+
+For version control the following steps were made:
+
+1. Changes made to files in Gitpod
+2. Files made ready for commit with command - git add .
+3. For the commits the following command was run along with commit description - git commit -m "This is my commit etc"
+4. To move the changes to Github the following command was run - git push  
+
 ### Forking the GitHub Repository
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
@@ -434,7 +443,11 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 1. [W3schools](https://www.w3schools.com/)
     - W3schools was used throughout the project process for answering any queries I had.
 1. [James Q Quick](https://www.youtube.com/c/JamesQQuick), [Kevin Powell](https://www.youtube.com/kepowob), [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified), [Code with Ania Kubów](https://www.youtube.com/c/AniaKub%C3%B3w), [Brian Design](https://www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A).
-    - All of the above for creating fantastic videos on HTML/CSS & Javascript. Javascript was very tough to grasp but with what was learned on the course coupled with the knowledge gained from all of the above and the tutorial videos they produced it slowly started to make sense. I reviewed several videos on building a quiz and took some ideas from different videos and applied them to by own. Any code that was used has been credited in comments in js files.
+    - All of the above for creating fantastic videos on HTML/CSS & Javascript. Javascript was very tough to grasp but with what was learned on the course coupled with the knowledge gained from all of the above and the tutorial videos they produced it slowly started to make sense. I reviewed several videos on building a quiz and took some ideas from different videos and applied them to my own. Any code that was used has been credited in comments in js files. The videos used for inspiration and where some code was acquired are listed below:
+    GeekProbin - https://youtu.be/-cX5jnQgqSM
+    James Q Quick - https://youtu.be/3aKOQn2NPFs
+    Web Dev Simplified - https://youtu.be/riDzcEQbX6k
+    Brian Design - https://youtu.be/f4fB9Xg2JEY
 1. [Stackoverflow](https://stackoverflow.com/)
     - I found myself on Stackoverflow so many times researching issues with javascript code or the occasional Html/CSS issue. This a fantastic place to learn and troubleshoot code.
 1. [Slack](https://slack.com/intl/en-ie/)

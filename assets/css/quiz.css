@@ -297,7 +297,7 @@ h2 {
 #end-form input {
     border: 5px solid var(--main-color);
     border-radius: .5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: var(--accent-color);
     margin: 1rem auto;
     padding: .3rem .8rem;
@@ -432,6 +432,7 @@ h2 {
 
     #end-form input {
         margin: 1rem auto 0 auto;
+        font-size: 1.5rem;
     }
 
     #username-text {

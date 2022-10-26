@@ -8,11 +8,14 @@
     <meta name="description"
         content="Movie Buff or Bluff is a Movie based Trivia Quiz site aimed at anyone who enjoys the world of cinema and testing their knowledge">
     <meta name="keywords" content="quiz, movie, trivia, movie-buff">
+    <!-- Favicon Links -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="preconnect" href="https://opentdb.com/api.php?amount=10&category=11&type=multiple">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <!-- API Preconnect Links -->
+    <link rel="preconnect" href="https://opentdb.com/api.php?amount=10&category=11&type=multiple">
+    <!-- CSS Links -->
     <link rel="stylesheet" href="assets/css/quiz.css">
     <title>Movie Buff or Bluff</title>
 </head>
@@ -21,7 +24,7 @@
 
     <header>
         <a href="index.html" aria-label="Visit Home Page"><img id="logo-mobile" src="assets/images/logo.webp"
-                alt="Site Logo" width="370" height="133"></a>
+                alt="Site Logo" width="300" height="120"></a>
         <a href="index.html" aria-label="Visit Home Page"><img id="logo-desktop" src="assets/images/logo2.webp"
                 alt="Site Logo" width="460" height="190"></a>
     </header>
@@ -72,7 +75,8 @@
                 <p id="final-quote"></p>
             </div>
             <form id="end-form">
-                <input type="text" name="name" id="username" placeholder="Enter your name here....">
+                <input type="text" aria-label="Enter Username" name="name" id="username"
+                    placeholder="Enter your name here....">
                 <p id="username-text"></p>
                 <button class="btn" id="saveScoreBtn" type="submit">Save</button>
             </form>
