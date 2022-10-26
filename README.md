@@ -426,6 +426,8 @@ For version control the following steps were made:
 3. For the commits the following command was run along with commit description - git commit -m "This is my commit etc"
 4. To move the changes to Github the following command was run - git push  
 
+Please note due to a bug that could not be replicated locally there were a series of commits made to test resolution of bug via published link.
+
 ### Forking the GitHub Repository
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
