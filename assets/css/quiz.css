@@ -143,7 +143,7 @@ h2 {
     width: 20rem;
     height: 1.5rem;
     border: 3px solid var(--main-color);
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     border-radius: 50px;
     outline: 3px solid var(--light-color);
     width: 90%;
@@ -241,11 +241,6 @@ h2 {
 
 #endPage {
     display: flex;
-    padding: 1rem 1rem 1rem 1rem;
-}
-
-#finalScore {
-    margin-top: 1rem;
 }
 
 #finalTextContainer {

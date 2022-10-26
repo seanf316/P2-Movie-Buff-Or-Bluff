@@ -236,7 +236,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
 <details><summary>JSHint</summary>
 
-Any warnings that could be fixed have been resolved, the only remaining warnings are all support based warnings regarding let's/const's etc.
 ![JSHint Results](/docs/readme/validation/jshint-results.PNG)
 
 </details>
