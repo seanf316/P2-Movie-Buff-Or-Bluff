@@ -1,6 +1,6 @@
 # Movie Buff or Bluff
 
-Movie Buff or Bluff is a Movie based Trivia Quiz site aimed at anyone who enjoys the world of cinema and testing their knowledge. It consists of 10 questions with a 90 second timer and a Leaderboard so you can boast about your highscore.
+Movie Buff or Bluff is a Movie based Trivia Quiz site aimed at anyone who enjoys the world of cinema and testing their knowledge. It consists of 10 questions with a 90-second timer and a Leaderboard so you can boast about your high score.
 
 Developed by Sean Finn.
 
@@ -32,11 +32,11 @@ Developed by Sean Finn.
 
 ## Project Goals
 
-This is my second portfolio project for [Code Institute](https://codeinstitute.net/) and my goal with this project is to display my newly acquired Javascript skills. I decided to build a Movie based quiz site that will allow repeated playability. To do this I setup the quiz to call on an API - [opentdb.com](https://opentdb.com/), to retrieve the questions and answers etc. This was very challenging.
+This is my second portfolio project for [Code Institute](https://codeinstitute.net/) and my goal with this project is to display my newly acquired Javascript skills. I decided to build a Movie based quiz site that will allow repeated playability. To do this I set up the quiz to call on an API - [opentdb.com](https://opentdb.com/), to retrieve the questions and answers, etc. This was very challenging.
 
 ## Target Audience
 
-The target audience for this site is anyone who enjoys the world of cinema and testing their knowledge via a quiz based game.
+The target audience for this site is anyone who enjoys the world of cinema and testing their knowledge via a quiz-based game.
 
 ## User Experience (UX)
 
@@ -45,7 +45,7 @@ The target audience for this site is anyone who enjoys the world of cinema and t
     - #### First Time Visitor Goals
 
         -   As a First Time Visitor, I want to easily understand the main purpose of the site.
-        -   As a First Time Visitor, I want to understand the rules of the quiz
+        -   As a First Time Visitor, I want to understand the rules of the quiz.
         -   As a First Time Visitor, I want to be able to view the site on multiple devices.
 
     -   #### Returning Visitor Goals
@@ -68,12 +68,12 @@ The target audience for this site is anyone who enjoys the world of cinema and t
 
     -   #### Colour Scheme
 
-        -   I wanted the color scheme to be simple but ascetically pleasing. I chose 4 colors that where implemented across all the site pages and they contrast well together.
+        -   I wanted the color scheme to be simple but ascetically pleasing. I chose 4 colors that were implemented across all the site pages and they contrast well together.
         ![Coolors Image](/docs/readme/coolors.png)
 
     -   #### Typography
 
-        -   The Poppins font is the main font used throughout the website with Sans Serif as the fallback. I used variations of font weight for the headers and and question text etc.
+        -   The Poppins font is the main font used throughout the website with Sans Serif as the fallback. I used variations of font weight for the headers and question text etc.
 
 *   ### Wireframes
 
@@ -105,7 +105,7 @@ The Highscores page can be accessed via the Highscores button on the homepage of
 
 ### Instructions Modal
 
-The Instructions Modal can be accessed via the Instructions button on the homepage of the website, when clicked it will display the instructions for the quiz and advise the user that local storage will be used to store Highscores. The user can close the modal by clicking on the "X" icon displayed at the top of modal or can click anywhere out side it the modal space.
+The Instructions Modal can be accessed via the Instructions button on the homepage of the website, when clicked it will display the instructions for the quiz and advise the user that local storage will be used to store Highscores. The user can close the modal by clicking on the "X" icon displayed at the top of the modal or can click anywhere outside it the modal space.
 ![Desktop Instructions Modal](/docs/readme/features/desktop-instructions.PNG)
 
 ### Sign Up/Feedback
@@ -120,7 +120,8 @@ The footer is placed at the bottom of the page. It contains the social media lin
 
 ### Quiz
 
-The Quiz content can be accessed from the "Let's get started ->" button on the Homepage. It features a timer, sound effects which can be toggled on/off (sound toggled off as standard), progress bar/text, question, answers and a check answer button. The timer is set to 90 seconds, if the user does not answer the 10 questions in the allocated time the quiz will automatically finish. There is a sound effect for correct answer, incorrect answer and click for when selected an answer. The progress bar/text are both dynamic and update with each question asked. The questions and answers are fetched from the Opentdb API to allow for more re-playability. As a design choice I wanted a check answer button instead of just displaying correct answer instantly, the reason for this is I found that a user may click an answer they didn't want sometimes by mistake and at least with the check answer button it should remedy that situation. When the user does click on an answer and then selects the "CHECK ANSWER" button the button hides and the result appears in its place. The correct answer will be signified with green background and text confirming Correct Answer. When the answer selected is incorrect the result will be signified with a red background and text confirming Incorrect Answer and text signifying what the correct answer was. If the user doesn't click on an answer and then selects the "CHECK ANSWER" button the result area will display briefly the following text "Please select an answer!".
+The Quiz content can be accessed from the "Let's get started ->" button on the Homepage. There is a custom loader in place that will hide when the quiz is ready. The quiz features a timer, sound effects which can be toggled on/off (sound toggled off as standard), a progress bar/text, questions, answers, and a check answer button. The timer is set to 90 seconds, if the user does not answer the 10 questions in the allocated time the quiz will automatically finish. There is a sound effect for the correct answer, incorrect answer, and click when selecting an answer. The progress bar/text are both dynamic and update with each question asked. The questions and answers are fetched from the Opentdb API to allow for more replayability. As a design choice, I wanted a check answer button instead of just displaying the correct answer instantly, the reason for this is I found that a user may click an answer they didn't want sometimes by mistake, and at least with the check answer button it should remedy that situation. When the user does click on an answer and then selects the "CHECK ANSWER" button the button hides and the result appears in its place. The correct answer will be signified with green background and text confirming Correct Answer. When the answer selected is incorrect the result will be signified with a red background and text confirming Incorrect Answer and text signifying what the correct answer was. If the user doesn't click on an answer and then selects the "CHECK ANSWER" button the result area will display briefly the following text "Please select an answer!".
+![Desktop Loader](/docs/readme/features/desktop-loader.PNG)
 ![Desktop Quiz](/docs/readme/features/desktop-quiz.PNG)
 ![Desktop Quiz Hover](/docs/readme/features/desktop-quiz-hover.PNG)
 ![Desktop Quiz Correct](/docs/readme/features/desktop-quiz-correct.PNG)
@@ -129,7 +130,7 @@ The Quiz content can be accessed from the "Let's get started ->" button on the H
 
 ### End of Quiz
 
-When the user has finished the quiz the end results will display. If the user has not answered any questions correctly the username entry will be hidden and they will be instructed to Play Again to get their name on the Leaderboard. If the user does answer some questions correctly their results will be show along with a message and movie quote - these will change based off users results. They will now be able to enter a username - there is an indication to tell the user that their username needs to be between 4 and 10 characters with no spaces (spaces have been disabled in the code). If the user enters less than 4 characters or more than 10 and try's to save the Save button will be disabled, if the user enters a username between 4 & 10 characters the indication text will hide and user and save their username. When the user saves their username they will be redirected to the Highscores page.
+When the user has finished the quiz the results will display. If the user has not answered any questions correctly the username entry will be hidden and they will be instructed to Play Again to get their name on the Leaderboard. If the user does answer some questions correctly their results will be shown along with a message and movie quote - these will change based on users' results. They will now be able to enter a username - there is an indication to tell the user that their username needs to be between 4 and 10 characters with no spaces (spaces have been disabled in the code). If the user enters less than 4 characters or more than 10 and try's to save the Save button will be disabled, if the user enters a username between 4 & 10 characters the indication text will hide, and user and save their username. When the user saves their username they will be redirected to the Highscores page.
 ![Desktop Quiz No Score](/docs/readme/features/desktop-end-noscore.PNG)
 ![Desktop Quiz Score One](/docs/readme/features/desktop-end-score.PNG)
 ![Desktop Quiz Username](/docs/readme/features/desktop-end-username.PNG)
@@ -141,13 +142,19 @@ When the user has finished the quiz the end results will display. If the user ha
 
 ### Thank You
 
-When the user fills out form sections and clicks "SIGN UP" button a Thank You message will be displayed along with text to indicate they have been registered and a movie quote. There is a "Return Home" button to redirect the user back to the main site.
+When the user fills out form sections and clicks the "SIGN UP" button a Thank You message will be displayed along with text to indicate they have been registered and a movie quote. There is a "Return Home" button to redirect the user back to the main site.
 ![Desktop Thank You](/docs/readme/features/desktop-thankyou.PNG)
 
 ### 404
 
-If user enters incorrect url a 404 page will appear, it indicates something went wrong and includes a movie quote and a "Home" button that directs the user to the site.
+If the user enters an incorrect URL a 404 page will appear, it indicates something went wrong and includes a movie quote and a "Home" button that directs the user to the site.
 ![Desktop 404](/docs/readme/features/desktop-404.PNG)
+
+### Mobile
+
+The site was created Mobile first and scaled up to larger devices with media queries.
+![Mobile View](/docs/readme/features/mobile-part1.PNG)
+![Mobile View](/docs/readme/features/mobile-part2.PNG)
 
 [Back to top &uarr;](#contents)
 
@@ -217,9 +224,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 <details><summary>JSHint</summary>
 
 Any warnings that could be fixed have been resolved, the only remaining warnings are all support based warnings regarding let's/const's etc.
-![JSHint Quiz Results](/docs/readme/validation/jshint-quiz.PNG)
-![JSHint Homepage Results](/docs/readme/validation/jshint-homepage.PNG)
-![JSHint Highscores Results](/docs/readme/validation/jshint-highscores.PNG)
+![JSHint Results](/docs/readme/validation/jshint-results.PNG)
 
 </details>
 
@@ -280,7 +285,7 @@ At Mobile, the Performance score is between 95-100 - This is due to Cumulative L
 
 ### Further Testing
 
-- The website was tested on Google Chrome, Internet Explorer, Microsoft Edge, Mozilla Firefox, and Safari browsers.
+- The website was tested on Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari browsers.
 - The website was viewed on a variety of devices such as desktops, Laptops, Apples Products (Macbook, IPad Pro, iPhone 13 Pro, iPhone 8), and a range of Android devices (Samsung Note 10+, Samsung S20 Plus, Samsung Tab S7+, Oppo mobile).
 - A large amount of testing was done to ensure that everything functions as expected.
 - I asked friends and family members to review the site and document any bugs and/or user experience issues. Some co-workers also helped out with testing.
