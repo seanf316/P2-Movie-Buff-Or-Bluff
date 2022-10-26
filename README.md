@@ -68,7 +68,7 @@ The target audience for this site is anyone who enjoys the world of cinema and t
 
     -   #### Colour Scheme
 
-        -   I wanted the color scheme to be simple but ascetically pleasing. I chose 4 colors that were implemented across all the site pages and they contrast well together.
+        -   I wanted the color scheme to be simple but aesthetically pleasing. I chose 4 colors that were implemented across all the site pages and they contrast well together.
         ![Coolors Image](/docs/readme/coolors.png)
 
     -   #### Typography
@@ -113,7 +113,7 @@ This is the prototype of the project that may change during its development.
 
 ### Highscores
 
-The Highscores page can be accessed via the Highscores button on the homepage of the website, when clicked it will display the users Highscores and give the option to return Home, Play Quiz or Clear Highscores. I was in 2 minds to include the Clear Highscores button but from who I spoke to (class mates/family/mentor) majority feedback was that they were happy to have it there. 
+The Highscores page can be accessed via the Highscores button on the homepage of the website, when clicked it will display the users Highscores and give the option to return Home, Play Quiz or Clear Highscores. I was in 2 minds whether to include the Clear Highscores button but from speaking to (class mates/family/mentor) majority feedback was that they were happy to have it there. 
 ![Desktop Highscores](/docs/readme/features/desktop-highscores.PNG)
 
 ### Instructions Modal
@@ -349,7 +349,7 @@ At Mobile, the Performance score is between 95-100 - This is due to Cumulative L
 
 <details><summary>Bug - User receiving Incorrect result after selecting Correct Answer.</summary>
 
-When questions where fetched from the API special characters where causing an issue when the user would select the correct answer they would get the incorrect result.
+When questions were fetched from the API special characters were causing an issue when the user would select the correct answer they would get the incorrect result.
 ![Question Bug](/docs/readme/bugs/question-bug.PNG)
 ![Question Bug Reason](/docs/readme/bugs/question-bug-reason.PNG)
 
@@ -358,7 +358,7 @@ Fix - Upon researching this issue, I was able to resolve this by taking a functi
 
 <details><summary>Bug - At end page browser/mobile back button not reloading quiz</summary>
 
-When the user was on the end of quiz results page they are indicated to enter a username if they score more then 0 or if 0 they are indicated to play again. There is a play again button that would direct them back to the quiz page and all worked as expected but if the user was to click the browser/mobile back button instead the quiz would start again but would not be reloaded to its original state. This caused the amount of questions to go over what was expected and the progressbar width grew outside its container. The problem was not evident in VS Code and could not be replicated there so several commits where done in the testing period to try and resolve.
+When the user was on the end of quiz results page they are indicated to enter a username if they score more then 0 or if 0 they are indicated to play again. There is a play again button that would direct them back to the quiz page and all worked as expected but if the user was to click the browser/mobile back button instead the quiz would start again but would not be reloaded to its original state. This caused the amount of questions to go over what was expected and the progress bar width grew outside its container. The problem was not evident in VS Code and could not be replicated there so several commits where done in the testing period to try and resolve.
 ![End Page Bug](/docs/readme/bugs/endpage-bug.png)
 
 Fix - After numerous attempts and alot of commits testing various code to try and override/change the back button behavior I decided to remove the endpage.html and implement all the code into the quiz.html. I set the end page section to hidden and revealed it with javascript code at the time required. Now when a user presses the browser/mobile back button they are brought back to the homepage instead of the quiz.
