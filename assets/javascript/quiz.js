@@ -10,6 +10,7 @@ const totalQuestionsText = document.getElementById('total-questions');
 
 // Sounds
 let isPlaying = false;
+let audioIconLogo = document.getElementsByClassName("audio-icon-logo");
 const audioOffIcon = document.getElementsByClassName("sound-off");
 const audioOnIcon = document.getElementsByClassName("sound-on");
 const buttonAudio = new Audio("assets/sounds/button-click.mp3");
@@ -47,6 +48,7 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 // Event Listeners 
 username.addEventListener('input', usernameEnter);
 saveScoreBtn.addEventListener('click', saveHighScore);
+audioIconLogo[0].addEventListener("click", toggleAudio);
 document.addEventListener('DOMContentLoaded', () => {
   // Fetch to retrieve API learned from James Q Quick tutorial
   fetch(`https://opentdb.com/api.php?amount=10&category=11&type=multiple`)
@@ -103,6 +105,7 @@ function stopTimer() {
 
 /** 
  * Function that takes the data from the result fetched by getQuestion and maps the questions and answers to the html
+ * Parts of this function where taken and altered from a GeekProbin video
  */
 function showQuestion() {
   answerCheck.disabled = false;
@@ -131,6 +134,7 @@ function showQuestion() {
  * Function for selecting an answer, to avoid accidentally selecting an answer by mistake I have the answers setup to not reveal answer until "check answer" is clicked
  * User can change their selected answer before clicking "check answer"
  * Applies a .selected class to each answer that is clicked by user
+ * Parts of this function where taken and altered from a GeekProbin video
  */
 function selectAnswer() {
   quizAnswers.querySelectorAll('li').forEach((answer) => {
@@ -151,6 +155,7 @@ function selectAnswer() {
  * If answer selected is correct user will be met with a Correct Answer display and a sound effect indicating correct
  * If answer selected is incorrect user will be met with a Incorrect Answer display and a sound effect indicating incorrect, It will detail what the correct answer was too
  * If user clicks "Check Answer" without selecting an answer they will be met with a "Please select and answer!" display and button will be disabled
+ * Parts of this function where taken and altered from a GeekProbin video
  */
 function checkAnswer() {
   answerCheck.disabled = true;
@@ -182,6 +187,7 @@ function checkAnswer() {
 
 /**
  * Function to decodeHtml for the correctAnswers(removes Special Character Codes for HTML)
+ * This function was taken from a GeekProbin video
  */
  function HTMLDecode(textString) {
   let doc = new DOMParser().parseFromString(textString, "text/html");
@@ -190,6 +196,7 @@ function checkAnswer() {
 
 /**
  * Function to increase question count, score and log score for Highscore Leaderboard
+ * Parts of this function where taken and altered from a Brian Design video
  */
 function checkCount() {
   if (questionCounter == totalQuestion) {
@@ -203,7 +210,7 @@ function checkCount() {
   setTimeout(() => {
     questionCounter++;
     showQuestion();
-  }, 2000);
+  }, 900);
 }
 
 /**
@@ -280,6 +287,7 @@ function usernameEnter() {
 /** 
  * Function to save the Highscores to local storage. Created using information from a Brian Design video
  * It will push the username and most recent score to the Highscores table.
+ * Parts of this function where taken and altered from a Brian Design video
  */
 function saveHighScore(event) {
   event.preventDefault();
@@ -298,14 +306,6 @@ function saveHighScore(event) {
 }
 
 // Sound Functions
-
-/**
- * Loop through the audio-icon-logo and call toggleAudio() when the player clicks
- */
-let audioIconLogo = document.getElementsByClassName("audio-icon-logo");
-for (let i = 0; i < audioIconLogo.length; i++) {
-  audioIconLogo[i].addEventListener("click", toggleAudio);
-}
 
 /**
  * Lets the player have the option whether to have sounds on or not
@@ -333,6 +333,7 @@ function toggleAudioOff() {
   for (let i = 0; i < audioOffIcon.length && audioOnIcon.length; i++) {
     audioOffIcon[i].classList.remove("hide");
     audioOnIcon[i].classList.add("hide");
+    buttonAudio.play();
   }
 }
 

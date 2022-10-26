@@ -1,6 +1,6 @@
 # Movie Buff or Bluff
 
-Movie Buff or Bluff is a Movie based Trivia Quiz site aimed at anyone who enjoys the world of cinema and testing their knowledge. It consists of 10 questions with a 90-second timer and a Leaderboard so you can boast about your high score.
+Movie Buff or Bluff is a Movie based Trivia Quiz site aimed at anyone who enjoys the world of cinema and testing their knowledge. It consists of 10 multiple choice questions with a 90-second timer and a Leaderboard so you can boast about your high score.
 
 Developed by Sean Finn.
 
@@ -32,7 +32,7 @@ Developed by Sean Finn.
 
 ## Project Goals
 
-This is my second portfolio project for [Code Institute](https://codeinstitute.net/) and my goal with this project is to display my newly acquired Javascript skills. I decided to build a Movie based quiz site that will allow repeated playability. To do this I set up the quiz to call on an API - [opentdb.com](https://opentdb.com/), to retrieve the questions and answers, etc. This was very challenging.
+This is my second portfolio project for [Code Institute](https://codeinstitute.net/) and my goal with this project is to display my newly acquired Javascript skills. I decided to build a Movie based quiz site that will allow repeated playability. To do this I set up the quiz to call on an API - [opentdb.com](https://opentdb.com/), to retrieve the questions and answers, etc. I wanted the site to have a simple but pleasing layout and I wanted to have visuals to support the correct/incorrect answers. Most of all I wanted it to be fun.
 
 ## Target Audience
 
@@ -56,7 +56,7 @@ The target audience for this site is anyone who enjoys the world of cinema and t
 
     -   #### Frequent User Goals
 
-        -   As a Frequent User, I want to be able to view my best scores
+        -   As a Frequent User, I want to be able to view my best scores.
         -   As a Frequent User, I want to check to see if there are any new sections added to the site.
         -   As a Frequent User, I want to sign up so that I am emailed any major updates and/or changes to the website.
 
@@ -105,7 +105,7 @@ The Highscores page can be accessed via the Highscores button on the homepage of
 
 ### Instructions Modal
 
-The Instructions Modal can be accessed via the Instructions button on the homepage of the website, when clicked it will display the instructions for the quiz and advise the user that local storage will be used to store Highscores. The user can close the modal by clicking on the "X" icon displayed at the top of the modal or can click anywhere outside it the modal space.
+The Instructions Modal can be accessed via the Instructions button on the homepage of the website, when clicked it will display the instructions for the quiz and advise the user that local storage will be used to store Highscores. The user can close the modal by clicking on the "X" icon displayed at the top of the modal or can click anywhere outside the modal space.
 ![Desktop Instructions Modal](/docs/readme/features/desktop-instructions.PNG)
 
 ### Sign Up/Feedback
@@ -130,7 +130,7 @@ The Quiz content can be accessed from the "Let's get started ->" button on the H
 
 ### End of Quiz
 
-When the user has finished the quiz the results will display. If the user has not answered any questions correctly the username entry will be hidden and they will be instructed to Play Again to get their name on the Leaderboard. If the user does answer some questions correctly their results will be shown along with a message and movie quote - these will change based on users' results. They will now be able to enter a username - there is an indication to tell the user that their username needs to be between 4 and 10 characters with no spaces (spaces have been disabled in the code). If the user enters less than 4 characters or more than 10 and try's to save the Save button will be disabled, if the user enters a username between 4 & 10 characters the indication text will hide, and user and save their username. When the user saves their username they will be redirected to the Highscores page.
+When the user has finished the quiz the results will display. If the user has not answered any questions correctly the username entry will be hidden and they will be instructed to Play Again to get their name on the Leaderboard. If the user does answer some questions correctly their results will be shown along with a message and movie quote - these will change based on users' results. They will now be able to enter a username - there is an indication to tell the user that their username needs to be between 4 and 10 characters with no spaces (spaces have been disabled in the code). If the user enters less than 4 characters or more than 10 and try's to save the Save button will be disabled, if the user enters a username between 4 & 10 characters the indication text will hide, and user can save their username. When the user saves their username they will be redirected to the Highscores page.
 ![Desktop Quiz No Score](/docs/readme/features/desktop-end-noscore.PNG)
 ![Desktop Quiz Score One](/docs/readme/features/desktop-end-score.PNG)
 ![Desktop Quiz Username](/docs/readme/features/desktop-end-username.PNG)
@@ -142,7 +142,7 @@ When the user has finished the quiz the results will display. If the user has no
 
 ### Thank You
 
-When the user fills out form sections and clicks the "SIGN UP" button a Thank You message will be displayed along with text to indicate they have been registered and a movie quote. There is a "Return Home" button to redirect the user back to the main site.
+When the user fills out the form sections and clicks the "SIGN UP" button a Thank You message will be displayed along with text to indicate they have been registered and a movie quote. There is a "Return Home" button to redirect the user back to the main site.
 ![Desktop Thank You](/docs/readme/features/desktop-thankyou.PNG)
 
 ### 404
@@ -244,18 +244,23 @@ For performance and more accessibility testing, I used Google Lighthouse through
 <details><summary>Desktop</summary>
 
 Homepage
+
 ![Lighthouse Desktop Score](/docs/readme/validation/desktop-homepage-results.PNG)
 
 Highscores
+
 ![Lighthouse Desktop Score](/docs/readme/validation/desktop-highscores-results.PNG)
 
 Quiz
+
 ![Lighthouse Desktop Score](/docs/readme/validation/desktop-quiz-results.PNG)
 
 Thank You
+
 ![Lighthouse Desktop Score](/docs/readme/validation/desktop-thankyou-results.PNG)
 
 404
+
 ![Lighthouse Desktop Score](/docs/readme/validation/desktop-404-results.PNG)
 
 </details>
@@ -263,19 +268,24 @@ Thank You
 <details><summary>Mobile</summary>
 
 Homepage
-![Lighthouse Desktop Score](/docs/readme/validation/mobile-homepage-results.PNG)
+
+![Lighthouse Mobile Score](/docs/readme/validation/mobile-homepage-results.PNG)
 
 Highscores
-![Lighthouse Desktop Score](/docs/readme/validation/mobile-highscores-results.PNG)
+
+![Lighthouse Mobile Score](/docs/readme/validation/mobile-highscores-results.PNG)
 
 Quiz
-![Lighthouse Desktop Score](/docs/readme/validation/mobile-quiz-results.PNG)
+
+![Lighthouse Mobile Score](/docs/readme/validation/mobile-quiz-results.PNG)
 
 Thank You
-![Lighthouse Desktop Score](/docs/readme/validation/mobile-thankyou-results.PNG)
+
+![Lighthouse Mobile Score](/docs/readme/validation/mobile-thankyou-results.PNG)
 
 404
-![Lighthouse Desktop Score](/docs/readme/validation/mobile-404-results.PNG)
+
+![Lighthouse Mobile Score](/docs/readme/validation/mobile-404-results.PNG)
 
 </details>
 
@@ -310,7 +320,7 @@ At Mobile, the Performance score is between 95-100 - This is due to Cumulative L
     -   As a Returning Visitor, I want to see new questions.
         - The quiz has been setup to fetch questions from the Opentdb API so the user should see new questions when playing again.
     -   As a Returning Visitor, I want to learn more about any updates.
-        - There is a sign up section included on the site, by signing up the user will be registered for newsletter which will include news on future updates to the site and any new content released.
+        - There is a sign up section included on the site, by signing up the user will be registered for the site newsletter which will include news on future updates to the site and any new content released.
     -   As a Returning Visitor, I want to find the best way to get in contact with the site developer.
         - The user can sign up and offer their feedback on the site, alternatively they can contact the developer via the social media links provided in the footer. 
 
@@ -331,7 +341,7 @@ When questions where fetched from the API special characters where causing an is
 ![Question Bug](/docs/readme/bugs/question-bug.PNG)
 ![Question Bug Reason](/docs/readme/bugs/question-bug-reason.PNG)
 
-Fix - Upon researching this issue, I was able to resolve this by creating a function to decode the Html of the correct answer and just display the plain text.
+Fix - Upon researching this issue, I was able to resolve this by taking a function from a GeekProbin video to decode the Html of the correct answer and just display the plain text.
 </details>
 
 <details><summary>Bug - At end page browser/mobile back button not reloading quiz</summary>
@@ -349,7 +359,7 @@ Maybe technically not a bug but when the quiz was created and styled I ran my li
 
 Fix - To increase Performance there were several actions I made:
 1. Removed Font Awesome script in Header and placed at end of body.
-2. Added the following to the Head - link rel="preconnect" href="https://opentdb.com/api.php?amount=20&category=11&type=multiple"
+2. Added the following to the Head - link rel="preconnect" href="https://opentdb.com/api.php?amount=10&category=11&type=multiple"
 3. Removed the global media queries css file and placed the required css into the quiz.css file.
 4. Removed the mediaqueries.css link from the head
 5. Went through the css and removed or altered css that was not need or was duplicated for some properties.
@@ -370,11 +380,11 @@ Fix - To resolve this I simply removed the question that was displayed from the 
 
 <details><summary>Bug - Username Input Issues</summary>
 
-Originally I the input function set to "keyup" event and all seems well until a class mate noticed that the "Save" button was disabled when the tried to copy and paste their username in.
+Originally I had the input function set to "keyup" event and all seemed well until a class mate noticed that the "Save" button was disabled when the tried to copy and paste their username in.
 
 Fix - To resolve this issue I changed the "keyup" event to "input" and user was now able to copy and paste.
 
-I noticed with testing the user could enter 4 blank spaces as a username and was able to save. This cause the Leaderboard to look bad with no names showing.
+I noticed with testing the user could enter 4 blank spaces as a username and was able to save. This caused the Leaderboard to look bad with no names showing.
 ![Mobile Performance](/docs/readme/bugs/username-code.PNG)
 
 Fix - To resolved I disabled spaces in the input field and added some instruction text under the input field for the user to review.
@@ -410,9 +420,9 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 1. [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template)
     - This repository was created using the template provided by Code Institute. Also, without the knowledge gained through the course work, I could not be able to create this site so thank you Code Institute.
 1. [W3schools](https://www.w3schools.com/)
-    - W3schools was used throughout the project process for answering any queries I had. I was able to build modal and loader using the guides provided.
+    - W3schools was used throughout the project process for answering any queries I had.
 1. [James Q Quick](https://www.youtube.com/c/JamesQQuick), [Kevin Powell](https://www.youtube.com/kepowob), [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified), [Code with Ania Kubów](https://www.youtube.com/c/AniaKub%C3%B3w), [Brian Design](https://www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A).
-    - All of the above for creating fantastic videos on HTML/CSS & Javascript. Javascript was very tough to grasp but with what was learned on the course coupled with the knowledge gained from all of the above and the tutorial videos they produced it slowly started to make sense.
+    - All of the above for creating fantastic videos on HTML/CSS & Javascript. Javascript was very tough to grasp but with what was learned on the course coupled with the knowledge gained from all of the above and the tutorial videos they produced it slowly started to make sense. I reviewed several videos on building a quiz and took some ideas from different videos and applied them to by own. Any code that was used has been credited in comments in js files.
 1. [Stackoverflow](https://stackoverflow.com/)
     - I found myself on Stackoverflow so many times researching issues with javascript code or the occasional Html/CSS issue. This a fantastic place to learn and troubleshoot code.
 1. [Slack](https://slack.com/intl/en-ie/)

@@ -9,7 +9,7 @@ let month = date.getMonth() + 1;
 let year = date.getFullYear();
 let currentDate = `${day}/${month}/${year}`;
 
-// Maps the name, score & date to Highscores table
+// Maps the name, score & date to Highscores table - Idea taken and altered from a Brian Design Video
 highScoresList.innerHTML =
 highScores.map(score => {
     return `
