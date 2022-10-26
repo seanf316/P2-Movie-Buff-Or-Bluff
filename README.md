@@ -80,17 +80,30 @@ The target audience for this site is anyone who enjoys the world of cinema and t
 This is the prototype of the project that may change during its development.
 <details><summary>Desktop</summary>
 
-![Desktop Wireframe](/assets/wireframes/desktop.png)
+![Tablet Desktop Part 1](/docs/readme/wireframes/desktopwireframe-part1.PNG)
+![Tablet Desktop Part 2](/docs/readme/wireframes/desktopwireframe-part2.PNG)
+![Tablet Desktop Part 3](/docs/readme/wireframes/desktopwireframe-part3.PNG)
+![Tablet Desktop Part 4](/docs/readme/wireframes/desktopwireframe-part4.PNG)
+![Tablet Desktop Part 5](/docs/readme/wireframes/desktopwireframe-part5.PNG)
+![Tablet Desktop Part 6](/docs/readme/wireframes/desktopwireframe-part6.PNG)
+![Tablet Desktop Part 7](/docs/readme/wireframes/desktopwireframe-part7.PNG)
+![Tablet Desktop Part 8](/docs/readme/wireframes/desktopwireframe-part8.PNG)
+![Tablet Desktop Part 9](/docs/readme/wireframes/desktopwireframe-part9.PNG)
+![Tablet Desktop Part 10](/docs/readme/wireframes/desktopwireframe-part10.PNG)
 
 </details>
 <details><summary>Tablet</summary>
 
-![Tablet Wireframe](/assets/wireframes/tablet.png)
+![Tablet Wireframe Part 1](/docs/readme/wireframes/tabletwireframe-part1.PNG)
+![Tablet Wireframe Part 2](/docs/readme/wireframes/tabletwireframe-part2.PNG)
+![Tablet Wireframe Part 3](/docs/readme/wireframes/tabletwireframe-part3.PNG)
+![Tablet Wireframe Part 4](/docs/readme/wireframes/tabletwireframe-part4.PNG)
 
 </details>
 <details><summary>Mobile</summary>
 
-![Mobile Wireframe](/assets/wireframes/mobile.png)
+![Mobile Wireframe Part 1](/docs/readme/wireframes/mobilewireframe-part1.PNG)
+![Mobile Wireframe Part 2](/docs/readme/wireframes/mobilewireframe-part2.PNG)
 
 </details>
 
@@ -434,6 +447,6 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 - My son Alex for always making me laugh when I'm tired from a long night of study/coding.
 - To my family and friends - for being a great support and providing a lot of the user testing for me.
 - To my mentor Daisy Mc Girr, we have only had a few sessions together but she has been a huge help to me.
-- My class mate Sean Johnston for reviewing and testing my Project throughout the course.
+- My class mates Sean Johnston & Victoria Traynor for reviewing and testing my Project throughout the course.
 
 [Back to top &uarr;](#contents)
