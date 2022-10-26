@@ -289,6 +289,9 @@ At Mobile, the Performance score is between 95-100 - This is due to Cumulative L
 - The website was viewed on a variety of devices such as desktops, Laptops, Apples Products (Macbook, IPad Pro, iPhone 13 Pro, iPhone 8), and a range of Android devices (Samsung Note 10+, Samsung S20 Plus, Samsung Tab S7+, Oppo mobile).
 - A large amount of testing was done to ensure that everything functions as expected.
 - I asked friends and family members to review the site and document any bugs and/or user experience issues. Some co-workers also helped out with testing.
+- I came found a site called browserstack.com that simulated some of the most recent mobile phones and I just tested the quiz output on a variety of devices - again this is a simulation in the lines of the Dev Tools offered by chrome.
+
+![Browserstack Image](/docs/readme/validation/mobile-simulator.PNG)
 
 ### Testing User Stories from the User Experience (UX) Section
 
