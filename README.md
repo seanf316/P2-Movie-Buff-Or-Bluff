@@ -289,7 +289,7 @@ At Mobile, the Performance score is between 95-100 - This is due to Cumulative L
 - The website was viewed on a variety of devices such as desktops, Laptops, Apples Products (Macbook, IPad Pro, iPhone 13 Pro, iPhone 8), and a range of Android devices (Samsung Note 10+, Samsung S20 Plus, Samsung Tab S7+, Oppo mobile).
 - A large amount of testing was done to ensure that everything functions as expected.
 - I asked friends and family members to review the site and document any bugs and/or user experience issues. Some co-workers also helped out with testing.
-- I came found a site called browserstack.com that simulated some of the most recent mobile phones and I just tested the quiz output on a variety of devices - again this is a simulation in the lines of the Dev Tools offered by chrome.
+- I found a site called browserstack.com that simulated some of the most recent mobile phones and I just tested the quiz output on a variety of devices - again this is a simulation in the lines of the Dev Tools offered by chrome.
 
 ![Browserstack Image](/docs/readme/validation/mobile-simulator.PNG)
 
@@ -349,7 +349,7 @@ Maybe technically not a bug but when the quiz was created and styled I ran my li
 
 Fix - To increase Performance there were several actions I made:
 1. Removed Font Awesome script in Header and placed at end of body.
-2. Added the following to the Head - <link rel="preconnect" href="https://opentdb.com/api.php?amount=20&category=11&type=multiple">
+2. Added the following to the Head - link rel="preconnect" href="https://opentdb.com/api.php?amount=20&category=11&type=multiple"
 3. Removed the global media queries css file and placed the required css into the quiz.css file.
 4. Removed the mediaqueries.css link from the head
 5. Went through the css and removed or altered css that was not need or was duplicated for some properties.
