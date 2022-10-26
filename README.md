@@ -21,7 +21,7 @@ Developed by Sean Finn.
     - [Languages Used](#languages-used)
     - [Frameworks and Tools Used](#frameworks-and-tools-used)
 1. [Testing](#testing)
-    - [W3 Validators](#w3-validators)
+    - [Validators](Validators)
     - [Accessibility and Performance](#accessibility-and-performance)
     - [Further Testing](#further-testing)
     - [Testing User Stories from the User Experience (UX) Section](#testing-user-stories-from-the-user-experience-ux-section)
@@ -216,9 +216,9 @@ The site was created Mobile first and scaled up to larger devices with media que
 
 ## Testing
 
-### W3 Validators
+### Validators
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate the code used in the project to ensure there were no syntax errors.
+The W3C Markup Validator, W3C CSS Validator & JSHint Services were used to validate the code used in the project to ensure there were no syntax errors.
 <details><summary>W3C Markup Validator</summary>
 
 ![W3C Markup Validator Homepage Results](/docs/readme/validation/homepage-results.PNG)
