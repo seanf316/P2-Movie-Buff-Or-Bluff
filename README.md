@@ -307,13 +307,94 @@ At Mobile, the Performance score is between 95-100 - This is due to Cumulative L
 
 ### Further Testing
 
-- The website was tested on Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari browsers.
-- The website was viewed on a variety of devices such as desktops, Laptops, Apples Products (Macbook, IPad Pro, iPhone 13 Pro, iPhone 8), and a range of Android devices (Samsung Note 10+, Samsung S20 Plus, Samsung Tab S7+, Oppo mobile).
-- A large amount of testing was done to ensure that everything functions as expected.
-- I asked friends and family members to review the site and document any bugs and/or user experience issues. Some co-workers also helped out with testing.
-- I found a site called browserstack.com that simulated some of the most recent mobile phones and I just tested the quiz output on a variety of devices - again this is a simulation in the lines of the Dev Tools offered by chrome.
+The site was scaled from a width of 320px in Chrome Dev Tools to check that the site was responsive. There were no apparent issues but it is worth mentioning that the site was built with Portrait orientation in mind but user can view in landscape although there would be some scrolling to do which would be expected. I found a site called browserstack.com that simulated some of the most recent mobile phones and I just tested the quiz output on a variety of devices - again this is a simulation in the lines of the Dev Tools offered by chrome.
+
+<details><summary>Manual Testing</summary>
+
+| **Location** | **Feature Tested**       | **Expected Result**                                                                                                                                        | **Actual Result** | **Pass/Fail** |
+|--------------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|---------------|
+| Homepage     | Logo Anchor To Homepage  | Clicking Logo returns user to Homepage                                                                                                                     | As Expected       | Pass          |
+|              | Highscores Button        | Clicking Highscores button sends user to the Highscores Page                                                                                               | As Expected       | Pass          |
+|              | Instructions Modal       | Clicking Instructions button opens Instructions modal                                                                                                      | As Expected       | Pass          |
+|              |                          | Clicking close icon or clicking out outside modal closes modal                                                                                             | As Expected       | Pass          |
+|              | Let's get started Button | Clicking Let's get started Button starts the quiz                                                                                                          | As Expected       | Pass          |
+|              | Sign Up inputs -required | User cannot sign up without filling in inputs                                                                                                              | As Expected       | Pass          |
+|              | Sign Up email input      | Email input requires "@" or user cant signup                                                                                                               | As Expected       | Pass          |
+|              | Sign Up Button           | Clicking Sign Up button sends user to the Thank You Page                                                                                                   | As Expected       | Pass          |
+|              | Social Media Icons       | Clicking the individual Social Media Icons opens their site in a blank tab                                                                                 | As Expected       | Pass          |
+|              | Github Icon              | Clicking the Github Icon opens up the project repo                                                                                                         | As Expected       | Pass          |
+| Thank You    | Return Home Button       | Clicking Return Home button sends user to the Homepage                                                                                                     | As Expected       | Pass          |
+| Quiz         | Loader                   | Loader should display before the quiz is ready                                                                                                             | As Expected       | Pass          |
+|              | Logo Anchor To Homepage  | Clicking Logo returns user to Homepage                                                                                                                     | As Expected       | Pass          |
+|              | Timer                    | Timer starts at 90 seconds and counts down to 0                                                                                                            | As Expected       | Pass          |
+|              |                          | Timer at 0 quiz closes and end results show                                                                                                                | As Expected       | Pass          |
+|              | Sound                    | Clicking sound icon turns on/off audio                                                                                                                     | As Expected       | Pass          |
+|              |                          | Audio On - clicking on an answer plays the button click audio                                                                                              | As Expected       | Pass          |
+|              |                          | Audio On - correct answer plays the correct audio                                                                                                          | As Expected       | Pass          |
+|              |                          | Audio On - incorrect answer plays the incorrect audio                                                                                                      | As Expected       | Pass          |
+|              |                          | Audio Off - No Audio                                                                                                                                       | As Expected       | Pass          |
+|              | Questions                | Question received from API and displayed in the question text area                                                                                         | As Expected       | Pass          |
+|              | Answers                  | Answers received from API and displayed in the answers text area                                                                                           | As Expected       | Pass          |
+|              | Check Answer Button      | Clicking Check Answer button without selecting an answer displays - Please select an Answer                                                                | As Expected       | Pass          |
+|              |                          | Display  - Please select an Answer hides after .5sec                                                                                                       | As Expected       | Pass          |
+|              |                          | Clicking Check Answer button after selecting the correct answer displays - Correct Answer (also applies .correct css class)                                | As Expected       | Pass          |
+|              |                          | Clicking Check Answer button after selecting the incorrect answer displays - Incorrect Answer and shows correct Answer (also applies .incorrect css class) | As Expected       | Pass          |
+|              | Question Counter         | Question counter increments with each new question                                                                                                         | As Expected       | Pass          |
+|              | Progress Bar             | Progress Bar increments with each new question                                                                                                             | As Expected       | Pass          |
+| End Results  | Logo Anchor To Homepage  | Clicking Logo returns user to Homepage                                                                                                                     | As Expected       | Pass          |
+|              | Score = 0                | Displays message advising users they scored 0 and the need to play again to get their name on Leaderboard, Displays Play Again & Home buttons              | As Expected       | Pass          |
+|              |                          | Play Again button restarts quiz                                                                                                                            | As Expected       | Pass          |
+|              |                          | Home button returns user to Homepage                                                                                                                       | As Expected       | Pass          |
+|              | Score > 0                | Under logo final score is shown i.e. - "You got (correctscore) out of 10"                                                                                  | As Expected       | Pass          |
+|              |                          | Final text/quote displays i.e. "Good job my friend"  & "Movie Quote"                                                                                       | As Expected       | Pass          |
+|              |                          | Final text produces different results based off user score                                                                                                 | As Expected       | Pass          |
+|              |                          | Username input and instruction text appears & Save Button appears                                                                                          | As Expected       | Pass          |
+|              | Username Input           | Username between 4 & 10 characters enables the save button                                                                                                 | As Expected       | Pass          |
+|              |                          | Username with less than 4 or more than 10 characters disables the save button                                                                              | As Expected       | Pass          |
+|              |                          | Use of spaces in input disabled                                                                                                                            | As Expected       | Pass          |
+|              |                          | Entering in between 4 & 10 characters hides username instruction text                                                                                      | As Expected       | Pass          |
+|              | Save Button              | Clicking Save button sends user to Highscores page                                                                                                         | As Expected       | Pass          |
+|              |                          | Highscores displays the username and their score and date                                                                                                  | As Expected       | Pass          |
+| Highscores   | Logo Anchor To Homepage  | Clicking Logo returns user to Homepage                                                                                                                     | As Expected       | Pass          |
+|              | 10 Highscores            | Only 10 scores are displayed in the Leaderboard                                                                                                            | As Expected       | Pass          |
+|              |                          | If recent score is less then the top 10 scores in the Leaderboard then it is not updated                                                                   | As Expected       | Pass          |
+|              | Home Button              | Clicking Home button sends user to Homepage                                                                                                                | As Expected       | Pass          |
+|              | Play Again Button        | Clicking Play Again button starts Quiz                                                                                                                     | As Expected       | Pass          |
+|              | Clear Highscores         | Clicking Clear Highscores button clears Leaderboard and returns user to Homepage                                                                           | As Expected       | Pass          |
+| 404          | 404 Page                 | When user navigates to a location on site that doesn’t exist 404 page displays                                                                             | As Expected       | Pass          |
+|              | Return Home Button       | Clicking Return Home button returns user to Homepage                                                                                                       | As Expected       | Pass          |
+
+</details>
+
+<details><summary>Browser Testing</summary>
+
+| **Browser Tested** | **Actual Result** | **Pass/Fail** |   |   |
+|--------------------|-------------------|---------------|---|---|
+| Chrome             | As Expected       | Pass          |   |   |
+| Firefox            | As Expected       | Pass          |   |   |
+| Edge               | As Expected       | Pass          |   |   |
+| Mac OS Safari      | As Expected       | Pass          |   |   |
+
+</details>
+
+<details><summary>Physical Device Testing</summary>
+
+| **Device Tested** | **Actual Result** | **Pass/Fail** |   |   |
+|-------------------|-------------------|---------------|---|---|
+| Samsung Note 10+  | As Expected       | Pass          |   |   |
+| Samsung S21+      | As Expected       | Pass          |   |   |
+| Samsung Tab S7+   | As Expected       | Pass          |   |   |
+| iPhone 13 Pro Max | As Expected       | Pass          |   |   |
+| iPhone 11         | As Expected       | Pass          |   |   |
+| iPad Pro 12 inch  | As Expected       | Pass          |   |   |
+
+</details>
+
+<details><summary>Browserstack.com</summary>
 
 ![Browserstack Image](/docs/readme/validation/mobile-simulator.PNG)
+
+</details>
 
 ### Testing User Stories from the User Experience (UX) Section
 
@@ -361,7 +442,7 @@ Fix - Upon researching this issue, I was able to resolve this by taking a functi
 When the user was on the end of quiz results page they are indicated to enter a username if they score more then 0 or if 0 they are indicated to play again. There is a play again button that would direct them back to the quiz page and all worked as expected but if the user was to click the browser/mobile back button instead the quiz would start again but would not be reloaded to its original state. This caused the amount of questions to go over what was expected and the progress bar width grew outside its container. The problem was not evident in VS Code and could not be replicated there so several commits where done in the testing period to try and resolve.
 ![End Page Bug](/docs/readme/bugs/endpage-bug.png)
 
-Fix - After numerous attempts and alot of commits testing various code to try and override/change the back button behavior I decided to remove the endpage.html and implement all the code into the quiz.html. I set the end page section to hidden and revealed it with javascript code at the time required. Now when a user presses the browser/mobile back button they are brought back to the homepage instead of the quiz.
+Fix - After numerous attempts and a lot of commits testing various code to try and override/change the back button behavior I decided to remove the endpage.html and implement all the code into the quiz.html. I set the end page section to hidden and revealed it with javascript code at the time required. Now when a user presses the browser/mobile back button they are brought back to the homepage instead of the quiz.
 </details>
 
 <details><summary>Bug - Mobile Lighthouse Performance</summary>
@@ -392,7 +473,7 @@ Fix - To resolve this I simply removed the question that was displayed from the 
 
 <details><summary>Bug - Username Input Issues</summary>
 
-Originally I had the input function set to "keyup" event and all seemed well until a class mate noticed that the "Save" button was disabled when the tried to copy and paste their username in.
+Originally I had the input function set to "keyup" event and all seemed well until a class mate noticed that the "Save" button was disabled when they tried to copy and paste their username in.
 
 Fix - To resolve this issue I changed the "keyup" event to "input" and user was now able to copy and paste.
 
@@ -426,7 +507,7 @@ For version control the following steps were made:
 3. For the commits the following command was run along with commit description - git commit -m "This is my commit etc"
 4. To move the changes to Github the following command was run - git push  
 
-Please note due to a bug that could not be replicated locally there were a series of commits made to test resolution of bug via published link.
+Please note due to a bug that could not be replicated locally there were a series of commits made to test resolution of bug via published link. - (At end page browser/mobile back button not reloading quiz)
 
 ### Forking the GitHub Repository
 
@@ -441,7 +522,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 ## Credits
 
 1. [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template)
-    - This repository was created using the template provided by Code Institute. Also, without the knowledge gained through the course work, I could not be able to create this site so thank you Code Institute.
+    - This repository was created using the template provided by Code Institute. Also, without the knowledge gained through the course work, I would not be able to create this site so thank you Code Institute.
 1. [W3schools](https://www.w3schools.com/)
     - W3schools was used throughout the project process for answering any queries I had.
 1. [James Q Quick](https://www.youtube.com/c/JamesQQuick), [Kevin Powell](https://www.youtube.com/kepowob), [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified), [Code with Ania Kubów](https://www.youtube.com/c/AniaKub%C3%B3w), [Brian Design](https://www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A).
@@ -453,7 +534,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 1. [Stackoverflow](https://stackoverflow.com/)
     - I found myself on Stackoverflow so many times researching issues with javascript code or the occasional Html/CSS issue. This a fantastic place to learn and troubleshoot code.
 1. [Slack](https://slack.com/intl/en-ie/)
-    - After finishing the javascript essentials and Love Maths project it was very daunting sitting in front of an empty .js file. The people on slack and especially my class mates where always willing to lend a hand and some of the mentors on there are just amazing.
+    - After finishing the javascript essentials and Love Maths project it was very daunting sitting in front of an empty .js file. The people on slack and especially my class mates were always willing to lend a hand and some of the mentors on there are just amazing.
 
 ## Acknowledgements
 
