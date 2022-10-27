@@ -401,7 +401,7 @@ h2 {
     #result {
         font-size: 1.5rem;
         padding: 1rem 0;
-        width: 100%;
+        width: 90%;
     }
 
     /* End */
@@ -461,7 +461,7 @@ h2 {
     }
 
     .quiz-body {
-        width: 80%;
+        width: 60%;
     }
 
     .quiz-question {
@@ -475,7 +475,7 @@ h2 {
     }
 
     #result {
-        width: 80%;
+        width: 60%;
     }
 
     #endPage {

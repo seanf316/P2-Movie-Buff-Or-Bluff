@@ -368,25 +368,25 @@ The site was scaled from a width of 320px in Chrome Dev Tools to check that the 
 
 <details><summary>Browser Testing</summary>
 
-| **Browser Tested** | **Actual Result** | **Pass/Fail** |   |   |
-|--------------------|-------------------|---------------|---|---|
-| Chrome             | As Expected       | Pass          |   |   |
-| Firefox            | As Expected       | Pass          |   |   |
-| Edge               | As Expected       | Pass          |   |   |
-| Mac OS Safari      | As Expected       | Pass          |   |   |
+| **Browser Tested** | **Actual Result** | **Pass/Fail** |
+|--------------------|-------------------|---------------|
+| Chrome             | As Expected       | Pass          |
+| Firefox            | As Expected       | Pass          |
+| Edge               | As Expected       | Pass          |
+| Mac OS Safari      | As Expected       | Pass          |
 
 </details>
 
 <details><summary>Physical Device Testing</summary>
 
-| **Device Tested** | **Actual Result** | **Pass/Fail** |   |   |
-|-------------------|-------------------|---------------|---|---|
-| Samsung Note 10+  | As Expected       | Pass          |   |   |
-| Samsung S21+      | As Expected       | Pass          |   |   |
-| Samsung Tab S7+   | As Expected       | Pass          |   |   |
-| iPhone 13 Pro Max | As Expected       | Pass          |   |   |
-| iPhone 11         | As Expected       | Pass          |   |   |
-| iPad Pro 12 inch  | As Expected       | Pass          |   |   |
+| **Device Tested** | **Actual Result** | **Pass/Fail** |
+|-------------------|-------------------|---------------|
+| Samsung Note 10+  | As Expected       | Pass          |
+| Samsung S21+      | As Expected       | Pass          |
+| Samsung Tab S7+   | As Expected       | Pass          |
+| iPhone 13 Pro Max | As Expected       | Pass          |
+| iPhone 11         | As Expected       | Pass          |
+| iPad Pro 12 inch  | As Expected       | Pass          |
 
 </details>
 
