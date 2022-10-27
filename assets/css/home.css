@@ -85,6 +85,11 @@ h2 {
     text-align: justify;
 }
 
+.homepage_content__text span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
 .homepage_content__text2 {
     text-align: justify;
     margin-top: 1rem;

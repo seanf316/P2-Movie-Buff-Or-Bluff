@@ -26,6 +26,7 @@ Developed by Sean Finn.
     - [Further Testing](#further-testing)
     - [Testing User Stories from the User Experience (UX) Section](#testing-user-stories-from-the-user-experience-ux-section)
     - [Bugs and Fixes](#bugs-and-fixes)
+1. [Future Updates](#future-updates)
 1. [Deployment](#deployment)
 1. [Credits](#credits)
 1. [Acknowledgements](#acknowledgements)
@@ -387,6 +388,8 @@ The site was scaled from a width of 320px in Chrome Dev Tools to check that the 
 | iPhone 13 Pro Max | As Expected       | Pass          |
 | iPhone 11         | As Expected       | Pass          |
 | iPad Pro 12 inch  | As Expected       | Pass          |
+| One Plus 8T  | As Expected       | Pass          |
+| Alcatel (Unsure of model) | As Expected       | Pass          |
 
 </details>
 
@@ -462,7 +465,7 @@ Fix - To increase Performance there were several actions I made:
 
 <details><summary>Bug - API Fetch Issues</summary>
 
-Originally I had the quiz setup to fetch 10 questionS and display 1 at a time. I quickly noticed from testing and feedback that there was a small delay between each question as instead of displaying the next question of the 10 fetched it was fetching 10 questions each time.
+Originally I had the quiz setup to fetch 10 questions and display 1 at a time. I quickly noticed from testing and feedback that there was a small delay between each question as instead of displaying the next question of the 10 fetched it was fetching 10 questions each time.
 
 Fix - To resolve this issue I had watched a James Q Quick video on fetching from an API and took some of the code he had written and applied it to the quiz I had setup. It took awhile to understand the API call but after hours of testing and gaining knowledge it now fetches the 10 questions only once and displays each question from the 10 fetched without delays.
 
@@ -484,6 +487,15 @@ Fix - To resolved I disabled spaces in the input field and added some instructio
 </details>
 
 [Back to top &uarr;](#contents)
+
+## Future Updates
+
+I would like to add the following updates in the future when time permits:
+
+1. Global Leaderboard - Instead of scores been saved locally on the users device they would instead be saved to a database where every users score would be stored.
+2. Catagories - I would like to add specific Movie catagories like Action, Comedy, Thriller, Sci-Fi etc.
+3. Difficulty Levels - I would like to incorporate difficulty levels like Easy, Medium & Hard.
+4. Remaining Time added to overall score - I want the timer to be more of just a countdown and have more influence on the overall score i.e. Answer correctly faster adds more points to the score.
 
 ## Deployment
 
@@ -540,6 +552,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 
 - To my amazing wife Denise who has supported me every day and kept me motivated while I have been spending long hours studying and building the site she had to look after and entertain our 5-year-old son so I think I had an easier time of it.
 - My son Alex for always making me laugh when I'm tired from a long night of study/coding.
+- To my sister Mari for all the help she provided testing on all the Apple devices.
 - To my family and friends - for being a great support and providing a lot of the user testing for me.
 - To my mentor Daisy Mc Girr, we have only had a few sessions together but she has been a huge help to me.
 - My class mates Sean Johnston & Victoria Traynor for reviewing and testing my Project throughout the course.

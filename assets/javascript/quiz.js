@@ -79,7 +79,7 @@ function startQuiz() {
 
 /**
  * Function for Timer
- * Time set to 60 seconds - after time is finished user is moved to end.html
+ * Time set to 90 seconds - after time is finished user is moved to end.html
  */
 function quizTimer() {
   let quizTimeAmount = 90;
