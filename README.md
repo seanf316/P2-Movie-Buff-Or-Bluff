@@ -33,7 +33,7 @@ Developed by Sean Finn.
 
 ## Project Goals
 
-This is my second portfolio project for [Code Institute](https://codeinstitute.net/) and my goal with this project is to display my newly acquired Javascript skills. I decided to build a Movie based quiz site that will allow repeated playability. To do this I set up the quiz to call on an API - [opentdb.com](https://opentdb.com/), to retrieve the questions and answers, etc. I wanted the site to have a simple but pleasing layout and I wanted to have visuals to support the correct/incorrect answers. Most of all I wanted it to be fun.
+This is my second portfolio project for [Code Institute](https://codeinstitute.net/) and my goal with this project is to display my newly acquired Javascript skills. I decided to build a Movie based quiz site that will allow repeated playability. To do this I set up the quiz to call on an API - [opentdb.com](https://opentdb.com/), to retrieve the questions and answers. I wanted the site to have a simple but pleasing layout and I wanted to have visuals to support the correct/incorrect answers. Most of all I wanted it to be fun.
 
 ## Target Audience
 
@@ -114,7 +114,7 @@ This is the prototype of the project that may change during its development.
 
 ### Highscores
 
-The Highscores page can be accessed via the Highscores button on the homepage of the website, when clicked it will display the users Highscores and give the option to return Home, Play Quiz or Clear Highscores. I was in 2 minds whether to include the Clear Highscores button but from speaking to (class mates/family/mentor) majority feedback was that they were happy to have it there. 
+The Highscores page can be accessed via the Highscores button on the homepage of the website, when clicked it will display the users Highscores and give the option to return Home, Play Quiz or Clear Highscores. I was in 2 minds whether to include the Clear Highscores button but from speaking to class mates/family/mentor majority feedback was that they were happy to have it there. 
 ![Desktop Highscores](/docs/readme/features/desktop-highscores.PNG)
 
 ### Instructions Modal
@@ -124,7 +124,7 @@ The Instructions Modal can be accessed via the Instructions button on the homepa
 
 ### Sign Up/Feedback
 
-The Sign Up/Feedback section is available on the homepage, it allows the user to signup for the site newsletter and offer their feedback on the site/quiz.
+The Sign Up/Feedback section is available on the homepage, it allows the user to sign up for the site newsletter and offer their feedback on the site/quiz.
 ![Desktop Signup](/docs/readme/features/desktop-signup.PNG)
 
 ### Footer
@@ -308,7 +308,7 @@ At Mobile, the Performance score is between 95-100 - This is due to Cumulative L
 
 ### Further Testing
 
-The site was scaled from a width of 320px in Chrome Dev Tools to check that the site was responsive. There were no apparent issues but it is worth mentioning that the site was built with Portrait orientation in mind but user can view in landscape although there would be some scrolling to do which would be expected. I found a site called browserstack.com that simulated some of the most recent mobile phones and I just tested the quiz output on a variety of devices - again this is a simulation in the lines of the Dev Tools offered by chrome.
+The site was scaled from a width of 320px in Chrome Dev Tools to check that the site was responsive. There were no apparent issues but it is worth mentioning that the site was built with Portrait orientation in mind but user can view in Landscape although there would be some scrolling to do which would be expected. I found a site called browserstack.com that simulated some of the most recent mobile phones and I just tested the quiz output on a variety of devices - again this is a simulation in the lines of the Dev Tools offered by chrome.
 
 <details><summary>Manual Testing</summary>
 
@@ -492,10 +492,10 @@ Fix - To resolved I disabled spaces in the input field and added some instructio
 
 I would like to add the following updates in the future when time permits:
 
-1. Global Leaderboard - Instead of scores been saved locally on the users device they would instead be saved to a database where every users score would be stored.
-2. Catagories - I would like to add specific Movie catagories like Action, Comedy, Thriller, Sci-Fi etc.
+1. Global Leaderboard - Instead of scores being saved locally on the user's device they would instead be saved to a database where every user's score would be stored.
+2. Categories - I would like to add specific Movie categories like Action, Comedy, Thriller, Sci-Fi, etc.
 3. Difficulty Levels - I would like to incorporate difficulty levels like Easy, Medium & Hard.
-4. Remaining Time added to overall score - I want the timer to be more of just a countdown and have more influence on the overall score i.e. Answer correctly faster adds more points to the score.
+4. Remaining Time added to the overall score - I want the timer to be more of just a countdown and have more influence on the overall score i.e. Answering correctly faster adds more points to the score.
 
 ## Deployment
 
@@ -546,7 +546,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 1. [Stackoverflow](https://stackoverflow.com/)
     - I found myself on Stackoverflow so many times researching issues with javascript code or the occasional Html/CSS issue. This a fantastic place to learn and troubleshoot code.
 1. [Slack](https://slack.com/intl/en-ie/)
-    - After finishing the javascript essentials and Love Maths project it was very daunting sitting in front of an empty .js file. The people on slack and especially my class mates were always willing to lend a hand and some of the mentors on there are just amazing.
+    - After finishing the javascript essentials and Love Maths project it was very daunting sitting in front of an empty .js file. The people on Slack and especially my class mates were always willing to lend a hand and some of the mentors on there are just amazing.
 
 ## Acknowledgements
 
