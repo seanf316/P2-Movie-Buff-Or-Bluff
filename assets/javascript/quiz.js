@@ -189,7 +189,7 @@ function checkAnswer() {
  * Function to decodeHtml for the correctAnswers(removes Special Character Codes for HTML)
  * This function was taken from a GeekProbin video
  */
- function HTMLDecode(textString) {
+function HTMLDecode(textString) {
   let doc = new DOMParser().parseFromString(textString, "text/html");
   return doc.documentElement.textContent;
 }
@@ -209,7 +209,9 @@ function checkCount() {
   }
   setTimeout(() => {
     questionCounter++;
-    showQuestion();
+    if (questionCounter <= totalQuestion) {
+      showQuestion();
+    }
   }, 900);
 }
 
